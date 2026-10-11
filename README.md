@@ -32,4 +32,4 @@ No lançamento ficam abertas as três matérias de processo (Teoria Geral do Pro
 
 ## Conteúdo
 
-O conteúdo é revisado antes de qualquer venda. Repositório privado: o material não deve ser publicado sem a revisão jurídica e a definição dos direitos de uso (ver Fase 0 do roadmap).
+O conteúdo ainda passa por revisão jurídica e pela definição dos direitos de uso antes de qualquer venda (ver Fase 0 do roadmap).
