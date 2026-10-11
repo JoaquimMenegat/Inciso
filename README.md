@@ -8,6 +8,7 @@ Plataforma de estudo para estudantes de Direito: aulas interativas (simuladores,
 
 | Pasta / arquivo | O que é |
 |---|---|
+| `CONTEXTO.md` | Decisões do projeto — leia primeiro |
 | `prototipo/src/` | Fonte do protótipo: HTML base, CSS e um arquivo JS por matéria (`40-pena.js` … `51-administrativo.js`) |
 | `prototipo/build.py` | Junta tudo em um único HTML |
 | `prototipo/vade-sucessoes.html` | Protótipo gerado (não editar à mão) |
