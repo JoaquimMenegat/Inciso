@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Procedimentos Especiais e Recursos | Inciso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F5;--sheet:#FFFFFF;--ink:#1B2540;--muted:#5B6478;--line:#CBD2DE;
+  --seal:#A3263A;--brass:#B98A2E;--sage:#4F7464;--soft:#E6E9EF;
+  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#131A2B;--sheet:#1B2438;--ink:#E7EBF3;--muted:#9AA4B8;--line:#33405A;--seal:#E0566C;--brass:#D9AE55;--sage:#7FB09A;--soft:#232E46}}
+:root[data-theme="dark"]{--paper:#131A2B;--sheet:#1B2438;--ink:#E7EBF3;--muted:#9AA4B8;--line:#33405A;--seal:#E0566C;--brass:#D9AE55;--sage:#7FB09A;--soft:#232E46}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans)}
+main{max-width:1060px;margin:0 auto;padding:0 20px 80px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
+p{max-width:66ch}
+button{font:inherit;color:inherit;cursor:pointer}
+button:disabled{cursor:default}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.brand{display:flex;align-items:center;gap:10px;padding-top:22px;font-family:var(--serif);font-size:1.15rem}
+.brand i{width:12px;height:22px;background:var(--seal);display:inline-block;transform:skewX(-14deg)}
+.brand small{font-family:var(--sans);color:var(--muted);font-size:.85rem}
+
+.hero{min-height:84vh;display:grid;align-content:center;gap:26px;padding:40px 0;position:relative}
+.hero .kicker{font-family:var(--serif);color:var(--brass);font-size:1.3rem;opacity:0;animation:fade .6s .1s forwards}
+.hero h1{font-size:clamp(2.6rem,7.4vw,5.8rem);letter-spacing:-.02em}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 span i{display:block;font-style:normal;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.15s;font-style:italic;color:var(--seal)}
+.hero p{font-size:1.15rem;color:var(--muted);opacity:0;animation:fade .8s .7s forwards}
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+.seal{position:absolute;right:0;top:14%;width:min(32vw,290px);aspect-ratio:1;opacity:0;animation:stamp .7s 1.1s cubic-bezier(.3,1.6,.5,1) forwards}
+@keyframes stamp{0%{opacity:0;transform:scale(1.6) rotate(-20deg)}100%{opacity:1;transform:scale(1) rotate(-8deg)}}
+.seal svg{width:100%;height:100%}
+.seal .spin{transform-origin:150px 150px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.jump{display:flex;flex-wrap:wrap;gap:8px;opacity:0;animation:fade .8s .9s forwards}
+.jump a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--line);padding:6px 4px;margin-right:10px;font-size:.95rem;transition:border-color .2s,color .2s}
+.jump a:hover{border-color:var(--seal);color:var(--seal)}
+
+section{padding:76px 0 0}
+.num{font-family:var(--serif);color:var(--brass);font-size:1.15rem;display:block;margin-bottom:6px}
+section>h2{font-size:clamp(1.9rem,4.4vw,2.8rem);margin-bottom:10px}
+section>.lead{color:var(--muted);margin:0 0 26px}
+
+/* lista de cartões que viram */
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.flip{perspective:900px;min-height:180px;border:0;background:none;padding:0;text-align:left}
+.flip .in{position:relative;width:100%;height:100%;min-height:180px;transition:transform .6s cubic-bezier(.3,.7,.2,1);transform-style:preserve-3d}
+.flip[aria-pressed="true"] .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between}
+.flip .f{background:color-mix(in srgb,var(--brass) 9%,var(--paper));border-top:2px solid var(--brass)}
+.flip .f strong{font-family:var(--serif);font-size:1.45rem;font-weight:400}
+.flip .f small{color:var(--muted)}
+.flip .b{background:var(--seal);color:#fff;transform:rotateY(180deg);font-size:.97rem}
+.flip .b em{font-style:normal;font-weight:700}
+
+.callout{margin-top:22px;border-left:4px solid var(--seal);padding:12px 18px;background:color-mix(in srgb,var(--seal) 7%,transparent)}
+.callout b{color:var(--seal)}
+
+.panel{border-top:2px solid var(--ink);padding:22px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chips button{border:2px solid var(--line);background:none;padding:7px 14px;font-size:.92rem;transition:background .25s,color .25s,border-color .25s}
+.chips button[aria-pressed="true"]{background:var(--seal);color:#fff;border-color:var(--seal)}
+.out{border-left:4px solid var(--sage);padding:14px 18px;background:color-mix(in srgb,var(--sage) 9%,transparent);min-height:64px}
+.out .t{font-family:var(--serif);font-size:1.6rem}
+.out p{margin:4px 0 0}
+.swap{animation:swap .45s}
+@keyframes swap{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
+
+/* classificar */
+.sorter .deck{min-height:120px;display:grid;place-items:center;margin-bottom:16px}
+.card{max-width:560px;width:100%;border:2px solid var(--ink);padding:18px 20px;font-size:1.05rem;background:var(--sheet);animation:deal .45s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes deal{from{opacity:0;transform:translateY(-30px) rotate(-3deg)}to{opacity:1;transform:none}}
+.card.ok{border-color:var(--sage);animation:fly .5s forwards}
+.card.no{border-color:var(--seal);animation:shake .4s}
+@keyframes fly{to{opacity:0;transform:translateY(40px) scale(.9)}}
+@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.bins{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.bins button{border:2px solid var(--brass);background:none;padding:12px;font-family:var(--serif);font-size:1.1rem;transition:background .2s}
+.bins button:hover:not(:disabled){background:color-mix(in srgb,var(--brass) 14%,transparent)}
+.sortfb{margin-top:12px;min-height:48px;color:var(--muted)}
+.score{font-variant-numeric:tabular-nums;color:var(--sage);font-weight:600}
+
+/* passos */
+.steps{position:relative;display:grid;gap:0}
+.stepnav{display:flex;align-items:center;gap:10px;margin-top:16px}
+.stepnav button{border:2px solid var(--ink);background:none;padding:7px 16px}
+.stepnav button.pri{background:var(--seal);border-color:var(--seal);color:#fff}
+.track{display:flex;gap:4px;margin-bottom:18px}
+.track i{flex:1;height:6px;background:var(--soft);transition:background .4s}
+.track i.on{background:var(--brass)}
+.track i.cur{background:var(--seal)}
+.stage{display:grid;grid-template-columns:140px 1fr;gap:22px;align-items:start;min-height:190px}
+.stage .rn{font-family:var(--serif);font-size:4.2rem;line-height:1;color:var(--brass)}
+.stage h3{font-size:1.7rem;margin-bottom:6px}
+.stage .art{display:inline-block;margin-top:8px;font-size:.88rem;color:var(--seal);border:1.5px solid var(--seal);padding:1px 8px}
+
+/* artigos */
+.arts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.artb{border:0;background:none;border-top:2px solid var(--ink);padding:12px 4px;text-align:left;transition:border-color .2s,transform .2s}
+.artb:hover,.artb[aria-expanded="true"]{border-color:var(--seal);transform:translateY(-3px)}
+.artb b{font-family:var(--serif);font-size:1.25rem;font-weight:400;display:block;color:var(--brass)}
+.artb span{font-size:.86rem;color:var(--muted)}
+.artd{margin-top:12px;padding:0 18px;max-height:0;overflow:hidden;transition:max-height .5s,padding .5s;border-left:4px solid var(--brass)}
+.artd.open{max-height:320px;padding:12px 18px}
+
+/* quiz */
+.quiz{background:var(--seal);color:#fff;padding:28px}
+.quiz h3{font-size:1.6rem}
+.quiz .prog{height:4px;background:rgba(255,255,255,.25);margin:14px 0 20px;overflow:hidden}
+.quiz .prog i{display:block;height:100%;background:var(--brass);width:0;transition:width .5s}
+.qstage{min-height:220px}
+.opts{display:grid;gap:8px;margin-top:16px}
+.opts button{text-align:left;border:2px solid rgba(255,255,255,.4);background:none;padding:11px 14px;transition:background .25s,border-color .25s;color:#fff}
+.opts button:hover:not(:disabled){background:rgba(255,255,255,.1)}
+.opts button.ok{background:var(--sage);border-color:#fff}
+.opts button.no{background:#5a1420;border-color:#5a1420;animation:shake .4s}
+.why{margin-top:14px;opacity:.92;font-size:.96rem}
+.next{margin-top:16px;border:0;background:var(--brass);color:#1B2540;padding:9px 18px;font-weight:600}
+
+footer{margin-top:72px;color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padding-top:18px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.vis{opacity:1;transform:none}
+@media (min-width:721px){.hero h1,.hero p{padding-right:min(30vw,290px)}}
+@media (max-width:720px){.seal{position:static;width:140px;justify-self:end}.stage{grid-template-columns:1fr}.stage .rn{font-size:3rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.hero p,.jump,.hero .kicker{opacity:1;transform:none}.hero h1 span i{transform:none}}
+</style><style>
+.wiz .q{font-family:var(--serif);font-size:1.5rem;margin-bottom:12px}
+.wiz .ans{display:flex;gap:10px;flex-wrap:wrap}
+.wiz .ans button{border:2px solid var(--ink);background:none;padding:9px 18px;text-align:left}
+.wiz .ans button:hover{background:var(--ink);color:var(--paper)}
+.wiz .path{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;min-height:28px}
+.wiz .path span{font-size:.8rem;border:1.5px solid var(--brass);color:var(--brass);padding:2px 8px;animation:swap .3s}
+.wiz .end{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;border-left:4px solid var(--seal);padding:14px 18px;background:color-mix(in srgb,var(--seal) 7%,transparent)}
+.wiz .end .t{font-family:var(--serif);font-size:1.8rem;color:var(--seal)}
+.clock{width:96px;height:96px}
+.clock .arc{transition:stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1)}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:22px;text-align:center}
+.ladder div{padding:14px 8px;border-top:6px solid var(--line);font-size:.9rem;transition:border-color .4s,background .4s,color .4s}
+.ladder div b{display:block;font-family:var(--serif);font-weight:400;font-size:1.05rem}
+.ladder div.lit{border-color:var(--seal);background:color-mix(in srgb,var(--seal) 9%,transparent)}
+.slider{margin-top:10px}
+.slider input{width:100%;accent-color:var(--seal)}
+.posse{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:14px}
+.posse div{padding:16px 18px;border-top:6px solid var(--line);transition:border-color .4s,opacity .4s;opacity:.4}
+.posse div.on{opacity:1}
+.posse div.on.n{border-color:var(--sage)}.posse div.on.v{border-color:var(--brass)}
+.posse b{font-family:var(--serif);font-weight:400;font-size:1.4rem;display:block}
+.days{font-family:var(--serif);font-size:2.2rem;color:var(--seal);font-variant-numeric:tabular-nums}
+.efx{display:grid;grid-template-columns:1fr 280px;gap:28px;align-items:center}
+.lock{text-align:center}
+.lock svg{width:120px;height:140px}
+.lock .shack{transition:transform .6s cubic-bezier(.3,1.5,.4,1)}
+.lock.open .shack{transform:translateY(-18px) rotate(-18deg);transform-origin:84px 50px}
+.lock .t{font-family:var(--serif);font-size:1.4rem}
+@media (max-width:720px){.ladder,.posse,.efx{grid-template-columns:1fr}.wiz .end{grid-template-columns:1fr}}
+</style></head><body><main>
+<div class="brand"><i aria-hidden="true"></i>Inciso <small>Direto, incisivo.</small></div>
+<header class="hero">
+  <div class="seal" aria-hidden="true"><svg viewBox="0 0 300 300"><defs><path id="c" d="M150,150 m-112,0 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0"/></defs>
+  <circle cx="150" cy="150" r="140" fill="none" stroke="var(--seal)" stroke-width="4"/><circle cx="150" cy="150" r="92" fill="none" stroke="var(--brass)" stroke-width="2"/>
+  <g class="spin"><text font-family="Archivo,sans-serif" font-size="16" letter-spacing="4" fill="var(--seal)"><textPath href="#c">APELAÇÃO • AGRAVO • EMBARGOS • RESP • RE • </textPath></text></g>
+  <text x="150" y="146" text-anchor="middle" font-family="Libre Caslon Text,serif" font-size="32" fill="var(--seal)">Recorrer</text>
+  <text x="150" y="178" text-anchor="middle" font-family="Archivo,sans-serif" font-size="14" fill="var(--brass)">15 dias úteis</text></svg></div>
+  <div class="kicker">Matéria III</div>
+  <h1><span><i>Procedimentos especiais</i></span><span><i>e recursos</i></span></h1>
+  <p>Qual recurso cabe, em quanto tempo e com que efeito. E os ritos que fogem do comum: possessórias, monitória, inventário.</p>
+  <nav class="jump" aria-label="Seções"><a href="#qual">Qual recurso cabe</a><a href="#efeito">Efeito suspensivo</a><a href="#agravo">Agravo</a><a href="#posse">Possessórias</a><a href="#esp">Procedimentos especiais</a><a href="#quiz">Teste</a></nav>
+</header>
+<section id="qual" class="reveal"><span class="num">I –</span><h2>Qual recurso cabe?</h2><p class="lead">Responda sobre a decisão e veja o recurso, o prazo e para onde ele sobe.</p><div class="wiz panel" id="wiz"></div><div class="ladder" id="ladder"><div><b>1º grau</b>juiz</div><div><b>Tribunal</b>TJ ou TRF</div><div><b>STJ</b>lei federal</div><div><b>STF</b>Constituição</div></div></section><section id="prazo" class="reveal"><span class="num">II –</span><h2>Prazos recursais</h2><p class="lead">Quinze dias úteis para quase tudo. A exceção cai em toda prova.</p><div class="panel"><div class="chips" id="pzC"></div><div class="out" id="pzO" aria-live="polite"></div></div></section><section id="efeito" class="reveal"><span class="num">III –</span><h2>A apelação suspende a sentença?</h2><p class="lead">Em regra, sim. Ligue o tipo de sentença e veja se ela já produz efeitos.</p><div class="efx"><div><div class="chips" id="efC" style="flex-direction:column;align-items:stretch"></div><span id="lockO" hidden></span></div><div class="lock" id="lock"><svg viewBox="0 0 168 170" aria-hidden="true"><path class="shack" d="M50,80 V50 a34,34 0 0,1 68,0 V80" fill="none" stroke="var(--ink)" stroke-width="12"/><rect x="30" y="78" width="108" height="80" fill="var(--seal)"/><circle cx="84" cy="112" r="10" fill="#fff"/><rect x="80" y="112" width="8" height="24" fill="#fff"/></svg><div class="t" id="lockT"></div><p id="lockP" style="color:var(--muted);font-size:.92rem;margin:4px auto 0"></p></div></div></section><section id="agravo" class="reveal"><span class="num">IV –</span><h2>Cabe agravo de instrumento?</h2><p class="lead">O rol do art. 1.015 é taxativo, com taxatividade mitigada pelo STJ. Classifique as decisões.</p><div class="sorter" id="agS"></div><div class="callout"><b>Não cabe agravo?</b> A questão não preclui: é suscitada em preliminar de apelação ou nas contrarrazões (art. 1.009, §1º). O STJ admite agravo fora do rol quando há urgência que torna inútil esperar a apelação (Tema 988).</div></section><section id="ed" class="reveal"><span class="num">V –</span><h2>Embargos de declaração</h2><p class="lead">Toque nos cartões: os quatro vícios e o efeito que mais importa.</p><div class="flips" id="edF"></div></section><section id="posse" class="reveal"><span class="num">VI –</span><h2>Força nova ou força velha</h2><p class="lead">Arraste o tempo desde o esbulho e veja qual rito a possessória segue.</p><div class="panel"><div class="days" id="dias"></div><div class="slider"><input type="range" id="sl" min="1" max="900" value="120" aria-label="Dias desde o esbulho"></div><div class="posse"><div class="n" id="pn"><b>Força nova</b>Menos de ano e dia. Procedimento especial, com liminar sem precisar demonstrar urgência, bastando provar posse, esbulho, data e perda da posse (arts. 558 e 561 e 562).</div><div class="v" id="pv"><b>Força velha</b>Passado ano e dia. Procedimento comum, sem perder o caráter possessório. Liminar só como tutela provisória, com os requisitos do art. 300 (art. 558, parágrafo único).</div></div></div><div class="callout"><b>Fungibilidade:</b> pediu reintegração e era manutenção? O juiz concede a proteção adequada, se os requisitos estiverem provados (art. 554).</div></section><section id="esp" class="reveal"><span class="num">VII –</span><h2>Que procedimento especial é esse?</h2><p class="lead">Leia o caso e escolha a ação.</p><div class="sorter" id="espS"></div></section><section id="inv" class="reveal"><span class="num">VIII –</span><h2>Inventário: cartório ou juiz?</h2><p class="lead">Ligue as condições do caso.</p><div class="panel"><div class="chips" id="invC"></div><div class="out" id="invO" aria-live="polite"></div></div></section><section id="arts" class="reveal"><span class="num">IX –</span><h2>Os artigos, em ordem</h2><p class="lead">Abra cada um.</p><div class="arts" id="artsW"></div><div class="artd" id="artsD" aria-live="polite"></div></section><section id="quiz" class="reveal"><div class="quiz"><h3>Teste rápido</h3><div class="prog"><i id="prog"></i></div><div class="qstage" id="qstage" aria-live="polite"></div></div></section>
+<footer>Inciso, Procedimentos Especiais e Recursos. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), da Constituição Federal e da legislação citada em cada trecho. Material em revisão jurídica: confira sempre o texto vigente da lei.</footer>
+</main><script>
+const $=s=>document.querySelector(s);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const replay=(el,c)=>{el.classList.remove(c);void el.offsetWidth;el.classList.add(c)};
+function flips(id,items){$(id).innerHTML=items.map(([f,b])=>`<button class="flip" aria-pressed="false"><div class="in"><div class="f"><strong>${f}</strong><small>Toque para virar</small></div><div class="b">${b}</div></div></button>`).join('');
+  $(id).addEventListener('click',e=>{const b=e.target.closest('.flip');if(b)b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')})}
+function chooser(chipsId,outId,items,render){const c=$(chipsId),o=$(outId);
+  c.innerHTML=items.map((it,i)=>`<button aria-pressed="false" data-i="${i}">${it[0]}</button>`).join('');
+  const pick=i=>{c.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.i==i));o.innerHTML=render(items[i]);replay(o,'swap')};
+  c.addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(+b.dataset.i)});pick(0)}
+function sorter(root,bins,cards){const R=$(root);let i=0,sc=0,miss=false;
+  R.innerHTML=`<div class="deck"></div><div class="bins">${bins.map((b,j)=>`<button data-j="${j}">${b}</button>`).join('')}</div><div class="sortfb" aria-live="polite"></div>`;
+  const deck=R.querySelector('.deck'),fb=R.querySelector('.sortfb');
+  const show=()=>{if(i>=cards.length){deck.innerHTML=`<div class="card">Fim. <span class="score">${sc} de ${cards.length}</span> de primeira. <button class="next" id="${root.slice(1)}re">Recomeçar</button></div>`;R.querySelectorAll('.bins button').forEach(b=>b.disabled=true);
+      R.querySelector('#'+root.slice(1)+'re').onclick=()=>{i=0;sc=0;R.querySelectorAll('.bins button').forEach(b=>b.disabled=false);fb.textContent='';show()};return}
+    deck.innerHTML=`<div class="card">${cards[i][0]}</div>`;miss=false};
+  R.querySelector('.bins').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||i>=cards.length)return;
+    const card=deck.querySelector('.card');
+    if(+b.dataset.j===cards[i][1]){if(!miss)sc++;fb.innerHTML=`<span class="score">Isso.</span> ${cards[i][2]}`;card.classList.add('ok');i++;setTimeout(show,480)}
+    else{miss=true;fb.innerHTML=`Não é essa. Pense de novo.`;card.classList.remove('no');void card.offsetWidth;card.classList.add('no')}});
+  show()}
+function stepper(root,steps){const R=$(root);let k=0;
+  R.innerHTML=`<div class="track">${steps.map(()=>'<i></i>').join('')}</div><div class="stage" aria-live="polite"></div><div class="stepnav"><button class="prev">Voltar</button><button class="pri nx">Avançar</button><span class="cnt" style="color:var(--muted)"></span></div>`;
+  const st=R.querySelector('.stage'),tr=R.querySelectorAll('.track i'),nx=R.querySelector('.nx'),pv=R.querySelector('.prev'),cnt=R.querySelector('.cnt');
+  const roman=n=>['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'][n];
+  const draw=()=>{const s=steps[k];st.innerHTML=`<div class="rn">${roman(k)}</div><div><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p>${s[2]?`<span class="art">${s[2]}</span>`:''}</div>`;replay(st,'swap');
+    tr.forEach((t,j)=>{t.className=j<k?'on':j===k?'cur':''});pv.disabled=k===0;nx.textContent=k===steps.length-1?'Recomeçar':'Avançar';cnt.textContent=`${k+1} de ${steps.length}`};
+  nx.onclick=()=>{k=k===steps.length-1?0:k+1;draw()};pv.onclick=()=>{if(k>0){k--;draw()}};draw()}
+function arts(wrap,det,list){const W=$(wrap),D=$(det);
+  W.innerHTML=list.map((a,i)=>`<button class="artb" aria-expanded="false" data-i="${i}"><b>${a[0]}</b><span>${a[1]}</span></button>`).join('');
+  W.addEventListener('click',e=>{const b=e.target.closest('.artb');if(!b)return;const was=b.getAttribute('aria-expanded')==='true';
+    W.querySelectorAll('.artb').forEach(x=>x.setAttribute('aria-expanded','false'));if(was){D.classList.remove('open');return}
+    b.setAttribute('aria-expanded','true');const a=list[+b.dataset.i];D.innerHTML=`<strong>${a[0]}.</strong> ${a[2]}`;D.classList.add('open')})}
+function quiz(stageId,progId,qs){let qi=0,score=0;const st=$(stageId),pg=$(progId);
+  const showQ=()=>{pg.style.width=(qi/qs.length*100)+'%';
+    if(qi>=qs.length){st.innerHTML=`<p style="font-family:var(--serif);font-size:1.8rem;margin:0">${score} de ${qs.length}</p><p>${score===qs.length?'Gabaritou.':'Volte aos simuladores e aos artigos, depois tente de novo.'}</p><button class="next" id="qagain">Refazer o teste</button>`;$('#qagain').onclick=()=>{qi=0;score=0;showQ()};return}
+    const q=qs[qi];st.innerHTML=`<p style="margin:0">${qi+1}. ${q[0]}</p><div class="opts">${q[1].map((o,i)=>`<button data-i="${i}">${o}</button>`).join('')}</div>`;replay(st,'swap');
+    st.querySelector('.opts').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i,bs=st.querySelectorAll('.opts button');bs.forEach(x=>x.disabled=true);bs[q[2]].classList.add('ok');if(i===q[2])score++;else b.classList.add('no');
+      st.insertAdjacentHTML('beforeend',`<p class="why">${q[3]}</p><button class="next" id="qnx">${qi+1<qs.length?'Próxima pergunta':'Ver resultado'}</button>`);$('#qnx').onclick=()=>{qi++;showQ()};$('#qnx').focus()},{once:true})};
+  showQ()}
+
+
+const W=document.getElementById('wiz'),L=document.querySelectorAll('#ladder div');let path=[];
+const fim=(nome,dias,art,lvl,txt)=>({end:nome,dias,art,lvl,txt});
+const tree={q:'Quem proferiu a decisão?',a:[
+ ['Juiz de primeiro grau',{q:'Que tipo de decisão é?',a:[
+   ['Sentença',fim('Apelação',15,'art. 1.009',[0,1],'Interposta no juízo de origem, que não faz juízo de admissibilidade; sobe ao tribunal (art. 1.010, §3º).')],
+   ['Interlocutória do rol do art. 1.015',fim('Agravo de instrumento',15,'art. 1.015',[0,1],'Interposto diretamente no tribunal. Também cabe contra interlocutórias na liquidação, no cumprimento de sentença, na execução e no inventário (parágrafo único).')],
+   ['Interlocutória fora do rol',fim('Sem recurso imediato',0,'art. 1.009, §1º',[0],'Alegue em preliminar de apelação ou nas contrarrazões. Exceção: urgência que torne inútil esperar (STJ, Tema 988).')]]}],
+ ['Relator, sozinho, no tribunal',fim('Agravo interno',15,'art. 1.021',[1],'Dirigido ao órgão colegiado. Se manifestamente inadmissível ou improcedente por unanimidade, multa de 1% a 5% do valor da causa (§4º).')],
+ ['Tribunal, em acórdão',{q:'Qual é o vício alegado?',a:[
+   ['Ofensa à lei federal ou divergência de interpretação',fim('Recurso especial',15,'CF, art. 105, III',[1,2],'Exige prequestionamento e não reexamina provas (Súmula 7 do STJ).')],
+   ['Ofensa direta à Constituição',fim('Recurso extraordinário',15,'CF, art. 102, III',[1,3],'Exige repercussão geral da questão constitucional (CF, art. 102, §3º).')]]}],
+ ['Qualquer uma, com omissão, obscuridade, contradição ou erro material',fim('Embargos de declaração',5,'art. 1.022',[0,1,2,3],'Julgados pelo próprio órgão que decidiu. Interrompem o prazo dos outros recursos (art. 1.026).')]]};
+const draw=n=>{
+ const p=`<div class="path">${path.map(x=>`<span>${x}</span>`).join('')}</div>`;
+ L.forEach(d=>d.classList.remove('lit'));
+ if(n.end){
+  W.innerHTML=p+`<div class="end"><svg class="clock" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="var(--soft)" stroke-width="10"/><circle class="arc" cx="50" cy="50" r="42" fill="none" stroke="var(--seal)" stroke-width="10" stroke-dasharray="263.9" stroke-dashoffset="263.9" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" font-family="Libre Caslon Text,serif" font-size="24" fill="var(--ink)">${n.dias||'–'}</text></svg><div><div class="t">${n.end}</div><p style="margin:2px 0">${n.dias?n.dias+' dias úteis. ':''}${n.txt}</p><span class="art" style="display:inline-block;font-size:.86rem;color:var(--seal);border:1.5px solid var(--seal);padding:1px 8px">${n.art}</span></div></div><div class="stepnav"><button class="pri" id="wr">Recomeçar</button></div>`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{W.querySelector('.arc').style.strokeDashoffset=263.9*(1-(n.dias||0)/15)}));
+  n.lvl.forEach((l,i)=>setTimeout(()=>L[l].classList.add('lit'),i*280));
+  document.getElementById('wr').onclick=()=>{path=[];draw(tree)}}
+ else{W.innerHTML=p+`<div class="q">${n.q}</div><div class="ans">${n.a.map((a,i)=>`<button data-i="${i}">${a[0]}</button>`).join('')}</div>`;
+  W.querySelector('.ans').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=n.a[+b.dataset.i];path.push(a[0]);draw(a[1])}}
+ replay(W.lastElementChild,'swap')};
+draw(tree);
+
+chooser('#pzC','#pzO',[
+ ['Regra geral','15 dias úteis','Apelação, agravo de instrumento, agravo interno, recurso especial, extraordinário, ordinário e embargos de divergência (art. 1.003, §5º).'],
+ ['Embargos de declaração','5 dias úteis','A única exceção do CPC (art. 1.023). Interrompem o prazo dos demais recursos para ambas as partes (art. 1.026).'],
+ ['Fazenda, MP e Defensoria','Em dobro','30 dias úteis na regra geral; 10 nos embargos de declaração (arts. 180, 183 e 186).'],
+ ['Contrarrazões','15 dias úteis','O recorrido responde no mesmo prazo do recurso (art. 1.010, §1º, para a apelação).']],
+ x=>`<div class="t">${x[1]}</div><p><b>${x[0]}.</b> ${x[2]}</p>`);
+
+chooser('#efC','#lockO',[
+ ['Sentença comum',0,'Regra: a apelação tem efeito suspensivo (art. 1.012, caput).'],
+ ['Condena a pagar alimentos',1,'Art. 1.012, §1º, II.'],
+ ['Confirma, concede ou revoga tutela provisória',1,'Art. 1.012, §1º, V.'],
+ ['Decreta a interdição',1,'Art. 1.012, §1º, VI.'],
+ ['Julga procedente a instituição de arbitragem',1,'Art. 1.012, §1º, IV.'],
+ ['Extingue ou julga improcedentes embargos do executado',1,'Art. 1.012, §1º, III.']],
+ x=>{const lk=document.getElementById('lock');lk.classList.toggle('open',!!x[1]);document.getElementById('lockT').textContent=x[1]?'Produz efeitos já':'Efeitos suspensos';document.getElementById('lockT').style.color=x[1]?'var(--sage)':'var(--seal)';
+   document.getElementById('lockP').textContent=x[1]?'O apelado pode pedir o cumprimento provisório. O apelante pode requerer efeito suspensivo ao tribunal (§§ 2º a 4º).':'A sentença só produz efeitos depois do julgamento da apelação.';return ''});
+
+sorter('#agS',['Cabe agravo','Não cabe agora'],[
+ ['Decisão que indefere a tutela de urgência.',0,'Art. 1.015, I.'],
+ ['Decisão que indefere a produção de prova testemunhal.',1,'Fora do rol. Vai em preliminar de apelação.'],
+ ['Decisão que rejeita o pedido de gratuidade da justiça.',0,'Art. 1.015, V.'],
+ ['Decisão que redistribui o ônus da prova.',0,'Art. 1.015, XI, com remissão ao art. 373, §1º.'],
+ ['Decisão que rejeita a alegação de incompetência relativa.',1,'Fora do rol, em regra. Discute-se a mitigação pelo Tema 988 quando houver urgência.'],
+ ['Decisão interlocutória proferida na execução.',0,'Art. 1.015, parágrafo único: qualquer interlocutória na execução é agravável.']]);
+
+flips('#edF',[
+ ['Omissão','Ponto ou questão sobre o qual o juiz <em>devia se pronunciar e não se pronunciou</em> (art. 1.022, II).'],
+ ['Contradição','Proposições <em>inconciliáveis dentro da própria decisão</em> (art. 1.022, I).'],
+ ['Obscuridade','Decisão <em>ininteligível</em>, que não permite saber o que foi decidido (art. 1.022, I).'],
+ ['Erro material','Engano evidente, como <em>nome ou valor errado</em> (art. 1.022, III).'],
+ ['Efeito interruptivo','Interrompem o prazo para outros recursos, <em>para ambas as partes</em> (art. 1.026).'],
+ ['Protelatórios','Multa de até <em>2%</em> do valor da causa; na reiteração, até 10% (art. 1.026, §§ 2º e 3º).']]);
+
+const sl=document.getElementById('sl'),pd=document.getElementById('dias');
+const pos=()=>{const d=+sl.value,nova=d<=366;pd.textContent=`${d} ${d===1?'dia':'dias'} desde o esbulho`;
+ document.getElementById('pn').classList.toggle('on',nova);document.getElementById('pv').classList.toggle('on',!nova)};
+sl.oninput=pos;pos();
+
+sorter('#espS',['Consignação em pagamento','Exigir contas','Monitória','Embargos de terceiro'],[
+ ['O credor se recusa a receber o aluguel e o devedor quer se liberar da dívida.',0,'Art. 539.'],
+ ['O sócio quer que o administrador demonstre como geriu os recursos da sociedade.',1,'Art. 550. O réu tem 15 dias para prestar as contas ou contestar.'],
+ ['O credor tem um cheque prescrito e quer receber o valor.',2,'Prova escrita sem eficácia de título executivo (art. 700).'],
+ ['O carro de Ana foi penhorado numa execução contra outra pessoa.',3,'Quem não é parte e sofre constrição sobre bem que possui (art. 674).']]);
+
+chooser('#invC','#invO',[
+ ['Todos capazes, de acordo, sem testamento','Pode ser em cartório','Escritura pública, com advogado ou defensor assistindo as partes (art. 610, §§ 1º e 2º).'],
+ ['Há herdeiro incapaz','Em regra, judicial','O art. 610, caput, exige o inventário judicial. Normas recentes do CNJ admitem exceções em cartório: confira a regra vigente.'],
+ ['Herdeiros em desacordo','Judicial','Sem consenso, não há escritura possível.'],
+ ['Prazos','2 meses para abrir','O inventário deve ser instaurado em 2 meses da abertura da sucessão e concluído em 12, prorrogáveis (art. 611).']],
+ x=>`<div class="t">${x[1]}</div><p><b>${x[0]}.</b> ${x[2]}</p>`);
+
+arts('#artsW','#artsD',[
+ ['Art. 554','Fungibilidade','A propositura de uma ação possessória no lugar de outra não impede o juiz de conceder a proteção legal adequada.'],
+ ['Art. 558','Ano e dia','Rito especial para a ação proposta dentro de ano e dia do esbulho ou da turbação; depois, procedimento comum.'],
+ ['Art. 610','Inventário','Havendo testamento ou interessado incapaz, inventário judicial. Todos capazes e concordes: pode ser por escritura pública.'],
+ ['Art. 700','Monitória','Quem tem prova escrita sem eficácia de título executivo pode exigir pagamento, entrega de coisa ou obrigação de fazer ou não fazer.'],
+ ['Art. 1.003, §5º','Prazo recursal','Quinze dias para interpor e responder, salvo embargos de declaração.'],
+ ['Art. 1.009','Apelação','Cabe contra a sentença. Questões não agraváveis são suscitadas em preliminar.'],
+ ['Art. 1.012','Efeito suspensivo','Regra na apelação, com as exceções do §1º.'],
+ ['Art. 1.015','Agravo de instrumento','Rol de interlocutórias agraváveis, mais as da liquidação, cumprimento, execução e inventário.'],
+ ['Art. 1.022','Embargos de declaração','Contra qualquer decisão, para esclarecer obscuridade, eliminar contradição, suprir omissão ou corrigir erro material.'],
+ ['Art. 1.026','Interrupção','Os embargos de declaração não têm efeito suspensivo e interrompem o prazo para outros recursos.']]);
+
+quiz('#qstage','#prog',[
+ ['Qual o prazo dos embargos de declaração?',['15 dias','5 dias','10 dias'],1,'Art. 1.023.'],
+ ['Decisão que indefere prova pericial. Qual o caminho?',['Agravo de instrumento','Preliminar de apelação','Agravo interno'],1,'Fora do rol do art. 1.015; vai na apelação (art. 1.009, §1º).'],
+ ['A sentença condenou a pagar alimentos e houve apelação. Ela já produz efeitos?',['Sim','Não'],0,'Art. 1.012, §1º, II.'],
+ ['Esbulho há oito meses. Que rito segue a reintegração de posse?',['Procedimento especial, com liminar','Procedimento comum','Juizado Especial'],0,'Menos de ano e dia: força nova (art. 558).'],
+ ['Acórdão que ofende diretamente a Constituição. Qual recurso?',['Recurso especial','Recurso extraordinário','Recurso ordinário'],1,'CF, art. 102, III.']]);
+
+</script></body></html>

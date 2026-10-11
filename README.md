@@ -14,6 +14,7 @@ Plataforma de estudo para estudantes de Direito: aulas interativas (simuladores,
 | `prototipo/vade-sucessoes.html` | Protótipo gerado (não editar à mão) |
 | `prototipo/roadmap-inciso.md` | Roadmap até o lançamento |
 | `prototipo/prompt-base44.md` | Prompt para gerar a plataforma no Base44 |
+| `materiais-originais/` | Aulas avulsas recebidas (HTML), guardadas como referência depois de incorporadas ao protótipo |
 | `Identidade Visual/` | Manual da marca e versão animada |
 | `*.svg` (raiz) | Exportações da logo e do ícone |
 

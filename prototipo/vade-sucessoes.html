@@ -1225,6 +1225,36 @@ a.course:hover{background:var(--soft)}
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(.7)}}
 }
+
+/* ===== recursos: árvore de cabimento, escada de instâncias e cadeado do efeito suspensivo ===== */
+.rw .art,.efx .art{display:inline-block;margin-top:8px;font-size:.8rem;color:var(--seal);border:1.5px solid var(--seal);padding:1px 8px}
+.rwpath{display:flex;gap:6px;flex-wrap:wrap;min-height:26px;margin-bottom:12px}
+.rwpath span{font-size:.78rem;border:1.5px solid var(--brass);color:var(--brass-text);padding:2px 8px}
+.rwq{font:400 1.45rem/1.2 var(--serif);margin-bottom:12px}
+.rwans{display:flex;flex-wrap:wrap;gap:8px}
+.rwans button{border:2px solid var(--rule);background:none;color:var(--ink);padding:9px 16px;text-align:left;font:500 .95rem/1.35 var(--sans);cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.rwans button:hover{background:var(--seal);border-color:var(--seal);color:var(--on-seal)}
+.rwend{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;border-left:6px solid var(--seal);padding:14px 18px;background:var(--seal-soft)}
+.rwend b{font:400 1.7rem/1.15 var(--serif);color:var(--seal);display:block}
+.rwend p{margin:4px 0 0;color:var(--ink)}
+.rwclock{width:92px;height:92px}
+.rwclock text{font:400 24px var(--serif);fill:var(--ink)}
+.rwclock .arc{transition:stroke-dashoffset 1s var(--ease)}
+.rwre{margin-top:14px}
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:20px;text-align:center}
+.ladder div{padding:12px 6px;border-top:6px solid var(--track);font-size:.85rem;color:var(--muted);transition:border-color .4s,background-color .4s,color .4s}
+.ladder div b{display:block;font:400 1.05rem/1.2 var(--serif);color:var(--ink)}
+.ladder div.lit{border-color:var(--seal);background:var(--seal-soft);color:var(--ink)}
+.efx{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:26px;align-items:center}
+.efops{flex-direction:column;align-items:stretch}
+.lockw{text-align:center}
+.lock svg{width:110px;height:128px}
+.lock .shack{transition:transform .6s cubic-bezier(.3,1.5,.4,1);transform-origin:84px 50px}
+.lock.open .shack{transform:translateY(-18px) rotate(-18deg)}
+.lockt b{display:block;font:400 1.35rem/1.2 var(--serif)}
+.lockt b.go{color:var(--sage)} .lockt b.stop{color:var(--seal)}
+.lockt p{color:var(--muted);font-size:.9rem;margin:4px auto 0}
+@media (max-width:720px){.efx,.rwend{grid-template-columns:minmax(0,1fr)}.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 
 <div class="app">
@@ -4527,7 +4557,11 @@ const PE_BANK=[
  {id:'qr2',t:'pe-rec',q:'Qual o prazo dos embargos de declaração?',o:['5 dias','15 dias','10 dias'],a:0,e:'Os embargos serão opostos em 5 dias. Os demais recursos têm prazo de 15 dias.',art:'CPC, arts. 1.003, §5º e 1.023'},
  {id:'qr3',t:'pe-rec',q:'Os embargos de declaração suspendem ou interrompem o prazo dos outros recursos?',o:['Suspendem','Interrompem','Nem um nem outro'],a:1,e:'Os embargos de declaração interrompem o prazo para a interposição de recurso: ele recomeça do zero.',art:'CPC, art. 1.026'},
  {id:'qr4',t:'pe-rec',q:'O recorrente não comprovou o preparo. O recurso é deserto de imediato?',o:['Sim','Não: é intimado a recolher em dobro','Só se for apelação'],a:1,e:'O recorrente que não comprovar o preparo será intimado para realizar o recolhimento em dobro, sob pena de deserção.',art:'CPC, art. 1.007, §4º'},
- {id:'qr5',t:'pe-rec',q:'Qual efeito todo recurso tem?',o:['Suspensivo','Devolutivo','Translativo'],a:1,e:'Todo recurso devolve ao órgão julgador o conhecimento da matéria impugnada.',art:'CPC, art. 1.013'}
+ {id:'qr5',t:'pe-rec',q:'Qual efeito todo recurso tem?',o:['Suspensivo','Devolutivo','Translativo'],a:1,e:'Todo recurso devolve ao órgão julgador o conhecimento da matéria impugnada.',art:'CPC, art. 1.013'},
+ {id:'qr6',t:'pe-rec',q:'O juiz indeferiu a prova pericial no meio do processo. Qual o caminho?',o:['Agravo de instrumento','Alegar em preliminar de apelação','Agravo interno'],a:1,e:'A decisão está fora do rol do art. 1.015; a questão não preclui e vai na apelação ou nas contrarrazões.',art:'CPC, art. 1.009, §1º'},
+ {id:'qr7',t:'pe-rec',q:'A sentença condenou a pagar alimentos e houve apelação. Ela já produz efeitos?',o:['Sim','Não, a apelação suspende'],a:0,e:'A apelação contra sentença que condena a pagar alimentos não tem efeito suspensivo.',art:'CPC, art. 1.012, §1º, II'},
+ {id:'qr8',t:'pe-rec',q:'Acórdão do tribunal que ofende diretamente a Constituição. Qual recurso?',o:['Recurso especial','Recurso extraordinário','Recurso ordinário'],a:1,e:'Recurso extraordinário ao STF, que exige repercussão geral.',art:'CF, art. 102, III'},
+ {id:'qr9',t:'pe-rec',q:'O relator decidiu sozinho no tribunal. Qual recurso leva a questão ao colegiado?',o:['Agravo interno','Agravo de instrumento','Embargos infringentes'],a:0,e:'Agravo interno, em 15 dias úteis.',art:'CPC, art. 1.021'}
 ];
 const PE_CARDS=[
  {id:'pec1',t:'pe-cons',f:'Consignação extrajudicial',b:'Depósito bancário no lugar do pagamento; o credor tem 10 dias. Aceita ou fica em silêncio: o devedor se libera. Recusa por escrito: cabe a ação consignatória.',art:'CPC, art. 539'},
@@ -4562,6 +4596,58 @@ function juizado(){
       a.complexa?{tone:'bad',t:'Não cabe no Juizado',d:'A necessidade de perícia complexa afasta a menor complexidade exigida (CF, art. 98, I).'}:
       !a.valor?{tone:'warn',t:'Cabe, renunciando ao excedente',d:'A opção pelo Juizado importa renúncia ao crédito que passar de 40 salários mínimos, salvo conciliação (Lei 9.099/95, art. 3º, §3º).'}:
       {tone:'ok',t:'Cabe no Juizado Especial Cível',d:'Até 20 salários mínimos, sem advogado obrigatório; de 20 a 40, com advogado (art. 9º).'}});
+}
+
+/* árvore de cabimento: pergunta a pergunta até o recurso, com o prazo num relógio e a escada de instâncias */
+function recursoWiz(){
+  const id=uid('rw'),fim=(nome,dias,art,lvl,txt)=>({end:nome,dias,art,lvl,txt});
+  const tree={q:'Quem proferiu a decisão?',a:[
+    ['Juiz de primeiro grau',{q:'Que tipo de decisão é?',a:[
+      ['Sentença',fim('Apelação',15,'CPC, art. 1.009',[0,1],'Interposta no juízo de origem, que não faz juízo de admissibilidade; os autos sobem ao tribunal (art. 1.010, §3º).')],
+      ['Interlocutória do rol do art. 1.015',fim('Agravo de instrumento',15,'CPC, art. 1.015',[0,1],'Interposto diretamente no tribunal. Também cabe contra interlocutórias na liquidação, no cumprimento de sentença, na execução e no inventário (parágrafo único).')],
+      ['Interlocutória fora do rol',fim('Sem recurso imediato',0,'CPC, art. 1.009, §1º',[0],'A questão não preclui: alegue em preliminar de apelação ou nas contrarrazões. Exceção: urgência que torne inútil esperar (STJ, Tema 988).')]]}],
+    ['Relator, sozinho, no tribunal',fim('Agravo interno',15,'CPC, art. 1.021',[1],'Dirigido ao órgão colegiado. Se for manifestamente inadmissível ou improcedente por unanimidade, multa de 1% a 5% do valor da causa (§4º).')],
+    ['Tribunal, em acórdão',{q:'Qual é o vício alegado?',a:[
+      ['Ofensa à lei federal ou divergência de interpretação',fim('Recurso especial',15,'CF, art. 105, III',[1,2],'Exige prequestionamento e não reexamina provas (Súmula 7 do STJ).')],
+      ['Ofensa direta à Constituição',fim('Recurso extraordinário',15,'CF, art. 102, III',[1,3],'Exige repercussão geral da questão constitucional (CF, art. 102, §3º).')]]}],
+    ['Qualquer uma, com omissão, obscuridade, contradição ou erro material',fim('Embargos de declaração',5,'CPC, art. 1.022',[0,1,2,3],'Julgados pelo próprio órgão que decidiu. Interrompem o prazo dos outros recursos (art. 1.026).')]]};
+  later(()=>{
+    const root=$('#'+id),box=$('.rwbox',root),L=$$('.ladder div',root);let path=[];
+    function draw(n){
+      const p=`<div class="rwpath">${path.map(x=>`<span>${x}</span>`).join('')}</div>`;
+      L.forEach(d=>d.classList.remove('lit'));
+      if(n.end){
+        box.innerHTML=p+`<div class="rwend"><svg class="rwclock" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="var(--track)" stroke-width="10"/><circle class="arc" cx="50" cy="50" r="42" fill="none" stroke="var(--seal)" stroke-width="10" stroke-dasharray="263.9" stroke-dashoffset="263.9" transform="rotate(-90 50 50)"/><text x="50" y="57" text-anchor="middle">${n.dias||'–'}</text></svg><div><b>${n.end}</b><p>${n.dias?n.dias+' dias úteis. ':''}${n.txt}</p><span class="art">${n.art}</span></div></div><button class="btn small rwre" type="button">Recomeçar</button>`;
+        setTimeout(()=>{const a=$('.arc',box);if(a)a.style.strokeDashoffset=263.9*(1-(n.dias||0)/15)},60);
+        n.lvl.forEach((l,i)=>setTimeout(()=>L[l]&&L[l].classList.add('lit'),i*280));
+        $('.rwre',box).onclick=()=>{path=[];draw(tree)};
+      }else{
+        box.innerHTML=p+`<div class="rwq">${n.q}</div><div class="rwans">${n.a.map((a,i)=>`<button type="button" data-i="${i}">${a[0]}</button>`).join('')}</div>`;
+        $('.rwans',box).onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=n.a[+b.dataset.i];path.push(a[0]);draw(a[1])};
+      }
+      swapAnim(box);
+    }
+    draw(tree);
+  });
+  return `<div class="card rw" id="${id}"><div class="rwbox" aria-live="polite"></div><div class="ladder"><div><b>1º grau</b>juiz</div><div><b>Tribunal</b>TJ ou TRF</div><div><b>STJ</b>lei federal</div><div><b>STF</b>Constituição</div></div></div>`;
+}
+/* efeito suspensivo da apelação: o cadeado abre quando a sentença já produz efeitos */
+function efeitoLock(){
+  const id=uid('ef'),ops=[
+    ['Sentença comum',0,'Regra: a apelação tem efeito suspensivo (art. 1.012, caput).'],
+    ['Condena a pagar alimentos',1,'Art. 1.012, §1º, II.'],
+    ['Confirma, concede ou revoga tutela provisória',1,'Art. 1.012, §1º, V.'],
+    ['Decreta a interdição',1,'Art. 1.012, §1º, VI.'],
+    ['Julga procedente o pedido de instituição de arbitragem',1,'Art. 1.012, §1º, IV.'],
+    ['Extingue ou julga improcedentes embargos do executado',1,'Art. 1.012, §1º, III.']];
+  later(()=>{
+    const root=$('#'+id),lk=$('.lock',root);
+    function pick(i){const x=ops[i];$$('.efops button',root).forEach(b=>b.setAttribute('aria-pressed',b.dataset.i==i));lk.classList.toggle('open',!!x[1]);
+      const o=$('.lockt',root);o.innerHTML=`<b class="${x[1]?'go':'stop'}">${x[1]?'Produz efeitos já':'Efeitos suspensos'}</b><p>${x[1]?'O apelado pode pedir o cumprimento provisório; o apelante pode requerer efeito suspensivo ao tribunal (§§ 3º e 4º).':'A sentença só produz efeitos depois do julgamento da apelação.'}</p><span class="art">${x[2]}</span>`;swapAnim(o)}
+    $('.efops',root).addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(+b.dataset.i)});pick(0);
+  });
+  return `<div class="card efx" id="${id}"><div class="efops regimes">${ops.map((o,i)=>`<button type="button" data-i="${i}" aria-pressed="false">${o[0]}</button>`).join('')}</div>
+    <div class="lockw"><div class="lock"><svg viewBox="0 0 168 170" aria-hidden="true"><path class="shack" d="M50,80 V50 a34,34 0 0,1 68,0 V80" fill="none" stroke="var(--ink)" stroke-width="12"/><rect x="30" y="78" width="108" height="80" fill="var(--seal)"/><circle cx="84" cy="112" r="10" fill="#fff"/><rect x="80" y="112" width="8" height="24" fill="#fff"/></svg></div><div class="lockt" aria-live="polite"></div></div></div>`;
 }
 
 defCourse('procesp',{nome:'Procedimentos Especiais e Recursos',area:'Direito Processual',desc:'Consignação, monitória, possessórias, inventário, juizados e o sistema recursal, com simuladores de rito e de cabimento.',topics:PE_TOPICS,mods:PE_MODS,units:PE_UNITS,bank:PE_BANK,cards:PE_CARDS});
@@ -4624,6 +4710,11 @@ defLesson('pe-inv',{
       ['Todos capazes e de acordo, apresentando partilha amigável ao juiz.',1,'Homologada de plano (CPC, art. 659).'],
       ['Bens de até 1.000 salários mínimos, ainda que haja incapaz, havendo concordância do MP.',2,'Arrolamento comum (CPC, art. 664).'],
       ['Todos capazes, concordes, sem testamento, com advogado, em cartório.',3,'Escritura pública (CPC, art. 610, §1º).']]})},
+    {id:'cartorio',nav:'Cartório ou juiz?',h:'Inventário: cartório ou juiz?',lead:'Escolha a situação do caso.',html:()=>W.picker({opts:[
+      {l:'Todos capazes e de acordo',t:'Pode ser em cartório',d:'Escritura pública, com advogado ou defensor assistindo as partes.',art:'CPC, art. 610, §§ 1º e 2º',v:1,c:'sage'},
+      {l:'Há herdeiro incapaz',t:'Em regra, judicial',d:'O art. 610 exige o inventário judicial. Normas recentes do CNJ admitem exceções em cartório: confira a regra vigente.',art:'CPC, art. 610',v:.5,c:'brass'},
+      {l:'Herdeiros em desacordo',t:'Judicial',d:'Sem consenso, não há escritura possível.',art:'CPC, art. 610',v:.15,c:'seal'},
+      {l:'Prazos',t:'2 meses para abrir',d:'O inventário deve ser instaurado em 2 meses da abertura da sucessão e concluído em 12, prorrogáveis.',art:'CPC, art. 611',v:.17,c:'brass'}]})},
     {id:'juizado',nav:'Cabe no juizado?',h:'Cabe no Juizado Especial?',lead:'Responda e veja.',html:juizado},
     {id:'principios',nav:'Princípios do JEC',h:'Princípios dos juizados',lead:'O art. 2º da Lei 9.099/95.',html:()=>W.flips([
       ['Oralidade','Atos <em>falados</em>, reduzidos a termo só no essencial.'],
@@ -4639,30 +4730,42 @@ defLesson('pe-inv',{
   ]
 });
 defLesson('pe-rec',{
-  hero:()=>heroSeal('CABIMENTO • TEMPESTIVIDADE • PREPARO • EFEITOS • '),
+  hero:()=>heroSeal('APELAÇÃO • AGRAVO • EMBARGOS • RESP • RE • '),
   title:['Recursos','cíveis'],
-  lead:'Qual recurso usar contra cada decisão, o que ele precisa ter para ser conhecido e o que acontece com a decisão enquanto ele tramita.',
+  lead:'Qual recurso cabe, em quanto tempo e com que efeito. E o que o tribunal confere antes de olhar o mérito.',
   sections:[
-    {id:'qual',nav:'Qual recurso?',h:'Que recurso cabe?',lead:'Classifique pela decisão impugnada.',html:()=>W.classify({buckets:['Apelação','Agravo de instrumento','Embargos de declaração','Recurso especial'],items:[
-      ['Sentença que julgou improcedente o pedido.',0,'Da sentença cabe apelação (art. 1.009).'],
-      ['Decisão que negou a tutela de urgência no meio do processo.',1,'Decisão interlocutória sobre tutela provisória (art. 1.015, I).'],
-      ['A sentença é omissa sobre um dos pedidos.',2,'Omissão, contradição, obscuridade ou erro material (art. 1.022).'],
-      ['Acórdão do TJ que contrariou lei federal.',3,'Cabe ao STJ (CF, art. 105, III, a).'],
-      ['Decisão que julgou parcialmente o mérito.',1,'Art. 356, §5º e art. 1.015, II.']]})},
+    {id:'qual',nav:'Qual recurso?',h:'Qual recurso cabe?',lead:'Responda sobre a decisão e veja o recurso, o prazo e até onde ele sobe.',html:recursoWiz},
+    {id:'prazo',nav:'Prazos',h:'Prazos recursais',lead:'Quinze dias úteis para quase tudo. A exceção cai em toda prova.',html:()=>W.picker({opts:[
+      {l:'Regra geral',t:'15 dias úteis',d:'Apelação, agravo de instrumento, agravo interno, recurso especial, extraordinário, ordinário e embargos de divergência.',art:'CPC, art. 1.003, §5º',v:.5,c:'sage'},
+      {l:'Embargos de declaração',t:'5 dias úteis',d:'A única exceção do CPC. Interrompem o prazo dos demais recursos, para ambas as partes (art. 1.026).',art:'CPC, art. 1.023',v:.17,c:'seal'},
+      {l:'Fazenda, MP e Defensoria',t:'Em dobro',d:'30 dias úteis na regra geral; 10 nos embargos de declaração.',art:'CPC, arts. 180, 183 e 186',v:1,c:'brass'},
+      {l:'Contrarrazões',t:'15 dias úteis',d:'O recorrido responde no mesmo prazo do recurso.',art:'CPC, art. 1.010, §1º',v:.5,c:'sage'}]})},
+    {id:'efeito',nav:'Efeito suspensivo',h:'A apelação suspende a sentença?',lead:'Em regra, sim. Escolha o tipo de sentença e veja se ela já produz efeitos.',html:efeitoLock},
+    {id:'agravo',nav:'Agravo',h:'Cabe agravo de instrumento?',lead:'O rol do art. 1.015 é taxativo, com taxatividade mitigada pelo STJ. Classifique as decisões.',html:()=>W.classify({buckets:['Cabe agravo','Não cabe agora'],items:[
+      ['Decisão que indefere a tutela de urgência.',0,'Art. 1.015, I.'],
+      ['Decisão que indefere a produção de prova testemunhal.',1,'Fora do rol. Vai em preliminar de apelação.'],
+      ['Decisão que rejeita o pedido de gratuidade da justiça.',0,'Art. 1.015, V.'],
+      ['Decisão que redistribui o ônus da prova.',0,'Art. 1.015, XI, com remissão ao art. 373, §1º.'],
+      ['Decisão que rejeita a alegação de incompetência relativa.',1,'Fora do rol, em regra. Discute-se a mitigação do Tema 988 quando houver urgência.'],
+      ['Decisão interlocutória proferida na execução.',0,'Art. 1.015, parágrafo único: qualquer interlocutória na execução é agravável.']]})+`<div class="callout"><b>Não cabe agravo?</b> A questão não preclui: é suscitada em preliminar de apelação ou nas contrarrazões (art. 1.009, §1º). O STJ admite agravo fora do rol quando há urgência que torna inútil esperar a apelação (Tema 988).</div>`},
+    {id:'ed',nav:'Embargos de declaração',h:'Embargos de declaração',lead:'Toque nos cartões: os quatro vícios e os efeitos que mais caem.',html:()=>W.flips([
+      ['Omissão','Ponto ou questão sobre o qual o juiz <em>devia se pronunciar e não se pronunciou</em> (art. 1.022, II).'],
+      ['Contradição','Proposições <em>inconciliáveis dentro da própria decisão</em> (art. 1.022, I).'],
+      ['Obscuridade','Decisão <em>ininteligível</em>, que não permite saber o que foi decidido (art. 1.022, I).'],
+      ['Erro material','Engano evidente, como <em>nome ou valor errado</em> (art. 1.022, III).'],
+      ['Efeito interruptivo','Interrompem o prazo para outros recursos, <em>para ambas as partes</em> (art. 1.026).'],
+      ['Protelatórios','Multa de até <em>2%</em> do valor da causa; na reiteração, até 10% (art. 1.026, §§ 2º e 3º).']])},
     {id:'admissibilidade',nav:'Admissibilidade',h:'O recurso será conhecido?',lead:'Antes de olhar o mérito, o tribunal confere os requisitos. Responda.',html:()=>W.wizard({qs:[['cab','O recurso é o cabível contra essa decisão?'],['interesse','O recorrente perdeu algo com a decisão (interesse)?'],['prazo','Foi interposto no prazo (15 dias; 5 nos embargos de declaração)?'],['preparo','O preparo foi comprovado (ou há isenção)?']],init:{cab:true,interesse:true,prazo:true,preparo:true},
       verdict:a=>!a.cab?{tone:'bad',t:'Não conhecido: cabimento',d:'Recurso errado. A fungibilidade só salva em caso de dúvida objetiva e sem erro grosseiro.'}:!a.interesse?{tone:'bad',t:'Não conhecido: falta interesse',d:'Só recorre quem sucumbiu e pode obter situação melhor.'}:!a.prazo?{tone:'bad',t:'Não conhecido: intempestivo',d:'Preclusão temporal. A intempestividade é vício insanável.'}:!a.preparo?{tone:'warn',t:'Ainda não é deserto',d:'O recorrente é intimado a recolher em dobro, em 5 dias, sob pena de deserção (art. 1.007, §4º).'}:{tone:'ok',t:'Recurso conhecido',d:'Passada a admissibilidade, o tribunal julga o mérito do recurso.'}})},
-    {id:'efeitos',nav:'Efeitos',h:'Os efeitos dos recursos',lead:'Toque nos cartões.',html:()=>W.flips([
-      ['Devolutivo','Todo recurso <em>devolve a matéria impugnada</em> ao tribunal, nos limites do que se pediu (art. 1.013).'],
-      ['Suspensivo','Impede a eficácia da decisão. A apelação tem, <em>em regra</em>; as exceções estão no art. 1.012, §1º.'],
-      ['Translativo','O tribunal conhece <em>de ofício</em> matérias de ordem pública, mesmo sem pedido.'],
-      ['Expansivo e regressivo','O julgamento pode <em>atingir outros sujeitos</em> ou atos; em alguns recursos, o próprio juiz pode <em>retratar-se</em>.']])},
     {id:'arts',nav:'Artigos',h:'Os artigos, em ordem',lead:'Do CPC.',html:()=>W.arts([
-      ['1.003, §5º','Prazo','Excetuados os embargos de declaração, o prazo para interpor e responder aos recursos é de 15 dias.'],
+      ['1.003, §5º','Prazo','Quinze dias para interpor e responder aos recursos, salvo embargos de declaração.'],
       ['1.007','Preparo','O recorrente comprova o preparo no ato de interposição; sem ele, é intimado a recolher em dobro.'],
-      ['1.009','Apelação','Da sentença cabe apelação.'],
-      ['1.015','Agravo de instrumento','Cabe contra interlocutórias sobre tutela provisória, mérito do processo, entre outras do rol.'],
-      ['1.022','Embargos de declaração','Contra decisão obscura, contraditória, omissa ou com erro material.'],
-      ['1.026','Interrupção','Os embargos de declaração interrompem o prazo para a interposição de recurso.']])}
+      ['1.009','Apelação','Cabe contra a sentença. Questões não agraváveis são suscitadas em preliminar.'],
+      ['1.012','Efeito suspensivo','Regra na apelação, com as exceções do §1º.'],
+      ['1.015','Agravo de instrumento','Rol de interlocutórias agraváveis, mais as da liquidação, cumprimento, execução e inventário.'],
+      ['1.021','Agravo interno','Contra decisão do relator, para o órgão colegiado.'],
+      ['1.022','Embargos de declaração','Contra qualquer decisão, para esclarecer obscuridade, eliminar contradição, suprir omissão ou corrigir erro material.'],
+      ['1.026','Interrupção','Os embargos de declaração não têm efeito suspensivo e interrompem o prazo para outros recursos.']])}
   ]
 });
 

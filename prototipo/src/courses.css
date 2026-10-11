@@ -214,3 +214,33 @@ a.course:hover{background:var(--soft)}
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(.7)}}
 }
+
+/* ===== recursos: árvore de cabimento, escada de instâncias e cadeado do efeito suspensivo ===== */
+.rw .art,.efx .art{display:inline-block;margin-top:8px;font-size:.8rem;color:var(--seal);border:1.5px solid var(--seal);padding:1px 8px}
+.rwpath{display:flex;gap:6px;flex-wrap:wrap;min-height:26px;margin-bottom:12px}
+.rwpath span{font-size:.78rem;border:1.5px solid var(--brass);color:var(--brass-text);padding:2px 8px}
+.rwq{font:400 1.45rem/1.2 var(--serif);margin-bottom:12px}
+.rwans{display:flex;flex-wrap:wrap;gap:8px}
+.rwans button{border:2px solid var(--rule);background:none;color:var(--ink);padding:9px 16px;text-align:left;font:500 .95rem/1.35 var(--sans);cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.rwans button:hover{background:var(--seal);border-color:var(--seal);color:var(--on-seal)}
+.rwend{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;border-left:6px solid var(--seal);padding:14px 18px;background:var(--seal-soft)}
+.rwend b{font:400 1.7rem/1.15 var(--serif);color:var(--seal);display:block}
+.rwend p{margin:4px 0 0;color:var(--ink)}
+.rwclock{width:92px;height:92px}
+.rwclock text{font:400 24px var(--serif);fill:var(--ink)}
+.rwclock .arc{transition:stroke-dashoffset 1s var(--ease)}
+.rwre{margin-top:14px}
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:20px;text-align:center}
+.ladder div{padding:12px 6px;border-top:6px solid var(--track);font-size:.85rem;color:var(--muted);transition:border-color .4s,background-color .4s,color .4s}
+.ladder div b{display:block;font:400 1.05rem/1.2 var(--serif);color:var(--ink)}
+.ladder div.lit{border-color:var(--seal);background:var(--seal-soft);color:var(--ink)}
+.efx{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:26px;align-items:center}
+.efops{flex-direction:column;align-items:stretch}
+.lockw{text-align:center}
+.lock svg{width:110px;height:128px}
+.lock .shack{transition:transform .6s cubic-bezier(.3,1.5,.4,1);transform-origin:84px 50px}
+.lock.open .shack{transform:translateY(-18px) rotate(-18deg)}
+.lockt b{display:block;font:400 1.35rem/1.2 var(--serif)}
+.lockt b.go{color:var(--sage)} .lockt b.stop{color:var(--seal)}
+.lockt p{color:var(--muted);font-size:.9rem;margin:4px auto 0}
+@media (max-width:720px){.efx,.rwend{grid-template-columns:minmax(0,1fr)}.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
