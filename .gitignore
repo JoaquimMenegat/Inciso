@@ -1,0 +1,13 @@
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
+
+# Python
+__pycache__/
+*.pyc
+
+# configurações locais do Claude Code
+.claude/settings.local.json
