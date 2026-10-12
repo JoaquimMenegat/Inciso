@@ -5870,7 +5870,7 @@ function viewPainel(){
   const days30=Object.keys(G.activity).filter(d=>+d>T-30&&G.activity[d]>0).length,tot30=S.attempts.filter(a=>a.d>T-30).length;
   const doneMods=MODS.filter(m=>lessonProgress(m.live)>=.999).length;
   return `
-  <header class="vh banner">${patHTML(48)}<div><p class="eyebrow">${COURSE.nome}</p><h1>Seu painel</h1><p class="sub">O que estudar hoje e como está sua preparação, tema por tema.</p></div>
+  <header class="vh banner">${patHTML(48)}<div><p class="eyebrow">${COURSE.nome}</p><h1>Seu painel</h1></div>
     <div class="exam"><span>Próxima prova</span><b class="num">${exam-T} dias</b><small>${fmtDay(exam,{weekday:'short'})} · data de exemplo</small></div></header>
   <div class="top">
     <article class="card prep">${dial(prep,132,'Preparo estimado')}
