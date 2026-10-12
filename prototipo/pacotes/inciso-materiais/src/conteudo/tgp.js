@@ -22,7 +22,7 @@ blocks:[
 [`Lide`,`Conflito de interesses qualificado por uma pretensão resistida. É o que a jurisdição contenciosa resolve.`]]},
 {t:`callout`,kind:`brass`,title:`Por que a ação é dirigida ao Estado`,html:`<p>No dia a dia se diz "vou entrar com uma ação contra fulano". Tecnicamente, a ação é um pedido ao Estado-juiz; o réu é quem suporta os efeitos do que o juiz decidir. A Lei 13.105/2015 é o Código de Processo Civil que organiza todo esse caminho.</p>`},
 {t:`table`,h:`Os sujeitos e seus nomes`,hint:`O nome muda conforme o tipo de processo.`,head:[`Sujeito`,`No processo civil`,`Na execução`,`No processo penal`],rows:[
-[`Autor`,`Requerente`,`Exequente`,`Denunciante (MP) ou querelante`],
+[`Autor`,`Requerente`,`Exequente`,`Ministério Público (autor da ação penal pública, por denúncia) ou querelante`],
 [`Réu`,`Requerido`,`Executado`,`Denunciado (no inquérito, indiciado)`],
 [`Juiz`,`Magistrado; "juízo" é o órgão`,`Juízo da execução`,`Juízo criminal`]]},
 {t:`svg`,h:`Como a Justiça está dividida`,html:`<svg viewBox="0 0 760 330" role="img" aria-label="Organograma: justiça comum (estadual e federal) e especial (trabalho, eleitoral, militar)">
@@ -62,7 +62,7 @@ blocks:[
 [`Indelegabilidade`,`O poder de decidir não pode ser transferido a particulares ou a outro órgão`,`Decorre do juiz natural`],
 [`Inafastabilidade`,`Nenhuma lesão ou ameaça a direito fica fora do Judiciário`,`${a(`CF, art. 5º, XXXV`)}; ${a(`CPC, art. 3º`)}`],
 [`Juiz natural`,`Ninguém escolhe o juiz nem é julgado por tribunal de exceção`,`${a(`CF, art. 5º, XXXVII e LIII`)}`]]},
-{t:`vs`,h:`Voluntária × contenciosa`,l:{t:`Jurisdição voluntária`,i:[`Sem lide: não há conflito entre as partes`,`Caráter administrativo: o juiz fiscaliza e homologa`,`Fala-se em interessados, não em partes`,`Exemplos: alvará, autorização de viagem de menor, divórcio consensual judicial`,`${a(`CPC, arts. 719 a 770`)}`]},r:{t:`Jurisdição contenciosa`,i:[`Há lide, com interesses opostos`,`O juiz decide o conflito com sentença de mérito`,`Forma coisa julgada material`,`Exemplos: cobrança, despejo, divórcio litigioso`,`Regra geral do CPC`]}},
+{t:`vs`,h:`Voluntária × contenciosa`,l:{t:`Jurisdição voluntária`,i:[`Sem lide: não há conflito entre as partes`,`Caráter administrativo: o juiz fiscaliza e homologa (corrente clássica; parte da doutrina vê natureza jurisdicional)`,`Fala-se em interessados, não em partes`,`Exemplos: alvará, autorização de viagem de menor, divórcio consensual judicial`,`${a(`CPC, arts. 719 a 770`)}`]},r:{t:`Jurisdição contenciosa`,i:[`Há lide, com interesses opostos`,`O juiz decide o conflito com sentença de mérito`,`Forma coisa julgada material`,`Exemplos: cobrança, despejo, divórcio litigioso`,`Regra geral do CPC`]}},
 {t:`chooser`,h:`Quem resolve o conflito?`,hint:`Do mais primitivo ao mais institucional.`,items:[
 [`Autotutela`,`As próprias partes, pela força`,`<p>Em regra proibida; pode ser crime de exercício arbitrário das próprias razões (${a(`CP, art. 345`)}). Exceções: legítima defesa e desforço imediato da posse (${a(`CC, art. 1.210, §1º`)}).</p>`],
 [`Autocomposição`,`As próprias partes, por acordo`,`<p>Transação, renúncia ou submissão. O Estado deve promovê-la sempre que possível (${a(`CPC, art. 3º, §§2º e 3º`)}).</p>`],
@@ -70,7 +70,7 @@ blocks:[
 [`Mediação`,`Terceiro que reaproxima as partes`,`<p>O mediador ajuda a restabelecer o diálogo; as partes constroem a solução. Indicada quando há vínculo anterior, como entre sócios ou familiares (${a(`CPC, art. 165, §3º`)}; Lei 13.140/2015).</p>`],
 [`Arbitragem`,`Árbitro escolhido pelas partes`,`<p>Só para direitos patrimoniais disponíveis. A sentença arbitral tem os mesmos efeitos da judicial e, se condenatória, é título executivo (${a(`Lei 9.307/96, arts. 1º e 31`)}).</p>`],
 [`Jurisdição`,`Estado-juiz`,`<p>Decide de forma imperativa e definitiva, com aptidão para a coisa julgada.</p>`]]},
-{t:`callout`,title:`Fungibilidade recursal`,html:`<p>Um recurso errado pode ser aproveitado como o correto se houver <b>dúvida objetiva</b> sobre qual cabia, <b>ausência de erro grosseiro</b> e interposição <b>no prazo do recurso correto</b>. O CPC prevê casos expressos: embargos de declaração recebidos como agravo interno (${a(`art. 1.024, §3º`)}), recurso especial remetido ao STF (${a(`art. 1.032`)}) e extraordinário remetido ao STJ (${a(`art. 1.033`)}).</p>`}],
+{t:`callout`,title:`Fungibilidade recursal`,html:`<p>Um recurso errado pode ser aproveitado como o correto se houver <b>dúvida objetiva</b> sobre qual cabia, <b>ausência de erro grosseiro</b> e interposição <b>no prazo do recurso correto</b>. O CPC prevê casos expressos: embargos de declaração recebidos como agravo interno, depois de intimado o recorrente para complementar as razões em 5 dias (${a(`art. 1.024, §3º`)}), recurso especial remetido ao STF (${a(`art. 1.032`)}) e extraordinário remetido ao STJ (${a(`art. 1.033`)}).</p>`}],
 quiz:[
 [`Um juiz se recusa a julgar dizendo que não há lei sobre o tema. Que princípio ele viola?`,[`Indelegabilidade`,`Indeclinabilidade`,`Territorialidade`],1,`${a(`CPC, art. 140`)}: o juiz não se exime de decidir alegando lacuna.`],
 [`Qual característica explica que o processo só começa com a petição inicial?`,[`Inércia`,`Definitividade`,`Substitutividade`],0,`Sem provocação, não há jurisdição (${a(`CPC, art. 2º`)}).`],
@@ -110,7 +110,7 @@ blocks:[
 [`IV`,`Não enfrentar argumentos capazes de mudar a conclusão`],
 [`V`,`Citar precedente ou súmula sem identificar seus fundamentos determinantes`],
 [`VI`,`Deixar de seguir precedente invocado sem demonstrar distinção ou superação`]]},
-{t:`vs`,h:`Duplo grau não é o mesmo que recorribilidade`,l:{t:`Recurso sem duplo grau pleno`,i:[`Recurso especial e extraordinário: só discutem direito, não reexaminam provas`,`Embargos de declaração: julgados pelo mesmo órgão`]},r:{t:`Duplo grau sem recurso`,i:[`Remessa necessária: sentença contra a Fazenda sobe ao tribunal mesmo sem apelação (${a(`CPC, art. 496`)})`,`Competência originária do STF: não há instância acima`]}},
+{t:`vs`,h:`Duplo grau não é o mesmo que recorribilidade`,l:{t:`Recurso sem duplo grau pleno`,i:[`Recurso especial e extraordinário: só discutem direito, não reexaminam provas`,`Embargos de declaração: julgados pelo mesmo órgão`,`Competência originária do STF: cabem só recursos internos (embargos de declaração, agravo interno); não há instância acima para reexaminar`]},r:{t:`Duplo grau sem recurso`,i:[`Remessa necessária: sentença contra a Fazenda sobe ao tribunal mesmo sem apelação (${a(`CPC, art. 496`)})`]}},
 {t:`juris`,h:`Na jurisprudência`,items:[
 {court:`Corte IDH`,year:`2012`,id:`Caso Mohamed vs. Argentina`,tese:`O condenado tem direito de recorrer da primeira condenação, mesmo quando ela reforma uma absolvição.`,html:`Fundamento: art. 8.2.h da Convenção Americana. O recurso deve permitir revisão ampla, de fato e de direito.`}]},
 {t:`callout`,kind:`sage`,title:`Publicidade e segredo de justiça`,html:`<p>Tramitam em segredo (${a(`CPC, art. 189`)}): interesse público ou social; casamento, divórcio, união estável, filiação, alimentos e guarda; dados protegidos pela intimidade; arbitragem com confidencialidade comprovada. Terceiro com interesse jurídico pode pedir certidão do dispositivo da sentença.</p>`}],
@@ -133,7 +133,7 @@ blocks:[
 [`De ordem`,`De tribunal para juízo a ele vinculado`,`TJ manda o juiz colher prova`],
 [`Arbitral`,`Do árbitro para o Judiciário`,`Cumprir medida decretada na arbitragem (${a(`CPC, art. 237, IV`)})`]]},
 {t:`steps`,h:`Homologação de decisão estrangeira`,items:[
-[`Decisão proferida no exterior`,`Sentença, decisão interlocutória ou sentença arbitral estrangeira precisa produzir efeitos aqui.`,`CPC, art. 960`],
+[`Decisão proferida no exterior`,`Sentença ou sentença arbitral estrangeira depende de homologação pelo STJ; decisão interlocutória estrangeira cumpre-se por carta rogatória, com exequatur (art. 960, §1º).`,`CPC, art. 960`],
 [`Pedido ao STJ`,`A competência é do Superior Tribunal de Justiça.`,`CF, art. 105, I, i`],
 [`Requisitos`,`Autoridade competente, citação regular, eficácia no país de origem, não ofender coisa julgada brasileira nem a ordem pública, tradução oficial.`,`CPC, art. 963`],
 [`Exceção`,`Sentença estrangeira de divórcio consensual produz efeitos no Brasil sem homologação.`,`CPC, art. 961, §5º`]]}],
@@ -197,7 +197,7 @@ blocks:[
 [`A: execução de nota promissória. B: ação para anular a mesma nota.`,0,`${a(`art. 55, §2º, I`)}.`]]},
 {t:`chooser`,h:`Conflito de competência`,hint:`${a(`CPC, art. 66 e arts. 951 a 959`)}.`,items:[
 [`Positivo`,`Dois ou mais juízes se dizem competentes`,`<p>${a(`art. 66, I`)}. O relator pode sobrestar o processo e designar um juiz para medidas urgentes (${a(`art. 955`)}).</p>`],
-[`Negativo`,`Dois ou mais juízes se dizem incompetentes`,`<p>${a(`art. 66, II`)}. Quem não acolher a competência declinada deve suscitar o conflito, salvo se atribuí-la a terceiro juízo.</p>`],
+[`Negativo`,`Dois ou mais juízes se dizem incompetentes`,`<p>${a(`art. 66, II`)}. Quem não acolher a competência declinada deve suscitar o conflito, salvo se atribuí-la a outro juízo (${a(`art. 66, parágrafo único`)}).</p>`],
 [`Sobre reunião`,`Divergência sobre reunir ou separar processos`,`<p>${a(`art. 66, III`)}.</p>`],
 [`Quem suscita`,`Partes, MP ou juiz`,`<p>O juiz por ofício; partes e MP por petição (${a(`arts. 951 e 953`)}). Não pode suscitar a parte que arguiu incompetência relativa (${a(`art. 952`)}).</p>`],
 [`Quem julga`,`O tribunal com ascendência sobre ambos`,`<p>Entre juízes do mesmo TJ, o TJ; entre juízes vinculados a tribunais diversos, o STJ (${a(`CF, art. 105, I, d`)}). O relator julga de plano se houver súmula ou tese repetitiva (${a(`art. 955, parágrafo único`)}).</p>`]]}],

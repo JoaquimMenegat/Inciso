@@ -25,7 +25,7 @@ blocks:[
 [`Lide`,`Conflito de interesses qualificado por uma pretensão resistida. É o que a jurisdição contenciosa resolve.`]]},
 {t:`callout`,kind:`brass`,title:`Por que a ação é dirigida ao Estado`,html:`<p>No dia a dia se diz "vou entrar com uma ação contra fulano". Tecnicamente, a ação é um pedido ao Estado-juiz; o réu é quem suporta os efeitos do que o juiz decidir. A Lei 13.105/2015 é o Código de Processo Civil que organiza todo esse caminho.</p>`},
 {t:`table`,h:`Os sujeitos e seus nomes`,hint:`O nome muda conforme o tipo de processo.`,head:[`Sujeito`,`No processo civil`,`Na execução`,`No processo penal`],rows:[
-[`Autor`,`Requerente`,`Exequente`,`Denunciante (MP) ou querelante`],
+[`Autor`,`Requerente`,`Exequente`,`Ministério Público (autor da ação penal pública, por denúncia) ou querelante`],
 [`Réu`,`Requerido`,`Executado`,`Denunciado (no inquérito, indiciado)`],
 [`Juiz`,`Magistrado; "juízo" é o órgão`,`Juízo da execução`,`Juízo criminal`]]},
 {t:`svg`,h:`Como a Justiça está dividida`,html:`<svg viewBox="0 0 760 330" role="img" aria-label="Organograma: justiça comum (estadual e federal) e especial (trabalho, eleitoral, militar)">
@@ -65,7 +65,7 @@ blocks:[
 [`Indelegabilidade`,`O poder de decidir não pode ser transferido a particulares ou a outro órgão`,`Decorre do juiz natural`],
 [`Inafastabilidade`,`Nenhuma lesão ou ameaça a direito fica fora do Judiciário`,`${a(`CF, art. 5º, XXXV`)}; ${a(`CPC, art. 3º`)}`],
 [`Juiz natural`,`Ninguém escolhe o juiz nem é julgado por tribunal de exceção`,`${a(`CF, art. 5º, XXXVII e LIII`)}`]]},
-{t:`vs`,h:`Voluntária × contenciosa`,l:{t:`Jurisdição voluntária`,i:[`Sem lide: não há conflito entre as partes`,`Caráter administrativo: o juiz fiscaliza e homologa`,`Fala-se em interessados, não em partes`,`Exemplos: alvará, autorização de viagem de menor, divórcio consensual judicial`,`${a(`CPC, arts. 719 a 770`)}`]},r:{t:`Jurisdição contenciosa`,i:[`Há lide, com interesses opostos`,`O juiz decide o conflito com sentença de mérito`,`Forma coisa julgada material`,`Exemplos: cobrança, despejo, divórcio litigioso`,`Regra geral do CPC`]}},
+{t:`vs`,h:`Voluntária × contenciosa`,l:{t:`Jurisdição voluntária`,i:[`Sem lide: não há conflito entre as partes`,`Caráter administrativo: o juiz fiscaliza e homologa (corrente clássica; parte da doutrina vê natureza jurisdicional)`,`Fala-se em interessados, não em partes`,`Exemplos: alvará, autorização de viagem de menor, divórcio consensual judicial`,`${a(`CPC, arts. 719 a 770`)}`]},r:{t:`Jurisdição contenciosa`,i:[`Há lide, com interesses opostos`,`O juiz decide o conflito com sentença de mérito`,`Forma coisa julgada material`,`Exemplos: cobrança, despejo, divórcio litigioso`,`Regra geral do CPC`]}},
 {t:`chooser`,h:`Quem resolve o conflito?`,hint:`Do mais primitivo ao mais institucional.`,items:[
 [`Autotutela`,`As próprias partes, pela força`,`<p>Em regra proibida; pode ser crime de exercício arbitrário das próprias razões (${a(`CP, art. 345`)}). Exceções: legítima defesa e desforço imediato da posse (${a(`CC, art. 1.210, §1º`)}).</p>`],
 [`Autocomposição`,`As próprias partes, por acordo`,`<p>Transação, renúncia ou submissão. O Estado deve promovê-la sempre que possível (${a(`CPC, art. 3º, §§2º e 3º`)}).</p>`],
@@ -73,7 +73,7 @@ blocks:[
 [`Mediação`,`Terceiro que reaproxima as partes`,`<p>O mediador ajuda a restabelecer o diálogo; as partes constroem a solução. Indicada quando há vínculo anterior, como entre sócios ou familiares (${a(`CPC, art. 165, §3º`)}; Lei 13.140/2015).</p>`],
 [`Arbitragem`,`Árbitro escolhido pelas partes`,`<p>Só para direitos patrimoniais disponíveis. A sentença arbitral tem os mesmos efeitos da judicial e, se condenatória, é título executivo (${a(`Lei 9.307/96, arts. 1º e 31`)}).</p>`],
 [`Jurisdição`,`Estado-juiz`,`<p>Decide de forma imperativa e definitiva, com aptidão para a coisa julgada.</p>`]]},
-{t:`callout`,title:`Fungibilidade recursal`,html:`<p>Um recurso errado pode ser aproveitado como o correto se houver <b>dúvida objetiva</b> sobre qual cabia, <b>ausência de erro grosseiro</b> e interposição <b>no prazo do recurso correto</b>. O CPC prevê casos expressos: embargos de declaração recebidos como agravo interno (${a(`art. 1.024, §3º`)}), recurso especial remetido ao STF (${a(`art. 1.032`)}) e extraordinário remetido ao STJ (${a(`art. 1.033`)}).</p>`}],
+{t:`callout`,title:`Fungibilidade recursal`,html:`<p>Um recurso errado pode ser aproveitado como o correto se houver <b>dúvida objetiva</b> sobre qual cabia, <b>ausência de erro grosseiro</b> e interposição <b>no prazo do recurso correto</b>. O CPC prevê casos expressos: embargos de declaração recebidos como agravo interno, depois de intimado o recorrente para complementar as razões em 5 dias (${a(`art. 1.024, §3º`)}), recurso especial remetido ao STF (${a(`art. 1.032`)}) e extraordinário remetido ao STJ (${a(`art. 1.033`)}).</p>`}],
 quiz:[
 [`Um juiz se recusa a julgar dizendo que não há lei sobre o tema. Que princípio ele viola?`,[`Indelegabilidade`,`Indeclinabilidade`,`Territorialidade`],1,`${a(`CPC, art. 140`)}: o juiz não se exime de decidir alegando lacuna.`],
 [`Qual característica explica que o processo só começa com a petição inicial?`,[`Inércia`,`Definitividade`,`Substitutividade`],0,`Sem provocação, não há jurisdição (${a(`CPC, art. 2º`)}).`],
@@ -113,7 +113,7 @@ blocks:[
 [`IV`,`Não enfrentar argumentos capazes de mudar a conclusão`],
 [`V`,`Citar precedente ou súmula sem identificar seus fundamentos determinantes`],
 [`VI`,`Deixar de seguir precedente invocado sem demonstrar distinção ou superação`]]},
-{t:`vs`,h:`Duplo grau não é o mesmo que recorribilidade`,l:{t:`Recurso sem duplo grau pleno`,i:[`Recurso especial e extraordinário: só discutem direito, não reexaminam provas`,`Embargos de declaração: julgados pelo mesmo órgão`]},r:{t:`Duplo grau sem recurso`,i:[`Remessa necessária: sentença contra a Fazenda sobe ao tribunal mesmo sem apelação (${a(`CPC, art. 496`)})`,`Competência originária do STF: não há instância acima`]}},
+{t:`vs`,h:`Duplo grau não é o mesmo que recorribilidade`,l:{t:`Recurso sem duplo grau pleno`,i:[`Recurso especial e extraordinário: só discutem direito, não reexaminam provas`,`Embargos de declaração: julgados pelo mesmo órgão`,`Competência originária do STF: cabem só recursos internos (embargos de declaração, agravo interno); não há instância acima para reexaminar`]},r:{t:`Duplo grau sem recurso`,i:[`Remessa necessária: sentença contra a Fazenda sobe ao tribunal mesmo sem apelação (${a(`CPC, art. 496`)})`]}},
 {t:`juris`,h:`Na jurisprudência`,items:[
 {court:`Corte IDH`,year:`2012`,id:`Caso Mohamed vs. Argentina`,tese:`O condenado tem direito de recorrer da primeira condenação, mesmo quando ela reforma uma absolvição.`,html:`Fundamento: art. 8.2.h da Convenção Americana. O recurso deve permitir revisão ampla, de fato e de direito.`}]},
 {t:`callout`,kind:`sage`,title:`Publicidade e segredo de justiça`,html:`<p>Tramitam em segredo (${a(`CPC, art. 189`)}): interesse público ou social; casamento, divórcio, união estável, filiação, alimentos e guarda; dados protegidos pela intimidade; arbitragem com confidencialidade comprovada. Terceiro com interesse jurídico pode pedir certidão do dispositivo da sentença.</p>`}],
@@ -136,7 +136,7 @@ blocks:[
 [`De ordem`,`De tribunal para juízo a ele vinculado`,`TJ manda o juiz colher prova`],
 [`Arbitral`,`Do árbitro para o Judiciário`,`Cumprir medida decretada na arbitragem (${a(`CPC, art. 237, IV`)})`]]},
 {t:`steps`,h:`Homologação de decisão estrangeira`,items:[
-[`Decisão proferida no exterior`,`Sentença, decisão interlocutória ou sentença arbitral estrangeira precisa produzir efeitos aqui.`,`CPC, art. 960`],
+[`Decisão proferida no exterior`,`Sentença ou sentença arbitral estrangeira depende de homologação pelo STJ; decisão interlocutória estrangeira cumpre-se por carta rogatória, com exequatur (art. 960, §1º).`,`CPC, art. 960`],
 [`Pedido ao STJ`,`A competência é do Superior Tribunal de Justiça.`,`CF, art. 105, I, i`],
 [`Requisitos`,`Autoridade competente, citação regular, eficácia no país de origem, não ofender coisa julgada brasileira nem a ordem pública, tradução oficial.`,`CPC, art. 963`],
 [`Exceção`,`Sentença estrangeira de divórcio consensual produz efeitos no Brasil sem homologação.`,`CPC, art. 961, §5º`]]}],
@@ -200,7 +200,7 @@ blocks:[
 [`A: execução de nota promissória. B: ação para anular a mesma nota.`,0,`${a(`art. 55, §2º, I`)}.`]]},
 {t:`chooser`,h:`Conflito de competência`,hint:`${a(`CPC, art. 66 e arts. 951 a 959`)}.`,items:[
 [`Positivo`,`Dois ou mais juízes se dizem competentes`,`<p>${a(`art. 66, I`)}. O relator pode sobrestar o processo e designar um juiz para medidas urgentes (${a(`art. 955`)}).</p>`],
-[`Negativo`,`Dois ou mais juízes se dizem incompetentes`,`<p>${a(`art. 66, II`)}. Quem não acolher a competência declinada deve suscitar o conflito, salvo se atribuí-la a terceiro juízo.</p>`],
+[`Negativo`,`Dois ou mais juízes se dizem incompetentes`,`<p>${a(`art. 66, II`)}. Quem não acolher a competência declinada deve suscitar o conflito, salvo se atribuí-la a outro juízo (${a(`art. 66, parágrafo único`)}).</p>`],
 [`Sobre reunião`,`Divergência sobre reunir ou separar processos`,`<p>${a(`art. 66, III`)}.</p>`],
 [`Quem suscita`,`Partes, MP ou juiz`,`<p>O juiz por ofício; partes e MP por petição (${a(`arts. 951 e 953`)}). Não pode suscitar a parte que arguiu incompetência relativa (${a(`art. 952`)}).</p>`],
 [`Quem julga`,`O tribunal com ascendência sobre ambos`,`<p>Entre juízes do mesmo TJ, o TJ; entre juízes vinculados a tribunais diversos, o STJ (${a(`CF, art. 105, I, d`)}). O relator julga de plano se houver súmula ou tese repetitiva (${a(`art. 955, parágrafo único`)}).</p>`]]}],
@@ -282,7 +282,7 @@ blocks:[
 [`Comprador evicto quer trazer quem lhe vendeu o imóvel.`,1,`${a(`art. 125, I`)}: evicção.`]]},
 {t:`flips`,h:`Detalhes que decidem questões`,items:[
 [`Denunciação não é obrigatória`,`Se não for feita ou for indeferida, o direito de regresso pode ser exercido em ação autônoma (${a(`art. 125, §1º`)}). Só se admite uma denunciação sucessiva (§2º).`],
-[`Seguradora condenada direto`,`Denunciada, pode ser condenada direta e solidariamente com o segurado, nos limites da apólice (${a(`Súmula 537 do STJ`)}).`],
+[`Seguradora condenada direto`,`Se aceitar a denunciação ou contestar o pedido, pode ser condenada direta e solidariamente com o segurado, nos limites da apólice (${a(`Súmula 537 do STJ`)}).`],
 [`Chamamento gera título`,`A sentença vale como título para quem pagar cobrar do devedor principal ou dos demais a quota de cada um (${a(`art. 132`)}).`],
 [`Desconsideração`,`Cabe em qualquer fase; suspende o processo, salvo se pedida na inicial; o sócio é citado e tem 15 dias. Pode ser inversa. Decide-se por interlocutória agravável (${a(`art. 1.015, IV`)}).`],
 [`Amicus curiae`,`Decisão de admissão é irrecorrível. Não altera a competência. Só recorre por embargos de declaração e no IRDR (${a(`art. 138, §§1º e 3º`)}).`]]},
@@ -298,7 +298,7 @@ intro:`Além das partes, o processo tem sujeitos com funções próprias: quem j
 blocks:[
 {t:`p`,h:`Poderes e deveres do juiz`,html:`<p>O juiz dirige o processo (${a(`CPC, art. 139`)}) e deve, entre outras coisas: assegurar igualdade; velar pela duração razoável; prevenir atos contrários à dignidade da justiça; determinar medidas indutivas, coercitivas, mandamentais ou sub-rogatórias; promover a autocomposição; <b>dilatar prazos e alterar a ordem das provas</b>; mandar suprir pressupostos processuais; e oficiar o MP e a Defensoria para ações coletivas. Não pode deixar de decidir por lacuna (${a(`art. 140`)}) e responde por perdas e danos se agir com dolo ou fraude (${a(`art. 143`)}).</p>`},
 {t:`vs`,h:`Impedimento × suspeição`,l:{t:`Impedimento (art. 144)`,i:[`Critério objetivo: basta o fato`,`Atuou como advogado, perito, MP ou testemunha`,`Já decidiu a causa em outro grau`,`Ele, cônjuge ou parente até o 3º grau é parte ou advogado (se já atuava antes)`,`Sócio ou diretor de pessoa jurídica parte; herdeiro, donatário ou empregador de parte`,`Gera nulidade e permite ação rescisória (${a(`art. 966, II`)})`]},r:{t:`Suspeição (art. 145)`,i:[`Critério subjetivo: risco à imparcialidade`,`Amigo íntimo ou inimigo da parte ou do advogado`,`Recebeu presentes, aconselhou a parte ou custeou o litígio`,`Parte é credora ou devedora dele ou de parentes`,`Interessado no julgamento; foro íntimo, sem declarar razões`,`Não autoriza rescisória`]}},
-{t:`callout`,kind:`brass`,title:`Suspeição provocada não vale`,html:`<p>É ilegítima a alegação de suspeição provocada por quem a alega ou feita por quem já praticou ato de aceitação do juiz (${a(`art. 145, §2º`)}). Ofender o juiz para depois chamá-lo de inimigo não funciona. A arguição se faz em 15 dias do conhecimento do fato (${a(`art. 146`)}) e suspende o processo (${a(`art. 313, III`)}).</p>`},
+{t:`callout`,kind:`brass`,title:`Suspeição provocada não vale`,html:`<p>É ilegítima a alegação de suspeição provocada por quem a alega ou feita por quem já praticou ato de aceitação do juiz (${a(`art. 145, §2º`)}). Ofender o juiz para depois chamá-lo de inimigo não funciona. A arguição se faz em 15 dias do conhecimento do fato (${a(`art. 146`)}) e o relator do incidente declara se o processo fica suspenso (${a(`art. 146, §2º`)}; ${a(`art. 313, III`)}).</p>`},
 {t:`table`,h:`As funções essenciais à justiça no processo civil`,head:[``,`Ministério Público`,`Advocacia Pública`,`Defensoria Pública`],rows:[
 [`Missão`,`Ordem jurídica, regime democrático, interesses sociais e individuais indisponíveis (${a(`CF, art. 127`)})`,`Representar e defender União, Estados, DF, Municípios, autarquias e fundações públicas`,`Orientação jurídica, direitos humanos e defesa dos necessitados`],
 [`Como atua`,`Parte ou fiscal da ordem jurídica (${a(`CPC, arts. 177 e 178`)})`,`Representação judicial, consultoria e assessoria`,`Parte ou curadora especial; pode propor ação civil pública`],
@@ -307,7 +307,7 @@ blocks:[
 [`Responsabilidade`,`Regressiva por dolo ou fraude (${a(`art. 181`)})`,`Regressiva por dolo ou fraude (${a(`art. 184`)})`,`Regressiva por dolo ou fraude (${a(`art. 187`)})`]]},
 {t:`chooser`,h:`Quando o MP intervém como fiscal`,hint:`${a(`CPC, art. 178`)}. Intimado, tem vista depois das partes e é intimado de todos os atos (art. 179).`,items:[
 [`Interesse público ou social`,`Intervém`,`<p>Inciso I.</p>`],[`Interesse de incapaz`,`Intervém`,`<p>Inciso II. Sem a intimação, o processo é nulo a partir de quando deveria intervir (${a(`art. 279`)}).</p>`],[`Litígio coletivo pela posse de terra`,`Intervém`,`<p>Inciso III, rural ou urbana.</p>`],[`Fazenda Pública é parte`,`Por si só, não`,`<p>A participação da Fazenda não configura, sozinha, interesse público (${a(`art. 178, parágrafo único`)}).</p>`]]},
-{t:`callout`,kind:`sage`,title:`Prazo próprio afasta o dobro`,html:`<p>O prazo em dobro não se aplica quando a lei fixa prazo específico para o ente público (${a(`arts. 180, §2º, 183, §2º e 186, §4º`)}). Empresas públicas e sociedades de economia mista não têm a prerrogativa: são pessoas de direito privado.</p>`}],
+{t:`callout`,kind:`sage`,title:`Prazo próprio afasta o dobro`,html:`<p>O prazo em dobro não se aplica quando a lei fixa prazo específico para o ente público (${a(`arts. 180, §2º, 183, §2º e 186, §4º`)}). Empresas públicas e sociedades de economia mista não têm a prerrogativa: são pessoas de direito privado. Exceção: os Correios (ECT) têm os privilégios processuais da Fazenda por lei especial (DL 509/69, art. 12).</p>`}],
 quiz:[
 [`Juiz que é amigo íntimo do advogado da parte é:`,[`impedido`,`suspeito`],1,`${a(`CPC, art. 145, I`)}.`],
 [`Cabe ação rescisória por suspeição?`,[`Sim`,`Não`],1,`Só o impedimento autoriza (${a(`art. 966, II`)}).`],
@@ -362,9 +362,9 @@ blocks:[
 [`Carta precatória ou rogatória`,`Juntada da comunicação do cumprimento ou da carta cumprida`],
 [`Diário da Justiça eletrônico`,`Publicação: considera-se publicado no primeiro dia útil após a disponibilização, e o prazo começa no dia útil seguinte (${a(`art. 224, §§2º e 3º`)})`],
 [`Carga dos autos`,`Dia da carga`],
-[`Citação eletrônica`,`Quinto dia útil após a confirmação do recebimento, que deve ocorrer em até 3 dias úteis (${a(`art. 246, §1º-A`)})`]]},
+[`Citação eletrônica`,`Quinto dia útil após a confirmação do recebimento (${a(`art. 231, IX`)}). Sem confirmação em 3 dias úteis, a citação é refeita por correio, oficial, escrivão ou edital, e o réu deve justificar a falta na primeira oportunidade, sob pena de multa de até 5% do valor da causa (${a(`art. 246, §§1º-A a 1º-C`)})`]]},
 {t:`flips`,h:`Regras de contagem`,items:[
-[`Só dias úteis`,`Para prazos processuais em dias (${a(`art. 219`)}). Prazos materiais, como a dilação do edital ou a prescrição, correm em dias corridos.`],
+[`Só dias úteis`,`Para prazos processuais em dias (${a(`art. 219`)}). Prazos de direito material, como a prescrição e a decadência, correm em dias corridos. A dilação do edital (20 a 60 dias, art. 257, III) é fixada pelo juiz, e há divergência sobre contá-la em dias úteis.`],
 [`Exclui e inclui`,`Exclui o dia do começo e inclui o do vencimento (${a(`art. 224`)}). Protrai se o expediente começar tarde, acabar cedo ou o sistema cair.`],
 [`Antes do prazo vale`,`Ato praticado antes do termo inicial é tempestivo (${a(`art. 218, §4º`)}).`],
 [`Renúncia`,`A parte pode renunciar ao prazo estabelecido só em seu favor, de forma expressa (${a(`art. 225`)}).`],
@@ -372,7 +372,7 @@ blocks:[
 [`Prorrogação`,`Até 2 meses em comarca de difícil transporte; mais em calamidade pública (${a(`art. 222`)}).`]]},
 {t:`keys`,h:`Prazos do juiz e do servidor`,hint:`São prazos impróprios: o descumprimento não gera preclusão.`,items:[[`5`,`dias`,`despachos (${a(`art. 226, I`)})`],[`10`,`dias`,`decisões interlocutórias (II)`],[`30`,`dias`,`sentenças (III)`],[`1`,`dia`,`servidor remeter os autos conclusos (${a(`art. 228`)})`]]},
 {t:`chooser`,h:`Prazo em dobro`,items:[
-[`Ministério Público`,`Dobro`,`<p>${a(`art. 180`)}, contado da intimação pessoal.</p>`],[`Fazenda Pública`,`Dobro`,`<p>${a(`art. 183`)}.</p>`],[`Defensoria e NPJ`,`Dobro`,`<p>${a(`art. 186`)}, inclusive escritórios de prática jurídica de faculdades e entidades conveniadas (§3º).</p>`],[`Litisconsortes`,`Dobro, com ressalvas`,`<p>Procuradores diferentes, de escritórios distintos, em autos físicos (${a(`art. 229`)}). Cessa se, de dois réus, só um contestar.</p>`],[`Lei com prazo próprio`,`Sem dobro`,`<p>Quando a lei fixa prazo específico para o ente.</p>`]]}],
+[`Ministério Público`,`Dobro`,`<p>${a(`art. 180`)}, contado da intimação pessoal.</p>`],[`Fazenda Pública`,`Dobro`,`<p>${a(`art. 183`)}.</p>`],[`Defensoria e NPJ`,`Dobro`,`<p>${a(`art. 186`)}, inclusive escritórios de prática jurídica de faculdades e entidades conveniadas (§3º).</p>`],[`Litisconsortes`,`Dobro, com ressalvas`,`<p>Procuradores diferentes, de escritórios distintos, em autos físicos (${a(`art. 229`)}). Cessa se, havendo só dois réus, apenas um contestar (§1º).</p>`],[`Lei com prazo próprio`,`Sem dobro`,`<p>Quando a lei fixa prazo específico para o ente.</p>`]]}],
 quiz:[
 [`Intimação publicada no DJe que foi disponibilizado na segunda-feira. Quando começa o prazo?`,[`Na segunda`,`Na terça`,`Na quarta`],2,`Publicação na terça (primeiro dia útil seguinte) e início na quarta (${a(`art. 224, §§2º e 3º`)}).`],
 [`O prazo para o juiz sentenciar é preclusivo?`,[`Sim`,`Não, é impróprio`],1,`${a(`art. 226`)}.`],
@@ -438,12 +438,12 @@ blocks:[
 [`Despesas`,`Custas (taxa paga ao Judiciário), indenização de viagem, remuneração de assistente técnico e diária de testemunha (${a(`art. 84`)}).`],
 [`Sentença`,`Condena o vencido a ressarcir o que o vencedor antecipou (${a(`art. 82, §2º`)}) e a pagar honorários (${a(`art. 85`)}).`],
 [`Recurso`,`O tribunal majora os honorários pelo trabalho adicional, até os tetos legais (${a(`art. 85, §11`)}).`]]},
-{t:`callout`,kind:`brass`,title:`Caução do autor que mora fora (art. 83)`,html:`<p>Autor, brasileiro ou estrangeiro, que reside fora do país ou deixa de residir durante o processo, sem imóveis no Brasil, presta caução para custas e honorários. Dispensada por tratado (como o Protocolo de Las Leñas, Decreto 6.891/2009), na execução de título extrajudicial, no cumprimento de sentença e na reconvenção.</p>`},
+{t:`callout`,kind:`brass`,title:`Caução do autor que mora fora (art. 83)`,html:`<p>Autor, brasileiro ou estrangeiro, que reside fora do país ou deixa de residir durante o processo, sem imóveis no Brasil, presta caução para custas e honorários. Dispensada por tratado (como o Protocolo de Las Leñas, Decreto 2.067/1996, e o acordo do Mercosul com Bolívia e Chile, Decreto 6.891/2009), na execução de título extrajudicial, no cumprimento de sentença e na reconvenção.</p>`},
 {t:`keys`,h:`Honorários de sucumbência (art. 85)`,items:[[`10–20%`,`regra geral`,`sobre condenação, proveito econômico ou valor atualizado da causa`],[`5%`,`monitória cumprida`,`honorários reduzidos para quem paga no prazo (art. 701)`],[`alimentar`,`natureza`,`vedada a compensação na sucumbência parcial (§14)`]]},
 {t:`p`,html:`<p>Para fixar o percentual, o juiz considera o zelo do profissional, o lugar do serviço, a natureza e importância da causa, o trabalho e o tempo exigidos (${a(`art. 85, §2º`)}).</p>`},
 {t:`calc`,kind:`honor`,h:`Honorários contra a Fazenda Pública`,hint:`Arraste o valor e veja as faixas se preencherem.`},
 {t:`chooser`,h:`Situações especiais`,items:[
-[`Equidade`,`Só para valores baixos ou inestimáveis`,`<p>O juiz arbitra por equidade quando o proveito é inestimável ou irrisório ou o valor da causa é muito baixo (${a(`§8º`)}). Em causas de grande valor, a equidade é vedada (STJ, Tema 1.076).</p>`],
+[`Equidade`,`Só para valores baixos ou inestimáveis`,`<p>O juiz arbitra por equidade quando o proveito é inestimável ou irrisório ou o valor da causa é muito baixo (${a(`§8º`)}). Nesses casos, observa a tabela da OAB ou o mínimo de 10%, o que for maior (§8º-A). Fora disso, a equidade é proibida (${a(`§6º-A`)}, Lei 14.365/2022; STJ, Tema 1.076). Nas causas com a Fazenda Pública, a questão aguarda o STF (Tema 1.255).</p>`],
 [`Perda do objeto`,`Paga quem deu causa`,`<p>Princípio da causalidade (${a(`§10`)}).</p>`],
 [`Sucumbência recíproca`,`Divisão proporcional`,`<p>Cada um vencedor e vencido em parte: despesas proporcionais. Se um perdeu parte mínima, o outro paga tudo (${a(`art. 86`)}). Ex.: pediu R$ 50 mil e ganhou R$ 49 mil.</p>`],
 [`Litisconsortes vencidos`,`Proporcional, ou solidária se omissa`,`<p>A sentença deve distribuir expressamente; se não o fizer, respondem solidariamente (${a(`art. 87`)}).</p>`],
@@ -454,7 +454,7 @@ blocks:[
 {court:`STF`,year:`ADI 6.053`,id:`ADI 6.053`,tese:`Advogados públicos podem receber honorários de sucumbência, respeitado o teto remuneratório.`,html:`O §19 do art. 85 é constitucional, mas a soma com o subsídio não pode ultrapassar o teto do art. 37, XI, da Constituição.`}]}],
 quiz:[
 [`Ação extinta por perda do objeto. Quem paga honorários?`,[`O autor, sempre`,`Quem deu causa ao processo`,`Ninguém`],1,`${a(`art. 85, §10`)}.`],
-[`Causa de R$ 50 milhões. O juiz pode fixar honorários por equidade?`,[`Sim`,`Não`],1,`STJ, Tema 1.076.`],
+[`Causa de R$ 50 milhões. O juiz pode fixar honorários por equidade?`,[`Sim`,`Não`],1,`Art. 85, §6º-A, e STJ, Tema 1.076 (entre particulares; com a Fazenda, aguarda-se o STF, Tema 1.255).`],
 [`Honorários podem ser compensados na sucumbência parcial?`,[`Sim`,`Não`],1,`${a(`art. 85, §14`)}.`]]},
 
 /* ================= XVI ================= */
