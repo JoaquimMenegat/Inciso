@@ -33,6 +33,7 @@ O projeto nasceu do interesse de um professor em vender material de estudo. O pr
 
   As outras 10 aparecem como "Em breve".
 - **Meta:** abrir as vendas em fevereiro de 2027, com um beta durante as provas de dezembro.
+- **Canal de acesso (12/10/2026):** no lançamento, o aluno compra na **Kiwify** e abre o Inciso pela área de membros (link ou iframe para o site hospedado). Sem login: o progresso fica no navegador, com aviso no primeiro acesso, exportar e importar e lembrete de backup. A plataforma própria com login vem depois, se as vendas validarem a ideia. Passos em `prototipo/roadmap-kiwify.md`.
 - O roadmap completo está em `prototipo/roadmap-inciso.md`.
 
 ## Identidade visual (v2, 12/10/2026)
@@ -81,4 +82,5 @@ Manuais em `Identidade Visual/`: `Inciso Identidade`, `Inciso Sistema` (v2) e `I
 1. Fase 0 do roadmap: direitos sobre o conteúdo, acordo com o professor, marca no INPI e domínio.
 2. Escrever o padrão de aula do Inciso, usando Teoria Geral do Processo como modelo.
 3. Separar o conteúdo do código, com as aulas em arquivos JSON ou Markdown.
-4. Construir a plataforma real: código próprio recomendado (Next.js + Supabase + Hotmart/Kiwify via webhook).
+4. Preparar o protótipo para venda na Kiwify (Etapa 3 de `prototipo/roadmap-kiwify.md`).
+5. Depois do lançamento, se validar: plataforma própria (Next.js + Supabase + Kiwify via webhook).

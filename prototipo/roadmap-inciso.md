@@ -100,6 +100,8 @@ Esta fase trava todas as outras. Não adianta construir antes de resolvê-la.
 
 ## Fase 2 — Plataforma mínima (semanas 4 a 10 · até 19/dez, em paralelo com a Fase 1)
 
+> **Atualização (12/10/2026):** o lançamento vai direto pela área de membros da Kiwify, sem login, com o progresso no navegador. Esta fase fica para depois do lançamento. Passos em `roadmap-kiwify.md`.
+
 **Decisão: Base44 ou código próprio.**
 
 - **Base44:** sobe rápido, mas prende você à ferramenta. Os simuladores personalizados são justamente o diferencial do Inciso, e lá ficam mais difíceis de manter.
