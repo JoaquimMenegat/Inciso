@@ -11,3 +11,7 @@ __pycache__/
 
 # configurações locais do Claude Code
 .claude/settings.local.json
+
+# pacotes vindos do Claude.ai: o zip e a pasta fontes/ derivam de notas de aula (não publicar)
+inciso-materiais*.zip
+**/fontes/

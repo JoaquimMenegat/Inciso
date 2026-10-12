@@ -1,6 +1,6 @@
 /* ================= estado ================= */
 /* G: estado do aluno (matéria atual e atividade diária); S: estado da matéria aberta */
-const GKEY='inciso-global-v3',CKEY=id=>'inciso-'+id+'-v3';
+const GKEY='inciso-global-v3',CKEY=id=>'inciso-'+id+'-v3'+((COURSES[id]&&COURSES[id].ver)||'');
 /* matérias liberadas no lançamento; as demais aparecem como "em breve" */
 const LIVE=['tgp','conhecimento','procesp'],isLive=id=>LIVE.includes(id);
 let G,S;

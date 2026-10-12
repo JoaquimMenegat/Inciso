@@ -244,3 +244,8 @@ a.course:hover{background:var(--soft)}
 .lockt b.go{color:var(--sage)} .lockt b.stop{color:var(--seal)}
 .lockt p{color:var(--muted);font-size:.9rem;margin:4px auto 0}
 @media (max-width:720px){.efx,.rwend{grid-template-columns:minmax(0,1fr)}.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ===== conteúdo dos pacotes (blocos em shadow DOM; aqui só o que aparece fora dele) ===== */
+.pkh{display:block;margin-bottom:26px}
+.art-ref{color:var(--seal);font-weight:600;white-space:nowrap}
+.why .art:empty,.answer .art:empty{display:none}

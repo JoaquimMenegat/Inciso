@@ -61,6 +61,11 @@ O manual está em `Identidade Visual/Inciso Identidade.dc.html`.
 - **Matérias:** um arquivo JS por matéria (`40-pena.js` … `51-administrativo.js`; Sucessões está em `10-content.js` e `30`–`32`).
   - Cada matéria é registrada com `defCourse(id,{...})`.
   - Cada aula é registrada com `defLesson(id,{...})`.
+- **Matérias de processo (pacote do Claude.ai):** as três matérias de lançamento vêm do pacote `inciso-materiais`, com 52 módulos e 157 questões, criado no projeto do Claude.ai.
+  - Importação: `python prototipo/importar_pacote.py <pasta inciso-materiais>`. Ela gera `54-pk-engine.js` (motor e CSS do pacote) e `6N-pk-<matéria>.js` (conteúdo); depois, rode `build.py`. Os arquivos gerados não devem ser editados à mão.
+  - `55-pack.js` converte cada módulo em aula: os blocos do pacote rodam isolados em shadow DOM e mantêm as animações originais; o quiz vai para o banco de questões, e os cartões que viram viram flashcards.
+  - As versões antigas dessas três matérias estão em `prototipo/legado/`.
+  - A pasta `fontes/` do pacote nunca vai para o Git, porque deriva de notas de aula.
 - **Matérias liberadas:** definidas por `LIVE`, no início de `prototipo/src/js/90-app.js`.
 - **Componentes:** os blocos interativos reutilizáveis ficam em `20-widgets.js`. As animações da marca ficam em `05-motion.js`; os ícones, em `06-icons.js`.
 - **Progresso:** salvo no navegador (localStorage). Ainda não há login nem banco de dados.
