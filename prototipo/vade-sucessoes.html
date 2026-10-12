@@ -997,17 +997,6 @@ input[type=range]{width:100%;accent-color:var(--brass)}
 .cont .bar i{background:var(--sage)}
 .lbar .bar i{background:var(--sage)}
 
-/* menu lateral recolhível (só no computador; no celular a navegação é a barra inferior) */
-.sbtog{position:absolute;top:22px;right:12px;background:none;border:0;color:var(--muted);font:600 .72rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;padding:6px 4px}
-.sbtog:hover{color:var(--seal)}
-.side{position:sticky}
-.sbopen{display:none;position:fixed;top:16px;left:16px;z-index:40;align-items:center;gap:8px;background:var(--sheet);color:var(--ink);border:2px solid var(--rule);border-left:5px solid var(--seal);font:600 .8rem/1 var(--sans);padding:9px 12px;cursor:pointer}
-.sbopen:hover{background:var(--seal-soft)}
-.app.nosb{grid-template-columns:minmax(0,1fr)}
-.app.nosb .side{display:none}
-.app.nosb main{padding-top:64px}
-body.nosb .sbopen{display:inline-flex}
-@media (max-width:900px){.sbtog,.sbopen,body.nosb .sbopen{display:none}.app.nosb main{padding-top:28px}}
 
 /* barra lateral: só o monograma "I –" com o selo (ícone da marca) */
 .side .brand{display:block;padding:0 10px;text-decoration:none}
@@ -1022,6 +1011,27 @@ body.nosb .sbopen{display:inline-flex}
   @keyframes monostamp{from{transform:scale(1.9);opacity:0}to{transform:none;opacity:1}}
   @keyframes monodash{from{transform:scaleX(0)}}
 }
+
+/* navegação horizontal no topo (computador); no celular continua a barra inferior */
+@media (min-width:901px){
+  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr}
+  .side{position:sticky;top:0;z-index:30;height:auto;flex-direction:row;align-items:center;gap:22px;padding:10px clamp(16px,3vw,40px);border-right:0;border-bottom:2px solid var(--rule);background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .side .brand{padding:0}
+  .side .mono{width:40px;height:40px}
+  .side .mono b{font-size:24px;transform:translateX(-5px)}
+  .side .mono i{left:23px;top:20px;width:9px}
+  .side .mono em{width:11px;height:11px;right:-4px;top:-4px}
+  .side .course{margin:0;padding:6px 12px;max-width:240px;min-width:0}
+  .side .course small{font-size:.62rem}
+  .side .course strong{font-size:1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nav{flex-direction:row;flex-wrap:nowrap;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{padding:9px 12px;gap:8px;white-space:nowrap;position:relative}
+  .nav a[aria-current="page"]{background:var(--seal-soft);box-shadow:inset 0 -3px 0 var(--seal)}
+  .nav .badge{margin-left:2px}
+  .lbar{top:var(--toph,78px)}
+}
+@media (min-width:901px) and (max-width:1180px){.nav a>span:not(.badge){display:none}.nav a{padding:10px}}
 
 /* ================= matérias e simuladores das novas matérias ================= */
 a.course{display:block;text-decoration:none;color:var(--ink);transition:background .12s}
@@ -1277,18 +1287,16 @@ a.course:hover{background:var(--soft)}
 </style>
 
 <div class="app">
-  <aside class="side" aria-label="Navegação">
-    <button class="sbtog" id="sbhide" type="button" aria-label="Recolher menu lateral" title="Recolher menu"><span aria-hidden="true">«</span> Recolher</button>
+  <header class="side" aria-label="Navegação">
     <a class="brand" href="#materias" aria-label="Inciso, início"><span class="mono" aria-hidden="true"><b>I</b><i></i><em></em></span></a>
     <a class="course" id="course" href="#materias"></a>
     <nav class="nav" id="nav"></nav>
-  </aside>
+  </header>
   <main>
     <div class="mtop"><span class="wm"><span class="wm-i">ı<span class="wm-dot"></span></span>nciso</span><span id="mtopc"></span></div>
     <div class="view" id="view"></div>
   </main>
 </div>
-<button class="sbopen" id="sbshow" type="button" aria-label="Mostrar menu lateral" title="Mostrar menu"><span aria-hidden="true">☰</span> Menu</button>
 <nav class="tabbar" id="tabbar" aria-label="Navegação"></nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -5858,7 +5866,7 @@ const NAV=[['materias','Matérias'],['painel','Painel'],['trilha','Trilha'],['re
 let currentNav='painel';
 function refreshNav(){
   const due=dueQueue().length,cur=currentNav;
-  $('#nav').innerHTML=NAV.map(([k,l])=>(k==='turma'?'<div class="sep"></div>':'')+`<a href="#${k}" data-nav="${k}" ${k===cur?'aria-current="page"':''}>${k===cur?ICON[k].replace('<svg','<svg class="icd"'):ICON[k]}<span>${l}</span>${k==='revisao'&&due?`<span class="badge">${due}</span>`:''}${k==='turma'?'<span class="tag">professor</span>':''}</a>`).join('');
+  $('#nav').innerHTML=NAV.map(([k,l])=>(k==='turma'?'<div class="sep"></div>':'')+`<a href="#${k}" data-nav="${k}" title="${l}" aria-label="${l}" ${k===cur?'aria-current="page"':''}>${k===cur?ICON[k].replace('<svg','<svg class="icd"'):ICON[k]}<span>${l}</span>${k==='revisao'&&due?`<span class="badge">${due}</span>`:''}${k==='turma'?'<span class="tag">professor</span>':''}</a>`).join('');
   $('#course').innerHTML=`<small>${COURSE.area} · trocar</small><strong>${COURSE.nome}</strong>`;$('#mtopc').textContent=COURSE.nome;
   $('#tabbar').innerHTML=NAV.filter(([k])=>k!=='turma').map(([k,l])=>`<a href="#${k}" ${k===cur?'aria-current="page"':''}>${ICON[k]}<span>${l}</span>${k==='revisao'&&due?'<i class="dot"></i>':''}</a>`).join('');
 }
@@ -6164,11 +6172,9 @@ function splash(){
   let done=false;const close=()=>{if(done)return;done=true;el.classList.add('out');setTimeout(()=>el.remove(),520)};
   el.addEventListener('click',close);setTimeout(close,3800);
 }
-/* recolher o menu lateral; a preferência fica neste navegador */
-function setSidebar(hide){$('.app').classList.toggle('nosb',hide);document.body.classList.toggle('nosb',hide);try{localStorage.setItem('inciso-nosb',hide?'1':'')}catch(e){}}
-$('#sbhide').addEventListener('click',()=>{setSidebar(true);$('#sbshow').focus()});
-$('#sbshow').addEventListener('click',()=>{setSidebar(false);$('#sbhide').focus()});
-try{if(localStorage.getItem('inciso-nosb'))setSidebar(true)}catch(e){}
+/* altura da barra do topo, para a barra da aula grudar logo abaixo dela */
+function topH(){const sd=$('.side');if(sd)document.documentElement.style.setProperty('--toph',(getComputedStyle(sd).position==='sticky'?sd.offsetHeight:0)+'px')}
+window.addEventListener('resize',topH);setTimeout(topH,0);
 window.addEventListener('hashchange',route);
 load();route();splash();
 

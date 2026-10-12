@@ -110,7 +110,7 @@ const NAV=[['materias','Matérias'],['painel','Painel'],['trilha','Trilha'],['re
 let currentNav='painel';
 function refreshNav(){
   const due=dueQueue().length,cur=currentNav;
-  $('#nav').innerHTML=NAV.map(([k,l])=>(k==='turma'?'<div class="sep"></div>':'')+`<a href="#${k}" data-nav="${k}" ${k===cur?'aria-current="page"':''}>${k===cur?ICON[k].replace('<svg','<svg class="icd"'):ICON[k]}<span>${l}</span>${k==='revisao'&&due?`<span class="badge">${due}</span>`:''}${k==='turma'?'<span class="tag">professor</span>':''}</a>`).join('');
+  $('#nav').innerHTML=NAV.map(([k,l])=>(k==='turma'?'<div class="sep"></div>':'')+`<a href="#${k}" data-nav="${k}" title="${l}" aria-label="${l}" ${k===cur?'aria-current="page"':''}>${k===cur?ICON[k].replace('<svg','<svg class="icd"'):ICON[k]}<span>${l}</span>${k==='revisao'&&due?`<span class="badge">${due}</span>`:''}${k==='turma'?'<span class="tag">professor</span>':''}</a>`).join('');
   $('#course').innerHTML=`<small>${COURSE.area} · trocar</small><strong>${COURSE.nome}</strong>`;$('#mtopc').textContent=COURSE.nome;
   $('#tabbar').innerHTML=NAV.filter(([k])=>k!=='turma').map(([k,l])=>`<a href="#${k}" ${k===cur?'aria-current="page"':''}>${ICON[k]}<span>${l}</span>${k==='revisao'&&due?'<i class="dot"></i>':''}</a>`).join('');
 }
@@ -416,10 +416,8 @@ function splash(){
   let done=false;const close=()=>{if(done)return;done=true;el.classList.add('out');setTimeout(()=>el.remove(),520)};
   el.addEventListener('click',close);setTimeout(close,3800);
 }
-/* recolher o menu lateral; a preferência fica neste navegador */
-function setSidebar(hide){$('.app').classList.toggle('nosb',hide);document.body.classList.toggle('nosb',hide);try{localStorage.setItem('inciso-nosb',hide?'1':'')}catch(e){}}
-$('#sbhide').addEventListener('click',()=>{setSidebar(true);$('#sbshow').focus()});
-$('#sbshow').addEventListener('click',()=>{setSidebar(false);$('#sbhide').focus()});
-try{if(localStorage.getItem('inciso-nosb'))setSidebar(true)}catch(e){}
+/* altura da barra do topo, para a barra da aula grudar logo abaixo dela */
+function topH(){const sd=$('.side');if(sd)document.documentElement.style.setProperty('--toph',(getComputedStyle(sd).position==='sticky'?sd.offsetHeight:0)+'px')}
+window.addEventListener('resize',topH);setTimeout(topH,0);
 window.addEventListener('hashchange',route);
 load();route();splash();

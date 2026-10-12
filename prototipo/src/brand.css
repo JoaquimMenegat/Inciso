@@ -218,17 +218,6 @@
 .cont .bar i{background:var(--sage)}
 .lbar .bar i{background:var(--sage)}
 
-/* menu lateral recolhível (só no computador; no celular a navegação é a barra inferior) */
-.sbtog{position:absolute;top:22px;right:12px;background:none;border:0;color:var(--muted);font:600 .72rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;padding:6px 4px}
-.sbtog:hover{color:var(--seal)}
-.side{position:sticky}
-.sbopen{display:none;position:fixed;top:16px;left:16px;z-index:40;align-items:center;gap:8px;background:var(--sheet);color:var(--ink);border:2px solid var(--rule);border-left:5px solid var(--seal);font:600 .8rem/1 var(--sans);padding:9px 12px;cursor:pointer}
-.sbopen:hover{background:var(--seal-soft)}
-.app.nosb{grid-template-columns:minmax(0,1fr)}
-.app.nosb .side{display:none}
-.app.nosb main{padding-top:64px}
-body.nosb .sbopen{display:inline-flex}
-@media (max-width:900px){.sbtog,.sbopen,body.nosb .sbopen{display:none}.app.nosb main{padding-top:28px}}
 
 /* barra lateral: só o monograma "I –" com o selo (ícone da marca) */
 .side .brand{display:block;padding:0 10px;text-decoration:none}
@@ -243,3 +232,24 @@ body.nosb .sbopen{display:inline-flex}
   @keyframes monostamp{from{transform:scale(1.9);opacity:0}to{transform:none;opacity:1}}
   @keyframes monodash{from{transform:scaleX(0)}}
 }
+
+/* navegação horizontal no topo (computador); no celular continua a barra inferior */
+@media (min-width:901px){
+  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr}
+  .side{position:sticky;top:0;z-index:30;height:auto;flex-direction:row;align-items:center;gap:22px;padding:10px clamp(16px,3vw,40px);border-right:0;border-bottom:2px solid var(--rule);background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .side .brand{padding:0}
+  .side .mono{width:40px;height:40px}
+  .side .mono b{font-size:24px;transform:translateX(-5px)}
+  .side .mono i{left:23px;top:20px;width:9px}
+  .side .mono em{width:11px;height:11px;right:-4px;top:-4px}
+  .side .course{margin:0;padding:6px 12px;max-width:240px;min-width:0}
+  .side .course small{font-size:.62rem}
+  .side .course strong{font-size:1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nav{flex-direction:row;flex-wrap:nowrap;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{padding:9px 12px;gap:8px;white-space:nowrap;position:relative}
+  .nav a[aria-current="page"]{background:var(--seal-soft);box-shadow:inset 0 -3px 0 var(--seal)}
+  .nav .badge{margin-left:2px}
+  .lbar{top:var(--toph,78px)}
+}
+@media (min-width:901px) and (max-width:1180px){.nav a>span:not(.badge){display:none}.nav a{padding:10px}}
