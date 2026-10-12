@@ -119,7 +119,7 @@ function refreshNav(){
 function viewPainel(){
   const T=today(),due=dueQueue().length,st=streak();
   const wk=S.attempts.filter(a=>a.d>T-7),wkAcc=wk.length?wk.filter(a=>a.ok).length/wk.length:null;
-  const prep=preparo(),weak=weakest(),exam=T+12;
+  const prep=preparo(),weak=weakest();
   const LM=MODS.find(m=>m.live===S.lastLesson)||MODS[3],lp=lessonProgress(LM.live);
   const next=MODS.find(m=>lessonProgress(m.live)<1)||LM;
   const doneQ=weak?S.attempts.filter(a=>a.d===T&&a.t===weak.id).length:0;
@@ -133,7 +133,7 @@ function viewPainel(){
   const doneMods=MODS.filter(m=>lessonProgress(m.live)>=.999).length;
   return `
   <header class="vh banner">${patHTML(48)}<div><p class="eyebrow">${COURSE.nome}</p><h1>Seu painel</h1></div>
-    <div class="exam"><span>Próxima prova</span><b class="num">${exam-T} dias</b><small>${fmtDay(exam,{weekday:'short'})} · data de exemplo</small></div></header>
+    </header>
   <div class="top">
     <article class="card prep">${dial(prep,132,'Preparo estimado')}
       <div><h2>Preparo estimado para a prova</h2><p>Média do seu domínio nos ${TOPICS.length} temas da prova. Sobe quando você acerta questões de temas novos e mantém os flashcards em dia.</p>
