@@ -1,116 +1,125 @@
 # Roadmap Inciso — até publicar na Kiwify
 
-*Versão 1 — 12/10/2026*
+*Versão 2 — 12/10/2026*
 
-**Meta:** abrir as vendas na Kiwify em **fevereiro de 2027**, sem construir login nem banco de dados.
+**Meta:** publicar na Kiwify até **quarta, 04/11/2026**, com folga até sexta, 06/11.
 
-**Como funciona nesta versão:**
-- O aluno compra na Kiwify e recebe acesso à área de membros.
-- Na área de membros, um link ou uma janela embutida (iframe) abre o Inciso, hospedado num site nosso.
-- O progresso fica salvo no navegador do aluno. Ele pode exportar e importar esse progresso para estudar em outro aparelho.
+**Decisões desta versão:**
+- **Quem vende:** Joaquim, como pessoa física (CPF).
+- **Sem professor parceiro.** O material é uma recriação própria. O conteúdo das aulas da faculdade serviu só de roteiro, e uma checagem de originalidade confirma isso antes da venda (Etapa 1).
+- **Sem login:** o aluno compra na Kiwify e abre o Inciso pela área de membros (link ou iframe para o site hospedado). O progresso fica no navegador, com aviso, exportar e importar e lembrete de backup.
+- **Lançamento:** as 3 matérias de processo. As outras 10 aparecem como "Em breve".
 
-Isso substitui, **para o lançamento**, a Fase 2 de `roadmap-inciso.md` (plataforma com login). A plataforma própria fica para depois que as vendas validarem a ideia (ver Etapa 7).
-
-**Riscos aceitos nesta versão:**
-- O progresso pode se perder se o aluno trocar de aparelho ou de navegador, limpar os dados, usar aba anônima ou, no Safari, passar uns 7 dias sem estudar.
-- O link do Inciso pode ser repassado para quem não comprou.
-- Não vemos o desempenho de cada aluno, só números gerais de uso.
+**Riscos aceitos:**
+- O progresso pode se perder se o aluno trocar de aparelho ou de navegador, limpar os dados ou, no Safari, passar uns 7 dias sem estudar.
+- O link pode ser repassado para quem não comprou.
+- Só vemos números gerais de uso, nunca o desempenho de cada aluno.
 
 ---
 
-## Etapa 1 — O que trava tudo (até 24/out)
+## Calendário
 
-Vem da Fase 0 de `roadmap-inciso.md`. Sem estes itens, não há o que vender.
+| Período | Etapa | Marco |
+|---|---|---|
+| 12–18/out | 1. Checagem de originalidade | Relatório por matéria |
+| 13–23/out | 2. Piloto técnico | Inciso no ar com métricas, "Encontrei um erro" e avaliação |
+| 19–25/out | 3. Reescrita e conferência | Nenhum item vermelho aberto |
+| 15/out–01/nov | 4. Kiwify, documentos e página de vendas | Compra de teste feita |
+| 26/out–01/nov | 5. Piloto com alunos | 10 a 20 alunos usando por uma semana |
+| 02–04/nov | 6. Ajustes e publicação | **Vendas abertas** |
 
-- [ ] **Direitos sobre o conteúdo:** autorização por escrito do professor, ou conteúdo reescrito a partir de fontes primárias.
-- [ ] **Acordo com o professor parceiro:** papel, remuneração, quem é dono do conteúdo e uso do nome dele.
-- [ ] **Marca:** buscar "Inciso" no INPI e registrar o domínio.
-- [ ] **Divisão da receita:** se houver sócio, combinar por escrito como a receita é dividida e declarada.
+---
 
-## Etapa 2 — Conteúdo pronto para vender (até 05/dez)
+## Etapa 1 — Checagem de originalidade (12 a 18/out)
 
-- [ ] Concluir a revisão jurídica das 3 matérias de processo e aplicar as correções (ver `validacao/roadmap-agentes.md`).
-- [ ] Aprovação final do professor parceiro.
-- [ ] Mostrar em cada aula "conteúdo conforme a legislação vigente em [data]".
-- [ ] Escolher as aulas grátis de amostra (1 por matéria) para a página de vendas.
+Confirmar que o material é recriação, e não cópia do material do professor. O método está em `validacao/originalidade.md`.
 
-## Etapa 3 — Preparar o protótipo para alunos de verdade (até 28/nov)
+- [x] **Rodada mecânica (12/out):** comparação literal do material com os slides e PDFs do professor e com as notas do Vault. Resultado na seção "Primeira rodada" de `validacao/originalidade.md`.
+- [ ] Converter os slides antigos (`.ppt`) de Teoria Geral do Processo e de Processo de Conhecimento, que a primeira rodada não conseguiu ler, e repetir a comparação.
+- [ ] **Inventário:** um agente lista as "marcas do professor": exemplos, casos, analogias, quadros, exercícios, ordem dos tópicos e julgados escolhidos.
+- [ ] **Auditoria:** outro agente procura essas marcas no material e classifica cada achado em verde, amarelo ou vermelho.
+- [ ] Você decide os amarelos.
+- [ ] Opcional, mas recomendado: uma consulta curta com um advogado de direito autoral, levando o relatório.
+
+## Etapa 2 — Piloto técnico (13 a 23/out)
 
 **Limpeza**
-- [ ] Remover os dados de demonstração: o aluno novo começa com o progresso zerado.
-- [ ] Trocar os nomes internos "vade" (arquivo gerado e chave do localStorage) por "inciso". **Precisa ser feito antes do primeiro aluno**, porque trocar a chave depois apaga o progresso de quem já estuda.
-- [ ] Conferir que as 10 matérias "Em breve" não podem ser abertas.
-- [ ] Remover qualquer resto de protótipo: textos de teste, botões de depuração.
+- [ ] Remover os dados de demonstração: o aluno novo começa do zero.
+- [ ] Trocar os nomes internos "vade" (arquivo gerado e chave do localStorage) por "inciso". **Antes do primeiro aluno**, porque trocar depois apaga o progresso de quem já estuda.
+- [ ] Conferir que as matérias "Em breve" não abrem.
+- [ ] Trocar o exemplo com "1ª Câmara de Direito Civil do TJSC" (`procesp3.js:10`). Ele veio de um slide do professor (ver Etapa 1).
 
 **Proteção do progresso**
 - [ ] Aviso no primeiro acesso, numa tela só, com o botão "Entendi".
-- [ ] Botões "Exportar progresso" e "Importar progresso" (arquivo ou código).
-- [ ] Lembrete a cada 7 dias de uso ou ao concluir uma aula, com a data do último backup.
+- [ ] Botões "Exportar progresso" e "Importar progresso".
+- [ ] Lembrete de backup a cada 7 dias de uso ou ao concluir uma aula, com a data do último backup.
 - [ ] Pedir ao navegador para guardar os dados como permanentes (`navigator.storage.persist()`).
 
-**Medir o uso sem login**
-- [ ] Contador de acessos que não identifica a pessoa (Cloudflare Web Analytics, Plausible ou Umami): aulas abertas, aulas concluídas, quem volta.
-- [ ] Avaliação no fim da aula, com estrelas e comentário, enviada por um formulário externo (Tally ou Google Forms).
+**O mínimo para o piloto**
+- [ ] **Hospedagem com um endereço:** Cloudflare Pages (grátis), no domínio próprio se já estiver registrado. Com `noindex`, para o Google não indexar as aulas.
+- [ ] **Métricas simples:** aulas abertas e aulas concluídas, contadas sem identificar o aluno. Usar um contador que registre eventos, como Umami ou GoatCounter (os dois têm plano grátis).
+- [ ] **Botão "Encontrei um erro"** em cada aula. Abre um formulário (Tally, grátis) que já chega preenchido com a matéria e a aula. O aluno descreve o erro e, se quiser, deixa o e-mail.
+- [ ] **Avaliação no fim da aula:** 1 a 5 estrelas e comentário opcional, enviados ao mesmo formulário ou ao contador de eventos.
+- [ ] Testar em computador e celular (Chrome, Edge, Safari no iPhone, Chrome no Android) e **dentro da área de membros da Kiwify**. Se o iframe der problema, usar link que abre numa aba nova.
 
-## Etapa 4 — Colocar no ar (até 05/dez)
+## Etapa 3 — Reescrita e conferência (19 a 25/out)
 
-- [ ] Hospedar o HTML gerado (Cloudflare Pages, Netlify ou Vercel, todos com plano grátis), de preferência no domínio próprio.
-- [ ] Impedir que o Google indexe as aulas (`noindex`) e usar um endereço difícil de adivinhar.
-- [ ] Testar em computador e celular: Chrome, Edge, Safari no iPhone e Chrome no Android.
-- [ ] Testar o Inciso **dentro** da área de membros da Kiwify, por iframe e por link. Confirmar que o progresso fica salvo e que exportar e importar funcionam. Se o iframe der problema, usar link que abre numa aba nova.
+- [ ] Reescrever os itens vermelhos e os amarelos que você decidir trocar, a partir da lei e com exemplos novos.
+- [ ] Um agente diferente do que reescreveu repete a comparação e confere se o trecho novo continua juridicamente certo.
+- [ ] Registrar tudo em `validacao/originalidade/registro.md` (o quê, quando e por quê). Esse registro também serve de prova de criação independente, se alguém questionar.
+- [ ] Aplicar as correções da revisão jurídica que ainda estiverem pendentes nas 3 matérias.
 
-## Etapa 5 — Beta durante as provas (dezembro)
+## Etapa 4 — Kiwify, documentos e página de vendas (15/out a 01/nov)
 
-- [ ] Convidar de 30 a 50 alunos para usar de graça. A Kiwify permite cadastrar alunos manualmente ou criar um cupom de 100%. Isso também testa o fluxo de compra.
-- [ ] Medir: quantos concluem a primeira aula, quantos voltam em 7 dias, onde abandonam.
-- [ ] Conversar com 5 a 10 alunos: o que ajudou, o que confundiu, **quanto pagariam** e se o aviso sobre o progresso ficou claro.
-- [ ] Juntar depoimentos, com autorização por escrito para usar.
-- [ ] Corrigir o que travar (até 15/jan).
+**Kiwify:** criar a conta logo, porque a verificação e a aprovação do produto podem levar alguns dias.
+- [ ] Conta como pessoa física: verificação de identidade e conta bancária no seu CPF.
+- [ ] Conferir as taxas, o prazo de saque e se a área de membros aceita iframe.
+- [ ] Criar o produto com área de membros: a aula "Comece aqui" (com o aviso sobre o progresso) e uma entrada por matéria apontando para o Inciso.
+- [ ] Definir preço, preço de lançamento e prazo de acesso (12 ou 24 meses, não "vitalício").
+- [ ] Garantia de 7 dias (direito de arrependimento, CDC, art. 49).
+- [ ] Compra de teste completa, do pagamento até abrir uma aula, e depois o reembolso.
 
-## Etapa 6 — Kiwify, jurídico e página de vendas (dezembro e janeiro)
-
-**Conta e produto na Kiwify**
-- [ ] Criar a conta como pessoa física: verificação de identidade e conta bancária no seu CPF.
-- [ ] Conferir as taxas e os prazos de saque atuais.
-- [ ] Criar o produto com área de membros: uma aula por matéria apontando para o Inciso, e uma aula "Comece aqui" com o aviso sobre o progresso.
-- [ ] Definir preço (hipótese: R$ 97 a 147), preço de lançamento e prazo de acesso (12 ou 24 meses, não "vitalício").
-- [ ] Configurar a garantia de 7 dias (direito de arrependimento, CDC, art. 49).
-- [ ] Fazer uma compra de teste completa, do pagamento até abrir uma aula, e depois pedir o reembolso.
-
-**Documentos (antes de vender)**
-- [ ] **Termos de uso:** licença pessoal; proibido compartilhar o acesso; prazo de acesso; sem atualizações incluídas; erros continuam sendo corrigidos; não substitui a leitura da lei; **progresso salvo no aparelho do aluno**.
-- [ ] **Política de privacidade (LGPD):** o que a Kiwify coleta, o que o contador de acessos e o formulário de avaliação coletam, e por quanto tempo.
+**Documentos (antes da primeira venda)**
+- [ ] **Termos de uso:** licença pessoal; proibido compartilhar o acesso; prazo de acesso; sem atualizações incluídas; erros continuam sendo corrigidos; o material não substitui a leitura da lei; **o progresso fica salvo no aparelho do aluno**.
+- [ ] **Política de privacidade (LGPD):** o que a Kiwify, o contador de acessos e o formulário coletam, para quê e por quanto tempo.
 - [ ] Links para os dois documentos no rodapé do Inciso e na página de vendas.
-- [ ] Imposto: entender o Carnê-Leão (declaração mensal) antes da primeira venda. Vale uma consulta com um contador.
+- [ ] **Imposto:** entender o Carnê-Leão (declaração mensal da receita no CPF) antes da primeira venda.
+
+**Marca**
+- [ ] Buscar "Inciso" no INPI (classes 41, 9 e 42) e registrar o domínio. O registro da marca pode ser pedido depois do lançamento; o que não pode é descobrir tarde que o nome já tem dono.
 
 **Página de vendas**
-- [ ] Vídeo curto das animações e um simulador para experimentar.
+- [ ] Vídeo curto das animações e uma aula grátis de amostra.
 - [ ] O que está incluído: 3 matérias, número de aulas e de questões, prazo de acesso.
-- [ ] Na seção de perguntas frequentes: "Meu progresso fica salvo?", com a resposta honesta.
-- [ ] Depoimentos do beta.
+- [ ] Perguntas frequentes, incluindo "Meu progresso fica salvo?", com a resposta honesta.
+- [ ] Depoimentos do piloto, com autorização.
 
-## Etapa 7 — Publicar (início de fevereiro de 2027)
+## Etapa 5 — Piloto com alunos (26/out a 01/nov)
 
-- [ ] Checklist final: conteúdo aprovado, termos no ar, compra de teste feita, aviso de progresso visível.
+- [ ] Liberar de 10 a 20 alunos de graça pela Kiwify (cupom de 100% ou cadastro manual). Isso também testa a compra e a área de membros.
+- [ ] Olhar todos os dias: aulas abertas e concluídas, erros relatados e avaliações.
+- [ ] Corrigir na hora os erros de conteúdo de gravidade alta.
+- [ ] Conversar com 5 alunos: o que ajudou, o que confundiu, quanto pagariam e se o aviso sobre o progresso ficou claro.
+
+## Etapa 6 — Ajustes e publicação (02 a 04/nov)
+
+- [ ] Checklist final:
+  - originalidade sem item vermelho aberto;
+  - erros do piloto corrigidos;
+  - termos e privacidade no ar;
+  - compra de teste feita;
+  - aviso de progresso visível.
 - [ ] Abrir as vendas com preço de lançamento por tempo limitado.
-- [ ] Avisar a lista de espera, centros acadêmicos e a rede do professor.
-- [ ] Acompanhar todas as semanas: vendas, reembolsos, aulas concluídas e reclamações sobre progresso perdido.
+- [ ] Divulgar entre colegas, centros acadêmicos e nas redes, com as animações das aulas.
+- [ ] Acompanhar todas as semanas: vendas, reembolsos, aulas concluídas, avaliações e erros relatados.
 
-**Quando partir para a plataforma própria** (login + banco de dados, Fase 2 de `roadmap-inciso.md`): quando as vendas se sustentarem, ou quando a perda de progresso virar reclamação frequente. Aí a Kiwify passa a avisar a plataforma por webhook, e o aluno importa o progresso que já tem pelo próprio botão "Importar".
+**Quando partir para a plataforma com login** (Fase 2 de `roadmap-inciso.md`): quando as vendas se sustentarem ou quando a perda de progresso virar reclamação frequente. O aluno leva o progresso que já tem pelo botão "Importar".
 
 ---
 
-## Caminho crítico
+## Próximos 3 dias
 
-```
-Direitos + acordo com o professor ──► Revisão jurídica concluída ──────────────┐
-Limpeza + backup do progresso ──► Hospedagem + teste dentro da Kiwify ─────────┼──► Beta ──► Ajustes ──► Publicar na Kiwify
-Conta na Kiwify + termos + página de vendas ───────────────────────────────────┘
-```
-
-## Próximos 7 dias
-
-- [ ] Conversar com o professor (direitos e acordo).
-- [ ] Criar a conta na Kiwify e conferir as taxas e se a área de membros aceita iframe.
+- [ ] Criar a conta na Kiwify.
 - [ ] Buscar "Inciso" no INPI e o domínio.
-- [ ] Pedir ao Claude a Etapa 3: limpeza, aviso, exportar e importar, lembrete.
+- [ ] Rodar o inventário e a auditoria de originalidade (Etapa 1).
+- [ ] Começar a limpeza e o mínimo do piloto (Etapa 2).

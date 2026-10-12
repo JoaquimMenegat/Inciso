@@ -15,3 +15,6 @@ __pycache__/
 # pacotes vindos do Claude.ai: o zip e a pasta fontes/ derivam de notas de aula (não publicar)
 inciso-materiais*.zip
 **/fontes/
+
+# Checagem de originalidade: contém trechos do material do professor
+validacao/originalidade/privado/

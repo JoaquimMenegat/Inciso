@@ -8,7 +8,7 @@ O **Inciso** é uma plataforma de estudo para estudantes de Direito. O slogan é
 
 Não vendemos PDF. Cada matéria é uma trilha de aulas interativas: o aluno simula, classifica, decide. A plataforma mede o progresso: painel, desempenho por tema, revisão espaçada de flashcards e banco de questões.
 
-O projeto nasceu do interesse de um professor em vender material de estudo. O professor deve ser o parceiro de conteúdo; o papel e a remuneração dele ainda estão em aberto.
+O projeto nasceu do interesse de um professor em vender material de estudo. **Decisão de 12/10/2026: não haverá professor parceiro.** O material é uma recriação própria; as aulas da faculdade serviram só de roteiro, e a checagem de originalidade (`validacao/originalidade.md`) confirma isso antes da venda.
 
 ## Regras de conteúdo
 
@@ -21,7 +21,7 @@ O projeto nasceu do interesse de um professor em vender material de estudo. O pr
 
 ## Decisões de negócio (10/10/2026)
 
-- **Venda como pessoa física**, sem abrir empresa. O pagamento passa pela Hotmart ou pela Kiwify.
+- **Venda como pessoa física** (Joaquim, no CPF), sem abrir empresa. O pagamento passa pela Kiwify.
 - **Pagamento único** pelo acesso à plataforma, **sem atualizações** incluídas.
   - O acesso deve ter prazo definido, não "vitalício".
   - Erros de conteúdo continuam sendo corrigidos para todos.
@@ -32,7 +32,7 @@ O projeto nasceu do interesse de um professor em vender material de estudo. O pr
   - Procedimentos Especiais e Recursos.
 
   As outras 10 aparecem como "Em breve".
-- **Meta:** abrir as vendas em fevereiro de 2027, com um beta durante as provas de dezembro.
+- **Meta (atualizada em 12/10/2026):** publicar na Kiwify até 04/11/2026, depois de um piloto de uma semana. Passos em `prototipo/roadmap-kiwify.md`.
 - **Canal de acesso (12/10/2026):** no lançamento, o aluno compra na **Kiwify** e abre o Inciso pela área de membros (link ou iframe para o site hospedado). Sem login: o progresso fica no navegador, com aviso no primeiro acesso, exportar e importar e lembrete de backup. A plataforma própria com login vem depois, se as vendas validarem a ideia. Passos em `prototipo/roadmap-kiwify.md`.
 - O roadmap completo está em `prototipo/roadmap-inciso.md`.
 
