@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-20f91295-c5f0-47de-82a3-904d69fa4ad3/styles.css">
+<script src="_ds/modernist-20f91295-c5f0-47de-82a3-904d69fa4ad3/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<script src="inciso-motion.js"></script>
+<style>
+body{margin:0;background:#EEF1F5;color:#1B2540;font-family:Archivo,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1B2540;text-underline-offset:3px}
+a:hover{color:#A3263A}
+button:focus-visible,a:focus-visible{outline:2px solid #A3263A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#EEF1F5;color:#1B2540;font-family:Archivo,sans-serif">
+<nav style="border-bottom:2px solid #1B2540">
+<div style="max-width:1240px;margin:0 auto;padding:14px clamp(20px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<a href="Inciso Identidade.dc.html" style="text-decoration:none;font:600 12px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase">← Identidade visual</a>
+<span style="font:400 26px/1 'Libre Caslon Text',serif;white-space:nowrap"><span style="position:relative;display:inline-block">ı<span style="position:absolute;left:50%;top:-.02em;width:.21em;height:.21em;margin-left:-.08em;border-radius:50%;background:#A3263A"></span></span>nciso</span>
+</div>
+</nav>
+<main style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px) 96px;display:flex;flex-direction:column">
+
+<header style="padding:64px 0 56px;display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">VII – Guia de movimento</div>
+<h1 style="margin:0;font:600 clamp(40px,6vw,80px)/1 Archivo,sans-serif;letter-spacing:-.035em">O carimbo <span style="font-style:italic">e</span> o travessão.</h1>
+</div>
+<p style="flex:1 1 320px;margin:0;font:400 17px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Movimento na Inciso explica, não enfeita. Dois gestos são da marca; o resto é uma entrada curta e discreta. Todo elemento é desenhado no estado final; a animação só chega até ele.</p>
+</header>
+
+<section style="border-top:2px solid #1B2540;padding:24px 0 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px">
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font:600 26px/1 Archivo,sans-serif">I <span style="color:#B98A2E">–</span></div><div style="font:600 16px/1.3 Archivo,sans-serif">Um gesto por vez</div><div style="font:400 15px/1.5 Archivo,sans-serif;color:#3A4560">Nunca dois movimentos de marca ao mesmo tempo. O carimbo espera o travessão terminar.</div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font:600 26px/1 Archivo,sans-serif">II <span style="color:#B98A2E">–</span></div><div style="font:600 16px/1.3 Archivo,sans-serif">Da esquerda, de baixo</div><div style="font:400 15px/1.5 Archivo,sans-serif;color:#3A4560">Tudo entra na direção da leitura: traços crescem para a direita, textos sobem. Nada gira, nada vem de cima.</div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font:600 26px/1 Archivo,sans-serif">III <span style="color:#B98A2E">–</span></div><div style="font:600 16px/1.3 Archivo,sans-serif">Carimbo é raro</div><div style="font:400 15px/1.5 Archivo,sans-serif;color:#3A4560">Só em capas, conquistas e no logo. No máximo um carimbo por tela.</div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font:600 26px/1 Archivo,sans-serif">IV <span style="color:#B98A2E">–</span></div><div style="font:600 16px/1.3 Archivo,sans-serif">Estado final primeiro</div><div style="font:400 15px/1.5 Archivo,sans-serif;color:#3A4560">Com prefers-reduced-motion, nada se move: a tela já abre pronta. O giro do selo também para.</div></div>
+</section>
+
+<section style="border-top:2px solid #1B2540;padding:24px 0 64px;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font:600 32px/1.1 Archivo,sans-serif">Tokens</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+<div style="border:2px solid #1B2540;background:#FFFFFF;border-radius:16px;overflow:hidden">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 90px;font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px;border-bottom:2px solid #1B2540"><span>Duração</span><span>ms</span></div>
+<sc-for list="{{ durations }}" as="d" hint-placeholder-count="14"><div style="display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:12px;padding:12px 18px;border-bottom:1px solid #C8CFDB;font:400 14px/1.4 Archivo,sans-serif"><span><span style="font-weight:600">{{ d.name }}</span> · <span style="color:#59627A">{{ d.use }}</span></span><span style="font-variant-numeric:tabular-nums;font-weight:600">{{ d.ms }}</span></div></sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px;background:#1B2540;border:2px solid #1B2540;border-radius:16px;overflow:hidden">
+<div style="background:#FFFFFF;padding:20px;display:flex;gap:20px;align-items:center">
+<svg viewBox="-4 -4 108 108" style="width:96px;height:96px;flex:none;overflow:visible"><rect x="0" y="0" width="100" height="100" style="fill:none;stroke:#C8CFDB;stroke-width:1"></rect><path d="M0,100 C20,20 20,0 100,0" style="fill:none;stroke:#1B2540;stroke-width:2.5"></path></svg>
+<div style="display:flex;flex-direction:column;gap:6px"><div style="font:600 15px/1.3 Archivo,sans-serif">--ease-inciso</div><code style="font:500 13px/1.4 ui-monospace,monospace;color:#3A4560">cubic-bezier(.2,.8,.2,1)</code><div style="font:400 13px/1.45 Archivo,sans-serif;color:#59627A">Padrão para tudo: entradas, traços, anel.</div></div>
+</div>
+<div style="background:#FFFFFF;padding:20px;display:flex;gap:20px;align-items:center">
+<svg viewBox="-4 -4 108 108" style="width:96px;height:96px;flex:none;overflow:visible"><rect x="0" y="0" width="100" height="100" style="fill:none;stroke:#C8CFDB;stroke-width:1"></rect><path d="M0,100 C28,100 45,60 50,0 C56,-14 62,10 70,4 C78,-2 86,2 100,0" style="fill:none;stroke:#A3263A;stroke-width:2.5"></path></svg>
+<div style="display:flex;flex-direction:column;gap:6px"><div style="font:600 15px/1.3 Archivo,sans-serif">--ease-carimbo</div><code style="font:500 13px/1.4 ui-monospace,monospace;color:#3A4560">queda (.55,0,.9,.45) + quique</code><div style="font:400 13px/1.45 Archivo,sans-serif;color:#59627A">Só o carimbo. Acelera na queda, quica três vezes.</div></div>
+</div>
+<div style="background:#FFFFFF;padding:20px;display:flex;gap:20px;align-items:center">
+<svg viewBox="-4 -4 108 108" style="width:96px;height:96px;flex:none;overflow:visible"><rect x="0" y="0" width="100" height="100" style="fill:none;stroke:#C8CFDB;stroke-width:1"></rect><path d="M0,100 L100,0" style="fill:none;stroke:#59627A;stroke-width:2.5"></path></svg>
+<div style="display:flex;flex-direction:column;gap:6px"><div style="font:600 15px/1.3 Archivo,sans-serif">linear</div><code style="font:500 13px/1.4 ui-monospace,monospace;color:#3A4560">30 s por volta</code><div style="font:400 13px/1.45 Archivo,sans-serif;color:#59627A">Exclusivo do texto girando no selo.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="border-top:2px solid #1B2540;padding:24px 0 64px;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font:600 32px/1.1 Archivo,sans-serif">Os dois gestos da marca</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px">
+
+<div data-scene="g1" style="border:2px solid #1B2540;background:#FFFFFF;display:flex;flex-direction:column;border-radius:16px;overflow:hidden">
+<div style="height:220px;display:flex;align-items:center;padding:0 40px;border-bottom:2px solid #1B2540;background:#EEF1F5">
+<div style="display:flex;flex-direction:column;gap:22px;width:100%">
+<div data-a="draw" data-d="0" style="height:6px;width:70%;background:#B98A2E;transform-origin:left center"></div>
+<div style="display:flex;align-items:center;gap:14px"><span data-a="fade" data-d="450" style="font:600 26px/1 Archivo,sans-serif">II</span><span data-a="draw" data-d="300" style="flex:1;height:2px;background:#1B2540;transform-origin:left center"></span></div>
+</div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div style="font:600 24px/1.1 Archivo,sans-serif">O travessão que se desenha</div>
+<button onClick="{{ replay }}" style="display:flex;align-items:center;justify-content:flex-start;gap:8px;padding:8px 12px;background:transparent;border:2px solid #1B2540;border-radius:10px;color:#1B2540;font:600 11px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;flex:none" style-hover="background:#1B2540;color:#EEF1F5">Repetir</button></div>
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr);row-gap:8px;font:400 14px/1.5 Archivo,sans-serif;color:#3A4560">
+<span style="font-family:Archivo,sans-serif;color:#1B2540">I –</span><span>scaleX de 0 a 1, origem à esquerda. Nunca do centro.</span>
+<span style="font-family:Archivo,sans-serif;color:#1B2540">II –</span><span>700 ms em --ease-inciso. Réguas longas até 1.000 ms.</span>
+<span style="font-family:Archivo,sans-serif;color:#1B2540">III –</span><span>O texto que o traço anuncia entra 150 ms depois.</span>
+<span style="font-family:Archivo,sans-serif;color:#1B2540">IV –</span><span>Usado em: logo, divisores, barras de progresso, sublinhado do inciso atual.</span>
+</div>
+<code style="display:block;background:#EEF1F5;padding:12px 14px;font:500 12px/1.6 ui-monospace,monospace;white-space:pre-wrap;border-radius:10px">el.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],
+  {duration:700, easing:'cubic-bezier(.2,.8,.2,1)', fill:'backwards'})</code>
+</div>
+</div>
+
+<div data-scene="g2" style="border:2px solid #1B2540;background:#FFFFFF;display:flex;flex-direction:column;border-radius:16px;overflow:hidden">
+<div style="height:220px;display:flex;align-items:center;padding:0 40px;border-bottom:2px solid #1B2540;background:#EEF1F5;gap:28px">
+<div data-a="stamp" data-d="150" style="width:150px;height:150px;flex:none;transform:rotate(-8deg)"><dc-import name="IncisoSelo" text="ART. 1.784 • SAISINE • " color="#A3263A" ink="#EEF1F5" spin="{{ false }}" hint-size="100%,100%" style="width:100%;height:100%"></dc-import></div>
+<div style="display:flex;flex-direction:column;gap:6px;font:500 12px/1.4 Archivo,sans-serif;color:#59627A"><span>0% · escala 1,9 · opacidade 0</span><span>50% · 0,92 · impacto</span><span>64–88% · tremida ±1,5 px</span><span>100% · 1 · −8°</span></div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div style="font:600 24px/1.1 Archivo,sans-serif">O carimbo</div>
+<button onClick="{{ replay }}" style="display:flex;align-items:center;justify-content:flex-start;gap:8px;padding:8px 12px;background:transparent;border:2px solid #1B2540;border-radius:10px;color:#1B2540;font:600 11px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;flex:none" style-hover="background:#1B2540;color:#EEF1F5">Repetir</button></div>
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr);row-gap:8px;font:400 14px/1.5 Archivo,sans-serif;color:#3A4560">
+<span style="font-family:Archivo,sans-serif;color:#1B2540">I –</span><span>Cai de perto da câmera: escala 1,9 → 0,92, já girado −8°.</span>
+<span style="font-family:Archivo,sans-serif;color:#1B2540">II –</span><span>Impacto aos 50% de 620 ms, depois quique e tremida de 1,5 px.</span>
+<span style="font-family:Archivo,sans-serif;color:#1B2540">III –</span><span>Repousa torto, a −8°. Selos nunca ficam retos.</span>
+<span style="font-family:Archivo,sans-serif;color:#1B2540">IV –</span><span>Usado em: logo, capa de aula, conclusão de módulo, lançamento. Uma vez por tela.</span>
+</div>
+<code style="display:block;background:#EEF1F5;padding:12px 14px;font:500 12px/1.6 ui-monospace,monospace;white-space:pre-wrap;border-radius:10px">duration: 620ms · keyframes 0 / .50 / .64 / .76 / .88 / 1
+scale 1.9 → .92 → 1.05 → .98 → 1.01 → 1 · rotate(-8deg)</code>
+</div>
+</div>
+
+</div>
+</section>
+
+<section style="border-top:2px solid #1B2540;padding:24px 0 64px;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font:600 32px/1.1 Archivo,sans-serif">Gestos de apoio</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:#1B2540;border:2px solid #1B2540;border-radius:16px;overflow:hidden">
+
+<div data-scene="g3" style="background:#FFFFFF;display:flex;flex-direction:column;border-radius:16px;overflow:hidden">
+<div style="height:150px;display:flex;flex-direction:column;justify-content:center;padding:0 28px;background:#EEF1F5;font:600 40px/1 Archivo,sans-serif"><div data-a="rise" data-d="0" style="display:block">Renúncia</div><div data-a="rise" data-d="120" style="display:block;font-style:italic">da herança</div></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font:600 15px/1.3 Archivo,sans-serif">Subida mascarada</span><button onClick="{{ replay }}" style="padding:6px 10px;background:transparent;border:2px solid #1B2540;border-radius:10px;color:#1B2540;font:600 10px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer" style-hover="background:#1B2540;color:#EEF1F5">Repetir</button></div><span style="font:400 14px/1.5 Archivo,sans-serif;color:#3A4560">Títulos. 720 ms, linhas a cada 120 ms. A máscara fica fixa na linha de base; o texto sobe por dentro dela.</span></div>
+</div>
+
+<div data-scene="g4" style="background:#FFFFFF;display:flex;flex-direction:column;border-radius:16px;overflow:hidden">
+<div style="height:150px;display:flex;align-items:center;padding:0 28px;background:#EEF1F5"><span data-a="letters" data-d="0" data-st="60" style="font:600 56px/1 Archivo,sans-serif;white-space:nowrap"><span data-l="1" style="display:inline-block">i</span><span data-l="1" style="display:inline-block">n</span><span data-l="1" style="display:inline-block">c</span><span data-l="1" style="display:inline-block">i</span><span data-l="1" style="display:inline-block">s</span><span data-l="1" style="display:inline-block">o</span></span></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font:600 15px/1.3 Archivo,sans-serif">Sequência</span><button onClick="{{ replay }}" style="padding:6px 10px;background:transparent;border:2px solid #1B2540;border-radius:10px;color:#1B2540;font:600 10px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer" style-hover="background:#1B2540;color:#EEF1F5">Repetir</button></div><span style="font:400 14px/1.5 Archivo,sans-serif;color:#3A4560">Letras do logo a 60 ms; itens de lista a 70 ms; no máximo 6 itens escalonados, o resto entra junto.</span></div>
+</div>
+
+<div data-scene="g5" style="background:#FFFFFF;display:flex;flex-direction:column;border-radius:16px;overflow:hidden">
+<div style="height:150px;display:flex;align-items:center;gap:20px;padding:0 28px;background:#EEF1F5">
+<div style="position:relative;width:100px;height:100px;flex:none"><svg viewBox="0 0 120 120" style="display:block;width:100%;height:100%;transform:rotate(-90deg)"><circle cx="60" cy="60" r="52" style="fill:none;stroke:#DCE1EA;stroke-width:9"></circle><circle data-a="ring" data-from="326.73" data-to="104.55" data-d="0" cx="60" cy="60" r="52" style="fill:none;stroke:#4F7464;stroke-width:9;stroke-dasharray:326.73;stroke-dashoffset:104.55"></circle></svg><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:600 26px/1 Archivo,sans-serif"><span data-a="count" data-to="68" data-suf="%" data-d="0">68%</span></div></div>
+</div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font:600 15px/1.3 Archivo,sans-serif">Progresso</span><button onClick="{{ replay }}" style="padding:6px 10px;background:transparent;border:2px solid #1B2540;border-radius:10px;color:#1B2540;font:600 10px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer" style-hover="background:#1B2540;color:#EEF1F5">Repetir</button></div><span style="font:400 14px/1.5 Archivo,sans-serif;color:#3A4560">Anel e número andam juntos, 1.600 ms. Sempre em Sálvia; sempre do valor anterior, não do zero, depois da primeira vez.</span></div>
+</div>
+
+</div>
+</section>
+
+<section style="border-top:2px solid #1B2540;padding:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font:600 32px/1.1 Archivo,sans-serif">Movimento reduzido</h2>
+<p style="margin:0;font:400 15px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">O HTML sempre descreve o estado final. A animação usa fill: backwards, então sem ela nada fica escondido ou fora do lugar.</p>
+<code style="display:block;background:#FFFFFF;border:2px solid #1B2540;padding:14px 16px;font:500 12px/1.65 ui-monospace,monospace;white-space:pre-wrap;border-radius:16px;overflow:hidden">if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+// sem animar: o elemento já está no estado final</code>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font:600 32px/1.1 Archivo,sans-serif">Não fazer</h2>
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr);row-gap:10px;font:400 15px/1.5 Archivo,sans-serif;color:#3A4560">
+<span style="font-family:Archivo,sans-serif;color:#A3263A">I –</span><span>Elástico, bounce ou overshoot fora do carimbo.</span>
+<span style="font-family:Archivo,sans-serif;color:#A3263A">II –</span><span>Animar cor, sombra ou desfoque. A marca só move posição, escala e opacidade.</span>
+<span style="font-family:Archivo,sans-serif;color:#A3263A">III –</span><span>Entradas acima de 800 ms, exceto o anel de progresso e a conquista.</span>
+<span style="font-family:Archivo,sans-serif;color:#A3263A">IV –</span><span>Repetir a abertura do logo dentro do produto; ela é só para splash e vídeos.</span>
+</div>
+</div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const go = () => {
+      if (!window.IncisoMotion) return setTimeout(go, 60);
+      document.querySelectorAll('[data-scene]').forEach(el => IncisoMotion.observe(el, 1));
+    };
+    go();
+  }
+  renderVals() {
+    return {
+      durations: [
+        { name: 'Micro', use: 'hover, pressionar, foco', ms: '120' },
+        { name: 'Base', use: 'trocas de estado na interface', ms: '240' },
+        { name: 'Entrada', use: 'cards e textos sobem 20 px', ms: '560' },
+        { name: 'Travessão', use: 'traço da esquerda para a direita', ms: '700' },
+        { name: 'Carimbo', use: 'queda, impacto e quique', ms: '620' },
+        { name: 'Subida', use: 'títulos revelados por máscara', ms: '720' },
+        { name: 'Progresso', use: 'anel e contagem', ms: '1600' },
+        { name: 'Hover', use: 'cor, sublinhado, ícone animado', ms: '160' },
+        { name: 'Transição de tela', use: 'abas deslizam, aula entra pela direita', ms: '360' },
+        { name: 'Acerto', use: 'check se desenha em Sálvia', ms: '480' },
+        { name: 'Erro', use: 'tremida horizontal, borda em Selo', ms: '420' },
+        { name: 'Virar flashcard', use: 'rotateY 180°', ms: '560' },
+        { name: 'Conquista', use: 'carimbo + anel + número', ms: '1200' },
+        { name: 'Abertura', use: 'logo completo, só splash', ms: '3200' }
+      ],
+      replay: e => { const s = e.currentTarget.closest('[data-scene]'); if (s && window.IncisoMotion) IncisoMotion.play(s, 1); }
+    };
+  }
+}
+</script>
+</body>
+</html>

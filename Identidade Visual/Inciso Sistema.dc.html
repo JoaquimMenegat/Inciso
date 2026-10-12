@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-20f91295-c5f0-47de-82a3-904d69fa4ad3/styles.css">
+<script src="_ds/modernist-20f91295-c5f0-47de-82a3-904d69fa4ad3/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<script src="inciso-motion.js"></script>
+<style>
+body{margin:0;background:#EEF1F5;color:#1B2540;font-family:Archivo,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1B2540;text-underline-offset:3px}
+a:hover{color:#A3263A}
+button:focus-visible,a:focus-visible{outline:2px solid #A3263A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#EEF1F5;color:#1B2540;font-family:Archivo,sans-serif">
+<nav style="border-bottom:2px solid #1B2540;position:sticky;top:0;z-index:5;background:#EEF1F5">
+<div style="max-width:1240px;margin:0 auto;padding:14px clamp(20px,4vw,56px);display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+<span style="font:400 26px/1 'Libre Caslon Text',serif;white-space:nowrap"><span style="position:relative;display:inline-block">ı<span style="position:absolute;left:50%;top:-.02em;width:.21em;height:.21em;margin-left:-.08em;border-radius:50%;background:#A3263A"></span></span>nciso</span>
+<div style="display:flex;gap:20px;flex-wrap:wrap;flex:1;font:600 12px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase">
+<a href="#materias" style="text-decoration:none">VIII – Matérias</a>
+<a href="#tipo" style="text-decoration:none">IX – Tipografia</a>
+<a href="#icones" style="text-decoration:none">X – Ícones</a>
+<a href="#gestos" style="text-decoration:none">XI – Gestos</a>
+<a href="#interacao" style="text-decoration:none">XII – Hover e clique</a>
+<a href="#telas" style="text-decoration:none">XIII – Telas</a>
+</div>
+<a href="Inciso Identidade.dc.html" style="text-decoration:none;font:600 12px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase">← Identidade</a>
+</div>
+</nav>
+<main style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px) 96px">
+
+<header style="padding:64px 0 56px;display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-end">
+<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">Sistema de produto · v2</div>
+<h1 style="margin:0;font:600 clamp(40px,6vw,72px)/1 Archivo,sans-serif;letter-spacing:-.035em;text-wrap:balance">Cor por matéria, escala por papel, movimento por gesto.</h1>
+</div>
+<p style="flex:1 1 320px;margin:0;font:400 17px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">A marca continua tinta sobre papel. Cada matéria ganha uma cor própria para identificar trilhas e capas; cada tipo de texto, um tamanho e uma cor fixos; cada ação, um gesto de movimento.</p>
+</header>
+
+<section id="materias" style="border-top:2px solid #1B2540;padding:28px 0 80px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div style="flex:0 0 200px;font:600 44px/1 Archivo,sans-serif;letter-spacing:-.035em">VIII <span style="color:#B98A2E">–</span></div>
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:600 36px/1.1 Archivo,sans-serif;letter-spacing:-.035em">Cor por matéria</h2>
+<p style="margin:0;max-width:62ch;font:400 16px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Seis tons para identificar matérias: faixa da capa, etiqueta, numerais da trilha. Nunca para progresso (sempre Sálvia) nem para alerta (sempre Selo). Cada tom tem base, texto (4,5:1 sobre o tom claro) e tom claro; no escuro, uma versão clara.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2px;background:#1B2540;border:2px solid #1B2540;border-radius:16px;overflow:hidden">
+<sc-for list="{{ materias }}" as="m" hint-placeholder-count="6">
+<div data-ih="1" style="background:#FFFFFF;display:flex;flex-direction:column;cursor:default;transition:background 160ms" style-hover="background:#F7F8FA">
+<div style="height:72px;background:{{ m.base }};display:flex;align-items:flex-end;padding:10px 14px;color:#FFFFFF;font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase">{{ m.base }}</div>
+<div style="padding:16px 14px;display:flex;flex-direction:column;gap:12px">
+<div style="font:600 20px/1.1 Archivo,sans-serif;letter-spacing:-.02em">{{ m.name }}</div>
+<span style="align-self:flex-start;background:{{ m.tint }};color:{{ m.dark }};padding:6px 9px;font:600 11px/1 Archivo,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:8px">{{ m.code }}</span>
+<div style="display:flex;gap:6px;font:500 11px/1.4 Archivo,sans-serif;color:#59627A;flex-direction:column"><span>Texto {{ m.dark }}</span><span>Claro {{ m.tint }}</span></div>
+</div>
+<div style="background:#131A2B;padding:12px 14px;display:flex;align-items:center;gap:8px;font:600 12px/1 Archivo,sans-serif;color:{{ m.dm }}"><span style="width:10px;height:10px;background:{{ m.dm }}"></span>{{ m.dm }} · escuro</div>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+<sc-for list="{{ capas }}" as="c" hint-placeholder-count="3">
+<div style="background:#FFFFFF;border:2px solid #1B2540;display:flex;flex-direction:column;border-radius:16px;overflow:hidden">
+<div style="height:8px;background:{{ c.base }}"></div>
+<div style="padding:22px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase"><span style="color:{{ c.dark }}">{{ c.name }}</span><span style="color:#59627A">{{ c.aula }}</span></div>
+<div style="font:600 26px/1.1 Archivo,sans-serif;letter-spacing:-.03em">{{ c.title }}</div>
+<div style="display:flex;align-items:center;gap:10px"><div style="flex:1;height:4px;background:#DCE1EA;border-radius:2px"><div style="height:100%;width:{{ c.pct }};background:#4F7464"></div></div><span style="font:600 12px/1 Archivo,sans-serif;color:#33503F">{{ c.pct }}</span></div>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="tipo" style="border-top:2px solid #1B2540;padding:28px 0 80px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div style="flex:0 0 200px;font:600 44px/1 Archivo,sans-serif;letter-spacing:-.035em">IX <span style="color:#B98A2E">–</span></div>
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:600 36px/1.1 Archivo,sans-serif;letter-spacing:-.035em">Tipografia — escala e cor por papel</h2>
+<p style="margin:0;max-width:62ch;font:400 16px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Escala média, razão ≈ 1,33. Cada papel tem tamanho, peso e cor fixos; a cor da matéria entra só no rótulo.</p>
+</div>
+</div>
+<div style="border:2px solid #1B2540;background:#FFFFFF;border-radius:16px;overflow:hidden">
+<sc-for list="{{ escala }}" as="t" hint-placeholder-count="9">
+<div style="display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:16px 32px;align-items:baseline;padding:18px 22px;border-bottom:1px solid #C8CFDB">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 13px/1 Archivo,sans-serif">{{ t.name }}</span><span style="font:500 12px/1.4 Archivo,sans-serif;color:#59627A">{{ t.spec }}</span><span style="display:flex;align-items:center;gap:6px;font:500 12px/1 Archivo,sans-serif;color:#59627A"><span style="width:10px;height:10px;background:{{ t.color }};border:1px solid #C8CFDB"></span>{{ t.cname }}</span></div>
+<div style="font-family:Archivo,sans-serif;font-size:{{ t.size }};line-height:{{ t.lh }};font-weight:{{ t.w }};letter-spacing:{{ t.ls }};text-transform:{{ t.tt }};color:{{ t.color }};text-decoration:{{ t.td }};text-underline-offset:3px;min-width:0;overflow-wrap:anywhere">{{ t.sample }}</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="icones" style="border-top:2px solid #1B2540;padding:28px 0 80px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div style="flex:0 0 200px;font:600 44px/1 Archivo,sans-serif;letter-spacing:-.035em">X <span style="color:#B98A2E">–</span></div>
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:600 36px/1.1 Archivo,sans-serif;letter-spacing:-.035em">Ícones — traço, preenchido, cor e movimento</h2>
+<p style="margin:0;max-width:62ch;font:400 16px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Dez ícones em traço de 1,5 px (padrão) e preenchidos (estado ativo). Passe o mouse: cada um tem um gesto curto de 520 ms.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:#1B2540;border:2px solid #1B2540;color:#1B2540;border-radius:16px;overflow:hidden">
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="rise" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="4" y="3" width="16" height="18"></rect><path d="M7.5 8h1.5M11.5 8h5M7.5 12h1.5M11.5 12h5M7.5 16h1.5M11.5 16h3"></path></svg><svg data-ia="rise" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="4" y="3" width="16" height="18" style="fill:currentColor"></rect><path d="M7.5 8h1.5M11.5 8h5M7.5 12h1.5M11.5 12h5M7.5 16h1.5M11.5 16h3" style="stroke:#FFFFFF"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Aula</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">rise</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="pop" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="3" width="18" height="18"></rect><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.24c-.66.33-1.1.98-1.1 1.71v1.05"></path><path d="M12 17.4v.2"></path></svg><svg data-ia="pop" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="3" width="18" height="18" style="fill:currentColor"></rect><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.24c-.66.33-1.1.98-1.1 1.71v1.05" style="stroke:#FFFFFF"></path><path d="M12 17.4v.2" style="stroke:#FFFFFF"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Questão</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">pop</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="flip" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="8" width="14" height="12"></rect><path d="M7 8V4h14v12h-4"></path><path d="M6.5 14h7"></path></svg><svg data-ia="flip" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M7 8V4h14v12h-4"></path><rect x="3" y="8" width="14" height="12" style="fill:currentColor"></rect><path d="M6.5 14h7" style="stroke:#FFFFFF"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Flashcard</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">flip</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="spin" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M12 4a8 8 0 1 1-8 8"></path><path d="M9 12h6"></path></svg><svg data-ia="spin" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M12 4a8 8 0 1 1-8 8"></path><path d="M12 12V4a8 8 0 1 1-8 8z" style="fill:currentColor"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Progresso</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">spin</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="nudge" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M3 12h18"></path><rect x="4.5" y="10.5" width="3" height="3"></rect><rect x="16.5" y="10.5" width="3" height="3"></rect><path d="M12 8v8"></path></svg><svg data-ia="nudge" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M3 12h18"></path><rect x="4" y="10" width="4" height="4" style="fill:currentColor"></rect><rect x="16" y="10" width="4" height="4" style="fill:currentColor"></rect><path d="M12 7v10"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Linha do tempo</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">nudge</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="pop" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="9" y="3" width="6" height="4"></rect><path d="M12 7v4M6 11h12M6 11v3M18 11v3"></path><rect x="3" y="14" width="6" height="4"></rect><rect x="15" y="14" width="6" height="4"></rect></svg><svg data-ia="pop" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="9" y="3" width="6" height="4" style="fill:currentColor"></rect><path d="M12 7v4M6 11h12M6 11v3M18 11v3"></path><rect x="3" y="14" width="6" height="4" style="fill:currentColor"></rect><rect x="15" y="14" width="6" height="4" style="fill:currentColor"></rect></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Árvore genealógica</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">pop</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="nudge" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M3 7h18M3 12h18M3 17h18"></path><rect x="6" y="5" width="3" height="4"></rect><rect x="14" y="10" width="3" height="4"></rect><rect x="9" y="15" width="3" height="4"></rect></svg><svg data-ia="nudge" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M3 7h18M3 12h18M3 17h18"></path><rect x="6" y="5" width="3" height="4" style="fill:currentColor"></rect><rect x="14" y="10" width="3" height="4" style="fill:currentColor"></rect><rect x="9" y="15" width="3" height="4" style="fill:currentColor"></rect></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Simulador</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">nudge</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="tick" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 13.5V9.5M10 2.5h4M12 2.5v3.5"></path></svg><svg data-ia="tick" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><circle cx="12" cy="13.5" r="7.5" style="fill:currentColor"></circle><path d="M12 13.5V9.5" style="stroke:#FFFFFF"></path><path d="M10 2.5h4M12 2.5v3.5"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Cronômetro</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">tick</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="diag" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 21 21"></path></svg><svg data-ia="diag" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><circle cx="10.5" cy="10.5" r="6.5" style="fill:currentColor"></circle><path d="M15.5 15.5 21 21" style="stroke-width:2.5"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Busca</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">diag</span></div></div>
+<div data-ih="1" style="background:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:16px;cursor:default;transition:background 160ms" style-hover="background:#EEF1F5"><div style="display:flex;gap:18px;align-items:center"><svg data-ia="rise" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><circle cx="12" cy="8" r="4"></circle><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path></svg><svg data-ia="rise" viewBox="0 0 24 24" style="width:36px;height:36px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><circle cx="12" cy="8" r="4" style="fill:currentColor"></circle><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z" style="fill:currentColor"></path></svg></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:600 14px/1.2 Archivo,sans-serif">Perfil</span><span style="font:500 11px/1 Archivo,sans-serif;color:#59627A">rise</span></div></div>
+</div>
+<h3 style="margin:8px 0 0;font:600 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase">Cor por tipo de conteúdo</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+<div data-ih="1" style="background:#FFFFFF;border:2px solid #1B2540;padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:transform 120ms;border-radius:16px;overflow:hidden" style-active="transform:scale(.98)"><span style="width:52px;height:52px;flex:none;background:#E4E8EF;color:#1B2540;display:flex;align-items:center;justify-content:center;border-radius:12px"><svg data-ia="rise" viewBox="0 0 24 24" style="width:28px;height:28px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="4" y="3" width="16" height="18"></rect><path d="M7.5 8h1.5M11.5 8h5M7.5 12h1.5M11.5 12h5M7.5 16h1.5M11.5 16h3"></path></svg></span><span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.1 Archivo,sans-serif">Aula</span><span style="font:500 12px/1.3 Archivo,sans-serif;color:#59627A">Tinta · ícone #1B2540</span></span></div>
+<div data-ih="1" style="background:#FFFFFF;border:2px solid #1B2540;padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:transform 120ms;border-radius:16px;overflow:hidden" style-active="transform:scale(.98)"><span style="width:52px;height:52px;flex:none;background:#F3EAD8;color:#8A6420;display:flex;align-items:center;justify-content:center;border-radius:12px"><svg data-ia="pop" viewBox="0 0 24 24" style="width:28px;height:28px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="3" width="18" height="18"></rect><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.24c-.66.33-1.1.98-1.1 1.71v1.05"></path><path d="M12 17.4v.2"></path></svg></span><span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.1 Archivo,sans-serif">Questão</span><span style="font:500 12px/1.3 Archivo,sans-serif;color:#59627A">Latão · ícone #8A6420</span></span></div>
+<div data-ih="1" style="background:#FFFFFF;border:2px solid #1B2540;padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:transform 120ms;border-radius:16px;overflow:hidden" style-active="transform:scale(.98)"><span style="width:52px;height:52px;flex:none;background:#F6E6E9;color:#A3263A;display:flex;align-items:center;justify-content:center;border-radius:12px"><svg data-ia="flip" viewBox="0 0 24 24" style="width:28px;height:28px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="8" width="14" height="12"></rect><path d="M7 8V4h14v12h-4"></path><path d="M6.5 14h7"></path></svg></span><span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.1 Archivo,sans-serif">Flashcard</span><span style="font:500 12px/1.3 Archivo,sans-serif;color:#59627A">Selo · ícone #A3263A</span></span></div>
+<div data-ih="1" style="background:#FFFFFF;border:2px solid #1B2540;padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:transform 120ms;border-radius:16px;overflow:hidden" style-active="transform:scale(.98)"><span style="width:52px;height:52px;flex:none;background:#E3EDE8;color:#33503F;display:flex;align-items:center;justify-content:center;border-radius:12px"><svg data-ia="nudge" viewBox="0 0 24 24" style="width:28px;height:28px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M3 7h18M3 12h18M3 17h18"></path><rect x="6" y="5" width="3" height="4"></rect><rect x="14" y="10" width="3" height="4"></rect><rect x="9" y="15" width="3" height="4"></rect></svg></span><span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.1 Archivo,sans-serif">Simulador</span><span style="font:500 12px/1.3 Archivo,sans-serif;color:#59627A">Sálvia · ícone #33503F</span></span></div>
+<div style="display:flex;align-items:center;padding:4px 0;font:400 14px/1.5 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">A cor do tipo vai só no ícone e no seu fundo claro. Texto continua Tinta.</div>
+</div>
+</section>
+
+<section id="gestos" style="border-top:2px solid #1B2540;padding:28px 0 80px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div style="flex:0 0 200px;font:600 44px/1 Archivo,sans-serif;letter-spacing:-.035em">XI <span style="color:#B98A2E">–</span></div>
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:600 36px/1.1 Archivo,sans-serif;letter-spacing:-.035em">Gestos novos</h2>
+<p style="margin:0;max-width:62ch;font:400 16px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Interaja com cada peça. Durações mais longas que as da interface, para o gesto ser lido.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:stretch">
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;font:600 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase"><span>Virar flashcard</span><span style="color:#59627A">560 ms</span></div>
+<div onClick="{{ flip }}" style="height:280px;perspective:1200px;cursor:pointer">
+<div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 560ms cubic-bezier(.2,.8,.2,1);transform:rotateY({{ flipDeg }}deg)">
+<div style="position:absolute;inset:0;backface-visibility:hidden;background:#FFFFFF;border:2px solid #1B2540;padding:24px;display:flex;flex-direction:column;justify-content:space-between;border-radius:16px;overflow:hidden">
+<div style="display:flex;justify-content:space-between;font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase"><span style="color:#2C4F59">Sucessões</span><span style="color:#59627A">Card 7 de 30</span></div>
+<div style="font:600 30px/1.1 Archivo,sans-serif;letter-spacing:-.03em">O que é a saisine?</div>
+<div style="font:500 13px/1 Archivo,sans-serif;color:#59627A">Toque para ver a resposta</div>
+</div>
+<div style="position:absolute;inset:0;backface-visibility:hidden;transform:rotateY(180deg);background:#1B2540;color:#EEF1F5;padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#D9AE57">Art. 1.784</div>
+<div style="font:400 18px/1.45 Archivo,sans-serif">Aberta a sucessão, a herança se transmite <span style="font-weight:600">desde logo</span> aos herdeiros legítimos e testamentários.</div>
+<div style="display:flex;gap:8px"><span style="padding:8px 10px;border:2px solid #EEF1F5;font:600 12px/1 Archivo,sans-serif;border-radius:16px;overflow:hidden">Errei</span><span style="padding:8px 10px;background:#82B29B;color:#131A2B;font:600 12px/1 Archivo,sans-serif;border-radius:8px">Acertei</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;font:600 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase"><span>Acerto e erro</span><span style="color:#59627A">480 · 420 ms</span></div>
+<div style="background:#FFFFFF;border:2px solid #1B2540;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:280px;box-sizing:border-box;border-radius:16px;overflow:hidden">
+<div style="font:600 17px/1.35 Archivo,sans-serif">A renúncia da herança pode ser feita:</div>
+<sc-for list="{{ opts }}" as="o" hint-placeholder-count="3">
+<button onClick="{{ o.pick }}" ref="{{ o.ref }}" style="display:grid;grid-template-columns:36px minmax(0,1fr) 22px;align-items:center;gap:8px;text-align:left;padding:12px 14px;background:{{ o.bg }};border:2px solid {{ o.bd }};border-radius:10px;color:#1B2540;font:400 14px/1.4 Archivo,sans-serif;cursor:pointer;transition:background 160ms,border-color 160ms" style-active="transform:scale(.98)"><span style="font:600 15px/1 Archivo,sans-serif;color:{{ o.nc }}">{{ o.n }}</span><span>{{ o.text }}</span><span style="display:flex;width:22px;height:22px">
+<sc-if value="{{ o.ok }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:none;stroke:#4F7464;stroke-width:2.5;stroke-linecap:square"><path data-a="stroke" pathLength="1" d="M20 6 9 17l-5-5"></path></svg></sc-if>
+<sc-if value="{{ o.bad }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:none;stroke:#A3263A;stroke-width:2.5;stroke-linecap:square"><path d="M6 6l12 12M18 6 6 18"></path></svg></sc-if>
+</span></button>
+</sc-for>
+<div style="font:500 13px/1.4 Archivo,sans-serif;color:{{ fbColor }}">{{ feedback }}</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;font:600 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase"><span>Conquista</span><span style="color:#59627A">1.200 ms</span></div>
+<div data-scene="win" style="background:#131A2B;color:#EEF1F5;padding:22px;display:flex;flex-direction:column;gap:16px;min-height:280px;box-sizing:border-box;position:relative;overflow:hidden;border-radius:16px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:20px">
+<div data-a="stamp" data-d="0" style="width:120px;height:120px;flex:none;transform:rotate(-8deg)"><dc-import name="IncisoSelo" text="MÓDULO CONCLUÍDO • SUCESSÕES • " center="✓" color="#82B29B" ink="#131A2B" hint-size="100%,100%" style="width:100%;height:100%"></dc-import></div>
+<div style="display:flex;flex-direction:column;gap:6px"><div data-a="up" data-d="500" style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7FB0BD">Sucessões · Módulo 1</div><div data-a="up" data-d="580" style="font:600 26px/1.05 Archivo,sans-serif;letter-spacing:-.03em">Módulo concluído</div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:2px solid #EEF1F5">
+<div style="padding:12px 0;display:flex;flex-direction:column;gap:4px"><span data-a="count" data-to="25" data-d="700" data-dur="900" style="font:600 28px/1 Archivo,sans-serif;font-variant-numeric:tabular-nums">25</span><span style="font:400 12px/1.3 Archivo,sans-serif;color:#A3ADC2">incisos</span></div>
+<div style="padding:12px 0;display:flex;flex-direction:column;gap:4px"><span data-a="count" data-to="86" data-suf="%" data-d="780" data-dur="900" style="font:600 28px/1 Archivo,sans-serif;color:#82B29B;font-variant-numeric:tabular-nums">86%</span><span style="font:400 12px/1.3 Archivo,sans-serif;color:#A3ADC2">de acerto</span></div>
+<div style="padding:12px 0;display:flex;flex-direction:column;gap:4px"><span data-a="count" data-to="12" data-d="860" data-dur="900" style="font:600 28px/1 Archivo,sans-serif;color:#D9AE57;font-variant-numeric:tabular-nums">12</span><span style="font:400 12px/1.3 Archivo,sans-serif;color:#A3ADC2">dias seguidos</span></div>
+</div>
+<button onClick="{{ replay }}" style="align-self:flex-start;display:flex;justify-content:flex-start;padding:10px 14px;background:#EEF1F5;border:0;border-radius:10px;color:#131A2B;font:600 13px/1 Archivo,sans-serif;cursor:pointer;transition:background 160ms" style-hover="background:#FFFFFF" style-active="transform:scale(.97)">Concluir de novo →</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="interacao" style="border-top:2px solid #1B2540;padding:28px 0 80px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div style="flex:0 0 200px;font:600 44px/1 Archivo,sans-serif;letter-spacing:-.035em">XII <span style="color:#B98A2E">–</span></div>
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:600 36px/1.1 Archivo,sans-serif;letter-spacing:-.035em">Hover e clique</h2>
+<p style="margin:0;max-width:62ch;font:400 16px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Hover em 160 ms: cor muda, travessão se desenha, ícone faz seu gesto. Clique em 120 ms: o elemento afunda para 97%. Nada de sombra ou brilho.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:#1B2540;border:2px solid #1B2540;border-radius:16px;overflow:hidden">
+<div style="background:#FFFFFF;padding:28px;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">Botões</span>
+<button data-ih="1" style="display:flex;align-items:center;justify-content:flex-start;gap:10px;min-width:220px;padding:13px 16px;background:#1B2540;border:2px solid #1B2540;border-radius:10px;color:#EEF1F5;font:600 14px/1 Archivo,sans-serif;cursor:pointer;transition:background 160ms,transform 120ms" style-hover="background:#2A365A" style-active="transform:scale(.97)">Continuar aula<svg data-ia="nudge" viewBox="0 0 24 24" style="width:18px;height:18px;margin-left:auto;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></button>
+<button style="display:flex;justify-content:flex-start;min-width:220px;padding:13px 16px;background:transparent;border:2px solid #1B2540;border-radius:10px;color:#1B2540;font:600 14px/1 Archivo,sans-serif;cursor:pointer;transition:background 160ms,color 160ms,transform 120ms" style-hover="background:#1B2540;color:#EEF1F5" style-active="transform:scale(.97)">Revisar flashcards</button>
+<button style="display:flex;justify-content:flex-start;min-width:220px;padding:13px 16px;background:transparent;border:2px solid #A3263A;border-radius:10px;color:#A3263A;font:600 14px/1 Archivo,sans-serif;cursor:pointer;transition:background 160ms,color 160ms,transform 120ms" style-hover="background:#A3263A;color:#FFFFFF" style-active="transform:scale(.97)">Refazer questões erradas</button>
+</div>
+<div style="background:#FFFFFF;padding:28px;display:flex;flex-direction:column;gap:18px">
+<span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">Links e itens de lista</span>
+<a href="#interacao" style="align-self:flex-start;font:600 16px/1.4 Archivo,sans-serif;color:#1B2540;text-decoration:none;background-image:linear-gradient(#B98A2E,#B98A2E);background-size:0% 2px;background-repeat:no-repeat;background-position:0 100%;padding-bottom:2px;transition:background-size 240ms cubic-bezier(.2,.8,.2,1)" style-hover="background-size:100% 2px;color:#1B2540">Ver art. 1.806 do Código Civil</a>
+<div style="display:flex;flex-direction:column;border-top:2px solid #1B2540">
+<sc-for list="{{ listItems }}" as="li" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:8px;padding:12px 8px;border-bottom:1px solid #C8CFDB;cursor:pointer;transition:background 160ms,padding 160ms" style-hover="background:#EEF1F5;padding-left:14px"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">{{ li.n }}</span><span style="font:500 14px/1.3 Archivo,sans-serif">{{ li.t }}</span><span style="font:600 14px/1 Archivo,sans-serif;color:#59627A">→</span></div>
+</sc-for>
+</div>
+</div>
+<div style="background:#FFFFFF;padding:28px;display:flex;flex-direction:column;gap:14px">
+<span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">Card de matéria</span>
+<div data-ih="1" style="border:2px solid #1B2540;padding:18px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:background 160ms,border-color 160ms,transform 120ms;border-radius:16px;overflow:hidden" style-hover="background:#E1EAF4;border-color:#2F5D8A" style-active="transform:scale(.98)">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#244A6E">Contratos</span><svg data-ia="flip" viewBox="0 0 24 24" style="width:22px;height:22px;fill:none;stroke:#244A6E;stroke-width:1.5;stroke-linecap:square"><rect x="3" y="8" width="14" height="12"></rect><path d="M7 8V4h14v12h-4"></path><path d="M6.5 14h7"></path></svg></div>
+<div style="font:600 22px/1.1 Archivo,sans-serif;letter-spacing:-.025em">Vícios redibitórios</div>
+<div style="font:400 13px/1.4 Archivo,sans-serif;color:#59627A">24 flashcards · 8 para hoje</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="telas" style="border-top:2px solid #1B2540;padding:28px 0 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;gap:16px 48px">
+<div style="flex:0 0 200px;font:600 44px/1 Archivo,sans-serif;letter-spacing:-.035em">XIII <span style="color:#B98A2E">–</span></div>
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:600 36px/1.1 Archivo,sans-serif;letter-spacing:-.035em">Transições entre telas</h2>
+<p style="margin:0;max-width:62ch;font:400 16px/1.55 Archivo,sans-serif;color:#3A4560;text-wrap:pretty">Abas deslizam na horizontal, na ordem da barra (360 ms). Abrir uma aula empurra a tela pela direita; voltar a devolve. O ícone da aba ativa fica preenchido e faz seu gesto.</p>
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr);row-gap:8px;max-width:62ch;font:400 15px/1.5 Archivo,sans-serif;color:#3A4560;margin-top:8px">
+<span style="font-weight:600;color:#B98A2E">I –</span><span>Aba → aba: translateX, 360 ms, --ease-inciso.</span>
+<span style="font-weight:600;color:#B98A2E">II –</span><span>Entrar numa aula: nova tela vem de 100% → 0; a anterior recua 24%.</span>
+<span style="font-weight:600;color:#B98A2E">III –</span><span>Conteúdo da tela nova entra em sequência (up, 70 ms entre itens).</span>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:flex-start"><div style="position:relative;width:340px;height:720px;box-sizing:border-box;border:10px solid #0B0F1A;border-radius:46px;background:#EEF1F5;overflow:hidden;display:flex;flex-direction:column;color:#1B2540;font-family:Archivo,sans-serif">
+<div style="display:flex;justify-content:space-between;padding:14px 26px 0;font:600 13px/1 Archivo,sans-serif"><span>9:41</span><span style="width:18px;height:9px;border:1.5px solid #1B2540"></span></div>
+<div style="position:relative;flex:1;overflow:hidden">
+<div style="position:absolute;inset:0;transform:{{ baseX }};transition:transform 360ms cubic-bezier(.2,.8,.2,1)"><div style="display:flex;width:400%;height:100%;transform:{{ trackX }};transition:transform 360ms cubic-bezier(.2,.8,.2,1)"><div id="scr-0" style="width:25%;flex:none;height:100%;box-sizing:border-box;padding:16px 20px;display:flex;flex-direction:column;gap:14px;overflow:hidden"><div data-a="up" data-d="0" style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">Boa noite, Marina</span><span style="font:600 28px/1.05 Archivo,sans-serif;letter-spacing:-.03em">Continue de onde parou</span></div><button data-a="up" data-d="80" onClick="{{ openAula }}" style="text-align:left;background:#1B2540;color:#EEF1F5;border:0;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:background 160ms" style-hover="background:#2A365A" style-active="transform:scale(.98)"><span style="display:flex;justify-content:space-between;width:100%;font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase"><span style="color:#7FB0BD">Sucessões · Aula 4</span><span style="color:#A9B3C7">40%</span></span><span style="font:600 22px/1.1 Archivo,sans-serif;letter-spacing:-.025em">Renúncia da herança</span><span style="height:4px;width:100%;background:#3A4562;border-radius:2px"><span style="display:block;height:100%;width:40%;background:#82B29B"></span></span><span style="font:600 13px/1 Archivo,sans-serif">Abrir aula →</span></button><div style="display:flex;flex-direction:column"><div data-a="fade" data-d="160" style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A;padding-bottom:8px;border-bottom:2px solid #1B2540">Suas matérias</div><div data-a="up" data-d="220" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#2C4F59">SUC</span><span style="font:500 14px/1.3 Archivo,sans-serif">Sucessões</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">68%</span></div><div data-a="up" data-d="290" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#6E3555">FAM</span><span style="font:500 14px/1.3 Archivo,sans-serif">Família</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">35%</span></div><div data-a="up" data-d="360" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#244A6E">CON</span><span style="font:500 14px/1.3 Archivo,sans-serif">Contratos</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">90%</span></div></div></div><div id="scr-1" style="width:25%;flex:none;height:100%;box-sizing:border-box;padding:16px 20px;display:flex;flex-direction:column;gap:14px;overflow:hidden"><div data-a="up" data-d="0" style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">12 para hoje</span><span style="font:600 28px/1.05 Archivo,sans-serif;letter-spacing:-.03em">Questões</span></div><div data-a="up" data-d="80" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">A</span><span style="font:500 14px/1.3 Archivo,sans-serif">Renúncia — forma</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">Sucessões</span></div><div data-a="up" data-d="150" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">B</span><span style="font:500 14px/1.3 Archivo,sans-serif">Ordem da vocação</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">Sucessões</span></div><div data-a="up" data-d="220" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">C</span><span style="font:500 14px/1.3 Archivo,sans-serif">Regime de bens</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">Família</span></div><div data-a="up" data-d="290" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">D</span><span style="font:500 14px/1.3 Archivo,sans-serif">Vícios redibitórios</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">Contratos</span></div></div><div id="scr-2" style="width:25%;flex:none;height:100%;box-sizing:border-box;padding:16px 20px;display:flex;flex-direction:column;gap:14px;overflow:hidden"><div data-a="up" data-d="0" style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">30 para revisar</span><span style="font:600 28px/1.05 Archivo,sans-serif;letter-spacing:-.03em">Flashcards</span></div><div data-a="up" data-d="80" style="border:2px solid #1B2540;background:#FFFFFF;padding:18px;display:flex;flex-direction:column;gap:20px;min-height:180px;justify-content:space-between;border-radius:16px;overflow:hidden"><span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#2C4F59">Sucessões</span><span style="font:600 22px/1.15 Archivo,sans-serif;letter-spacing:-.025em">O que é a saisine?</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">Toque para virar</span></div><div data-a="up" data-d="160" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">I –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Sucessões</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">14 cards</span></div><div data-a="up" data-d="230" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">II –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Família</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">16 cards</span></div></div><div id="scr-3" style="width:25%;flex:none;height:100%;box-sizing:border-box;padding:16px 20px;display:flex;flex-direction:column;gap:14px;overflow:hidden"><div data-a="up" data-d="0" style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#59627A">Sucessões</span><span style="font:600 28px/1.05 Archivo,sans-serif;letter-spacing:-.03em">Seu progresso</span></div><div data-a="up" data-d="80" style="display:flex;align-items:center;gap:18px"><div style="position:relative;width:110px;height:110px;flex:none"><svg viewBox="0 0 120 120" style="display:block;width:100%;height:100%;transform:rotate(-90deg)"><circle cx="60" cy="60" r="52" style="fill:none;stroke:#DCE1EA;stroke-width:9"></circle><circle data-a="ring" data-from="326.73" data-to="104.55" data-d="120" cx="60" cy="60" r="52" style="fill:none;stroke:#4F7464;stroke-width:9;stroke-dasharray:326.73;stroke-dashoffset:104.55"></circle></svg><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:600 26px/1 Archivo,sans-serif"><span data-a="count" data-to="68" data-suf="%" data-d="120">68%</span></div></div><div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 15px/1.3 Archivo,sans-serif">17 de 25 incisos</span><span style="font:400 13px/1.4 Archivo,sans-serif;color:#59627A">82% de acerto</span></div></div><div data-a="up" data-d="200" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">I –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Abertura da sucessão</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">✓</span></div><div data-a="up" data-d="270" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">II –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Herança e saisine</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">✓</span></div><div data-a="up" data-d="340" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">III –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Aceitação</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">✓</span></div></div></div></div>
+<div id="scr-aula" style="position:absolute;inset:0;background:#FFFFFF;transform:{{ pushX }};transition:transform 360ms cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column"><div style="height:8px;background:#3E6B78"></div><div style="padding:14px 20px;display:flex;flex-direction:column;gap:16px"><button onClick="{{ back }}" style="align-self:flex-start;display:flex;align-items:center;gap:6px;background:transparent;border:0;border-radius:10px;padding:6px 0;color:#1B2540;font:600 13px/1 Archivo,sans-serif;cursor:pointer" style-active="transform:scale(.95)">← Início</button><div data-a="up" data-d="120" style="font:600 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#2C4F59">Sucessões · Aula 4</div><div style="font:600 32px/1 Archivo,sans-serif;letter-spacing:-.035em"><div data-a="rise" data-d="160" style="display:block">Renúncia</div><div data-a="rise" data-d="280" style="display:block">da herança</div></div><div data-a="up" data-d="420" style="font:400 15px/1.55 Archivo,sans-serif;color:#3A4560">Ato formal e irrevogável pelo qual o herdeiro abre mão da herança. Retroage à abertura da sucessão.</div><div style="display:flex;flex-direction:column;border-top:2px solid #1B2540"><div data-a="up" data-d="500" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">I –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Forma</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">6 min</span></div><div data-a="up" data-d="570" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">II –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Irrevogabilidade</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">8 min</span></div><div data-a="up" data-d="640" style="display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #C8CFDB"><span style="font:600 15px/1 Archivo,sans-serif;color:#B98A2E">III –</span><span style="font:500 14px/1.3 Archivo,sans-serif">Efeitos</span><span style="font:500 12px/1 Archivo,sans-serif;color:#59627A">12 min</span></div></div></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #1B2540;padding:6px 6px 20px;background:#EEF1F5"><button onClick="{{ tabs.0.go }}" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:transparent;border:0;border-radius:10px;padding:6px 0;cursor:pointer;color:{{ tabs.0.color }};transition:color 160ms" style-active="transform:scale(.94)"><span data-tabicon="0" style="display:flex;width:22px;height:22px"><sc-if value="{{ tabs.0.on }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="4" y="3" width="16" height="18" style="fill:currentColor"></rect><path d="M7.5 8h1.5M11.5 8h5M7.5 12h1.5M11.5 12h5M7.5 16h1.5M11.5 16h3" style="stroke:#EEF1F5"></path></svg></sc-if><sc-if value="{{ tabs.0.off }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="4" y="3" width="16" height="18"></rect><path d="M7.5 8h1.5M11.5 8h5M7.5 12h1.5M11.5 12h5M7.5 16h1.5M11.5 16h3"></path></svg></sc-if></span><span style="font:600 10px/1 Archivo,sans-serif">Início</span></button>
+<button onClick="{{ tabs.1.go }}" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:transparent;border:0;border-radius:10px;padding:6px 0;cursor:pointer;color:{{ tabs.1.color }};transition:color 160ms" style-active="transform:scale(.94)"><span data-tabicon="1" style="display:flex;width:22px;height:22px"><sc-if value="{{ tabs.1.on }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="3" width="18" height="18" style="fill:currentColor"></rect><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.24c-.66.33-1.1.98-1.1 1.71v1.05" style="stroke:#EEF1F5"></path><path d="M12 17.4v.2" style="stroke:#EEF1F5"></path></svg></sc-if><sc-if value="{{ tabs.1.off }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="3" width="18" height="18"></rect><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.24c-.66.33-1.1.98-1.1 1.71v1.05"></path><path d="M12 17.4v.2"></path></svg></sc-if></span><span style="font:600 10px/1 Archivo,sans-serif">Questões</span></button>
+<button onClick="{{ tabs.2.go }}" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:transparent;border:0;border-radius:10px;padding:6px 0;cursor:pointer;color:{{ tabs.2.color }};transition:color 160ms" style-active="transform:scale(.94)"><span data-tabicon="2" style="display:flex;width:22px;height:22px"><sc-if value="{{ tabs.2.on }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M7 8V4h14v12h-4"></path><rect x="3" y="8" width="14" height="12" style="fill:currentColor"></rect><path d="M6.5 14h7" style="stroke:#EEF1F5"></path></svg></sc-if><sc-if value="{{ tabs.2.off }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><rect x="3" y="8" width="14" height="12"></rect><path d="M7 8V4h14v12h-4"></path><path d="M6.5 14h7"></path></svg></sc-if></span><span style="font:600 10px/1 Archivo,sans-serif">Cards</span></button>
+<button onClick="{{ tabs.3.go }}" style="display:flex;flex-direction:column;align-items:center;gap:5px;background:transparent;border:0;border-radius:10px;padding:6px 0;cursor:pointer;color:{{ tabs.3.color }};transition:color 160ms" style-active="transform:scale(.94)"><span data-tabicon="3" style="display:flex;width:22px;height:22px"><sc-if value="{{ tabs.3.on }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M12 4a8 8 0 1 1-8 8"></path><path d="M12 12V4a8 8 0 1 1-8 8z" style="fill:currentColor"></path></svg></sc-if><sc-if value="{{ tabs.3.off }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter"><path d="M12 4a8 8 0 1 1-8 8"></path><path d="M9 12h6"></path></svg></sc-if></span><span style="font:600 10px/1 Archivo,sans-serif">Progresso</span></button></div>
+</div></div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { flipped: false, pick: null, tab: 0, pushed: false };
+  optRefs = [React.createRef(), React.createRef(), React.createRef()];
+  componentDidMount() {
+    const go = () => {
+      if (!window.IncisoMotion) return setTimeout(go, 60);
+      document.querySelectorAll('[data-scene]').forEach(el => IncisoMotion.observe(el, 1));
+    };
+    go();
+  }
+  componentDidUpdate(pp, ps) {
+    if (!window.IncisoMotion) return;
+    if (ps.pick !== this.state.pick && this.state.pick != null) {
+      const el = this.optRefs[this.state.pick].current;
+      if (this.state.pick === 1) IncisoMotion.play(el); else IncisoMotion.shake(el);
+    }
+    if (ps.tab !== this.state.tab || ps.pushed !== this.state.pushed) {
+      const id = this.state.pushed ? 'scr-aula' : 'scr-' + this.state.tab;
+      const s = document.getElementById(id);
+      if (s) IncisoMotion.play(s);
+      const t = document.querySelector('[data-tabicon="' + this.state.tab + '"]');
+      if (t && ps.tab !== this.state.tab) IncisoMotion.icon(t);
+    }
+  }
+  renderVals() {
+    const M = [
+      { name: 'Sucessões', code: 'SUC', base: '#3E6B78', dark: '#2C4F59', tint: '#E0ECEF', dm: '#7FB0BD' },
+      { name: 'Família', code: 'FAM', base: '#8C4A6E', dark: '#6E3555', tint: '#F2E4EC', dm: '#D08FB2' },
+      { name: 'Contratos', code: 'CON', base: '#2F5D8A', dark: '#244A6E', tint: '#E1EAF4', dm: '#8DB4DE' },
+      { name: 'Direito das Coisas', code: 'REA', base: '#6B7A2E', dark: '#505C1F', tint: '#ECEFDC', dm: '#B4C46E' },
+      { name: 'Penal', code: 'PEN', base: '#A0582A', dark: '#7E4320', tint: '#F4E6DC', dm: '#E39A69' },
+      { name: 'Constitucional', code: 'CST', base: '#5B4E8C', dark: '#463B70', tint: '#E8E5F2', dm: '#A99DE0' }
+    ];
+    const pk = this.state.pick;
+    const O = [
+      'por instrumento particular ou de forma tácita',
+      'por instrumento público ou termo judicial',
+      'parcialmente, sob condição ou a termo'
+    ];
+    const ink = '#1B2540';
+    const T = [
+      { name: 'Display', spec: '64 / 1,0 · 600 · −.035em', size: 'clamp(40px,5vw,64px)', lh: '1', w: 600, ls: '-.035em', color: ink, cname: 'Tinta', sample: 'Renúncia da herança' },
+      { name: 'Título 1', spec: '44 / 1,05 · 600 · −.035em', size: 'clamp(32px,3.6vw,44px)', lh: '1.05', w: 600, ls: '-.035em', color: ink, cname: 'Tinta', sample: 'Ordem da vocação hereditária' },
+      { name: 'Título 2', spec: '32 / 1,1 · 600 · −.03em', size: '32px', lh: '1.1', w: 600, ls: '-.03em', color: ink, cname: 'Tinta', sample: 'Herdeiros necessários' },
+      { name: 'Título 3', spec: '22 / 1,2 · 600 · −.02em', size: '22px', lh: '1.2', w: 600, ls: '-.02em', color: ink, cname: 'Tinta', sample: 'Quem pode renunciar' },
+      { name: 'Numeral', spec: '22 / 1 · 600', size: '22px', lh: '1', w: 600, ls: '0', color: '#B98A2E', cname: 'Latão', sample: 'I –  II –  III –  IV –' },
+      { name: 'Corpo', spec: '17 / 1,55 · 400', size: '17px', lh: '1.55', w: 400, ls: '0', color: '#3A4560', cname: 'Tinta 80', sample: 'A renúncia é ato formal e irrevogável: deve constar de instrumento público ou termo nos autos.' },
+      { name: 'Apoio', spec: '14 / 1,45 · 400', size: '14px', lh: '1.45', w: 400, ls: '0', color: '#59627A', cname: 'Texto 2', sample: 'Arts. 1.804 a 1.813 · 42 min · 3 incisos' },
+      { name: 'Rótulo', spec: '12 / 1 · 600 · +.1em · caixa alta', size: '12px', lh: '1', w: 600, ls: '.1em', tt: 'uppercase', color: '#2C4F59', cname: 'Cor da matéria', sample: 'Sucessões · Aula 4' },
+      { name: 'Link', spec: '16 · 600 · sublinhado Latão', size: '16px', lh: '1.4', w: 600, ls: '0', color: ink, cname: 'Tinta', td: 'underline #B98A2E 2px', sample: 'Ver art. 1.806' },
+      { name: 'Acerto', spec: '14 · 600', size: '14px', lh: '1.4', w: 600, ls: '0', color: '#33503F', cname: 'Sálvia escura', sample: 'Correto — art. 1.806.' },
+      { name: 'Alerta', spec: '14 · 600', size: '14px', lh: '1.4', w: 600, ls: '0', color: '#A3263A', cname: 'Selo', sample: 'Atenção: a renúncia não admite condição.' }
+    ].map(t => ({ tt: 'none', td: 'none', ...t }));
+    return {
+      materias: M,
+      capas: [
+        { ...M[0], aula: 'Aula 4', title: 'Renúncia da herança', pct: '68%' },
+        { ...M[1], aula: 'Aula 2', title: 'Regime de bens', pct: '35%' },
+        { ...M[2], aula: 'Aula 7', title: 'Vícios redibitórios', pct: '90%' }
+      ],
+      escala: T,
+      flipDeg: this.state.flipped ? 180 : 0,
+      flip: () => this.setState(s => ({ flipped: !s.flipped })),
+      opts: O.map((text, i) => {
+        const ok = pk != null && i === 1, bad = pk === i && i !== 1;
+        return {
+          n: ['A', 'B', 'C'][i], text, ok, bad, ref: this.optRefs[i],
+          bg: ok ? '#E3EDE8' : bad ? '#F6E6E9' : '#FFFFFF',
+          bd: ok ? '#4F7464' : bad ? '#A3263A' : '#C8CFDB',
+          nc: ok ? '#33503F' : bad ? '#A3263A' : '#B98A2E',
+          pick: () => this.setState({ pick: i })
+        };
+      }),
+      feedback: pk == null ? 'Escolha uma alternativa.' : pk === 1 ? 'Correto — art. 1.806: instrumento público ou termo judicial.' : 'Não é essa. A renúncia não admite forma tácita nem condição (arts. 1.806 e 1.808).',
+      fbColor: pk == null ? '#59627A' : pk === 1 ? '#33503F' : '#A3263A',
+      listItems: [{ n: 'I –', t: 'Abertura da sucessão' }, { n: 'II –', t: 'Herança e saisine' }, { n: 'III –', t: 'Aceitação da herança' }],
+      replay: e => { const s = e.currentTarget.closest('[data-scene]'); if (s && window.IncisoMotion) IncisoMotion.play(s); },
+      trackX: 'translateX(-' + (this.state.tab * 25) + '%)',
+      baseX: this.state.pushed ? 'translateX(-24%)' : 'translateX(0)',
+      pushX: this.state.pushed ? 'translateX(0)' : 'translateX(100%)',
+      tabs: [0, 1, 2, 3].map(i => ({
+        on: this.state.tab === i, off: this.state.tab !== i,
+        color: this.state.tab === i ? '#1B2540' : '#7A8399',
+        go: () => this.setState({ tab: i, pushed: false })
+      })),
+      openAula: () => this.setState({ pushed: true }),
+      back: () => this.setState({ pushed: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

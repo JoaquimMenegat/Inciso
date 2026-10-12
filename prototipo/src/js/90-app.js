@@ -1,5 +1,11 @@
 /* ================= estado ================= */
 /* G: estado do aluno (matéria atual e atividade diária); S: estado da matéria aberta */
+/* identidade v2: cor por matéria (tom claro, para o modo escuro). Seis tons do manual "Inciso Sistema";
+   só para faixa da capa, etiqueta e numerais da trilha (progresso é sempre Sálvia, alerta sempre Selo) */
+const MATTONE={SUC:['#3E6B78','#7FB0BD'],FAM:['#8C4A6E','#D08FB2'],CON:['#2F5D8A','#8DB4DE'],REA:['#6B7A2E','#B4C46E'],PEN:['#A0582A','#E39A69'],CST:['#5B4E8C','#A99DE0']};
+const MATOF={tgp:'REA',conhecimento:'FAM',procesp:'CST',sucessoes:'SUC',respciv:'CON',obrigacoes:'CON',contratos:'CON',pena:'PEN',crimes:'PEN',constituicao:'CST',estado:'CST',administrativo:'REA',filosofia:'FAM'};
+const matCor=id=>(MATTONE[MATOF[id]]||MATTONE.REA)[1];
+function paintCourse(){const r=document.documentElement.style,t=MATTONE[MATOF[COURSE.id]]||MATTONE.REA;r.setProperty('--mat',t[1]);r.setProperty('--mat-base',t[0])}
 const GKEY='inciso-global-v3',CKEY=id=>'inciso-'+id+'-v3'+((COURSES[id]&&COURSES[id].ver)||'');
 /* matérias liberadas no lançamento; as demais aparecem como "em breve" */
 const LIVE=['tgp','conhecimento','procesp'],isLive=id=>LIVE.includes(id);
@@ -209,6 +215,11 @@ function lessonQuiz(id,topic){
   const qs=BANK.filter(q=>q.t===topic);
   function start(){mountQuiz(root,shuffle(qs),{onAnswer:record,onDone:(sc,n)=>{
     const L=S.lessons[id];L.quiz=Math.max(L.quiz||0,sc);bump(2);save();updateLessonBar(id);
+    const ok=sc>=Math.ceil(n*.6),st=streak();
+    if(ok){root.innerHTML=`<div class="qres conq"><svg class="cseal" data-a="stamp" data-d="200" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="var(--sage)"/><circle cx="100" cy="100" r="70" fill="none" stroke="var(--night)" stroke-width="2"/><path d="M70 102l20 20 42-46" fill="none" stroke="var(--night)" stroke-width="10" stroke-linecap="square"/></svg>
+      <div><p class="eyebrow">Aula concluída</p><h2>${sc===n?'Gabaritou.':'Módulo concluído.'}</h2><div class="cstats"><div><b class="num" data-a="count" data-to="${Math.round(sc/n*100)}" data-suf="%" data-d="300">${Math.round(sc/n*100)}%</b><span>de acerto</span></div><div><b class="num">${sc} de ${n}</b><span>questões</span></div><div><b class="num">${st}</b><span>${st===1?'dia seguido':'dias seguidos'}</span></div></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn primary qagain">Refazer o teste</button><a class="btn" href="#painel">Ver no painel</a></div></div></div>`;
+      Motion.play(root);$('.qagain',root).onclick=start;toast('Resultado salvo no seu progresso');return}
     root.innerHTML=`<div class="qres swap"><p class="eyebrow">Resultado</p><p class="score num">${sc} de ${n}</p><p>${sc===n?'Gabaritou. O tema já conta como revisado no seu painel.':'Releia as seções em que errou e tente de novo. As questões erradas voltam primeiro nas suas sessões de prática.'}</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn primary qagain">Refazer o teste</button><a class="btn" href="#painel" style="background:none;color:inherit;border-color:currentColor">Ver no painel</a></div></div>`;
     $('.qagain',root).onclick=start;toast('Resultado salvo no seu progresso');
@@ -358,7 +369,7 @@ function viewMaterias(){
   const soon=Object.values(COURSES).filter(c=>!isLive(c.id)).sort((x,y)=>order.indexOf(x.area)-order.indexOf(y.area));
   return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">Inciso</p><h1>Suas matérias</h1></div></header>
   ${areas.map(area=>`<section class="unit"><h2>${area}</h2><div class="courses">${live.filter(c=>c.area===area).map(c=>{const p=courseProgress(c.id),cur=c.id===COURSE.id;
-    return `<article class="course-card${cur?' cur':''}"><div class="cc-top"><small>${c.area}</small>${cur?'<span class="chip ok">Estudando agora</span>':''}</div>
+    return `<article class="course-card${cur?' cur':''}" style="--mat:${matCor(c.id)}"><div class="cc-top"><small>${c.area}</small>${cur?'<span class="chip ok">Estudando agora</span>':''}</div>
       <h2>${c.nome}</h2><p>${c.desc}</p>
       <dl class="cc-stats"><div><dt>${ic('aula','icd')}Aulas</dt><dd class="num">${c.mods.length}</dd></div><div><dt>${ic('questao','icd')}Questões</dt><dd class="num">${c.bank.length}</dd></div><div><dt>${ic('flash','icd')}Flashcards</dt><dd class="num">${c.cards.length}</dd></div></dl>
       <div class="bar"><i style="width:${p*100}%"></i></div><small class="num">${pct(p)} da trilha</small>
@@ -372,6 +383,7 @@ function mountTurma(){
 }
 
 /* ================= roteamento ================= */
+let prevNav='painel',prevL=false;
 function route(){
   cleanups.forEach(f=>f());cleanups=[];PEND=[];
   const h=(location.hash||'#painel').slice(1),mm=h.match(/^modulo-(\d+)$/),v=$('#view');
@@ -383,7 +395,12 @@ function route(){
     after={materias:mountMaterias,painel:()=>animateDials(v),revisao:renderCard,questoes:mountQuestoes,turma:mountTurma}[currentNav]||null;
   }
   v.innerHTML=html;refreshNav();runPending();if(after)after();Motion.play(v);
-  v.classList.remove('vin');void v.offsetWidth;v.classList.add('vin');
+  /* v2: abas deslizam na ordem da barra; entrar numa aula empurra pela direita; voltar devolve */
+  const order=['materias','painel','trilha','revisao','questoes','desempenho'],isL=!!mm;
+  let tr=isL?'v2-push':prevL?'v2-back':order.indexOf(currentNav)>=order.indexOf(prevNav)?'v2-r':'v2-l';
+  if(isL===prevL&&isL)tr='v2-r';
+  v.classList.remove('v2-r','v2-l','v2-push','v2-back');void v.offsetWidth;v.classList.add(tr);
+  prevNav=currentNav;prevL=isL;paintCourse();
   window.scrollTo(0,0);
 }
 document.addEventListener('click',e=>{

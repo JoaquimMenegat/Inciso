@@ -47,6 +47,15 @@ mark{background:color-mix(in srgb,var(--brass) 26%,transparent);color:inherit;pa
 .swap{animation:swap .45s}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
 .reveal.vis{opacity:1;transform:none}
+/* identidade v2 (Inciso Sistema): títulos em Archivo 600 apertado, cantos 16/10/8, sem sombra */
+h1,h2,h3,h4,.flip .f strong,.tl .it b,.stage h4,.wiz .q,.wiz .end .t,.jc .tese,.out .t,.gauge .t,.calc .res,.vs .col h4,.bins button{font-family:var(--sans);font-weight:600;letter-spacing:-.02em}
+.stage .rn,.artb b,.key b,.big,.cal .mh,.vs .x{font-family:var(--sans);font-weight:600}
+.flip .in,.flip .f,.flip .b,.card,.callout,.out,.wiz .end,.vs .col,.calc input,.calc select,.tbl,.juris .jc{border-radius:16px}
+.chips button,.bins button,.btn,.stepnav button,.wiz .ans button,.tog input{border-radius:10px}
+.tag,.wiz .path span{border-radius:8px}
+.tog input::after{border-radius:6px}
+.flip .f,.card,.calc input,.calc select{background:var(--sheet)}
+.card{border-color:var(--edge,var(--line))}
 /* ajustes do protótipo: nada vaza da largura do celular */
 .calc>*{min-width:0}
 .exp .art-ref{white-space:normal}

@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
-CSS_ORDER = ["styles.css", "lessons.css", "brand.css", "courses.css"]
+CSS_ORDER = ["styles.css", "lessons.css", "brand.css", "courses.css", "theme-v2.css"]
 
 head = (SRC / "head.html").read_text(encoding="utf-8")
 css = "\n".join((SRC / name).read_text(encoding="utf-8") for name in CSS_ORDER)

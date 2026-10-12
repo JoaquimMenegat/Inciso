@@ -1,0 +1,182 @@
+/* ================= Identidade visual v2 — "Inciso Sistema" + "Guia de movimento" =================
+   Sempre no modo escuro. Tinta vira superfície, Papel vira texto; os tons sobem de luminosidade.
+   Títulos em Archivo 600 com espaçamento apertado (escala ≈ 1,33); Caslon só no monograma "I –".
+   Cor por matéria (--mat) só em faixa da capa, etiqueta e numerais da trilha: nunca em progresso
+   (sempre Sálvia) nem em alerta (sempre Selo). Hover 160 ms, clique 120 ms (97%), sem sombra nem brilho. */
+:root:root:root{
+  --night:#131A2B;
+  --paper:#131A2B; --sheet:#1B2540; --sheet2:#222D4A; --ink:#EEF1F5; --body:#C9D0DE; --muted:#A3ADC2;
+  --line:#2E3A58; --edge:#34416A; --soft:#222D48; --track:#34416A; --rule:#EEF1F5;
+  --seal:#E0566B; --seal-soft:#3A2233; --on-seal:#131A2B;
+  --brass:#D9AE57; --brass-text:#D9AE57; --brass-soft:#3A3426;
+  --sage:#82B29B; --sage-soft:#20342C; --sage-ink:#A9D3BE;
+  --inv-bg:#1B2540; --inv-fg:#EEF1F5; --inv-muted:#C9D0DE; --inv-line:#34416A; --inv-brass:#D9AE57;
+  --serif:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --caslon:"Libre Caslon Text",Georgia,serif;
+  --ease:cubic-bezier(.2,.8,.2,1); --ease-inciso:cubic-bezier(.2,.8,.2,1);
+  --r-card:16px; --r-btn:10px; --r-tag:8px;
+  --mat:#B4C46E; --mat-base:#6B7A2E; --mat-tint:color-mix(in srgb,var(--mat) 14%,var(--sheet));
+  color-scheme:dark;
+}
+html{background:var(--night)}
+body{background:var(--paper);color:var(--body);font:400 17px/1.55 var(--sans)}
+::selection{background:color-mix(in srgb,var(--seal) 35%,transparent)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+/* ---------- tipografia por papel ---------- */
+h1,h2,h3,h4{font-family:var(--sans);font-weight:600;color:var(--ink);letter-spacing:-.03em}
+.vh h1,.banner h1{font-size:clamp(32px,3.6vw,44px);line-height:1.05;letter-spacing:-.035em}
+.ltitle{font:600 clamp(40px,5vw,64px)/1 var(--sans)!important;letter-spacing:-.035em}
+.lsec>h2{font-size:32px;line-height:1.1;letter-spacing:-.03em}
+.card h2,.course-card h2,.unit>h2,.qres h2{font-size:22px;line-height:1.2;letter-spacing:-.02em;font-style:normal}
+.eyebrow,.ctop,.cc-top small,.qhead{font:600 12px/1 var(--sans)!important;letter-spacing:.1em;text-transform:uppercase}
+.eyebrow{color:var(--mat)}
+.sub,.lead,.hint,.course-card p{font-size:14px;line-height:1.45;color:var(--muted)}
+.lsec .lead{font-size:17px;color:var(--body)}
+.inc,.lincs b,.mod .n,.cc-stats dd,.kpi b,.wzout b,.num{font-family:var(--sans);font-weight:600}
+.inc,.lincs b{color:var(--brass)}
+.inc i,.mod .n i{color:var(--brass)}
+.kpi b{font-size:32px;letter-spacing:-.03em;color:var(--ink)}
+.wzout b,.rwq,.rwend b,.answer .t,.pkans .t{font-weight:600;letter-spacing:-.02em}
+a:not(.btn):not(.mod):not(.brand):not([data-nav]):not(.course):not([class]){text-decoration:underline 2px var(--brass);text-underline-offset:3px;font-weight:600}
+.ok-txt,.why .ok{color:var(--sage-ink)}
+
+/* ---------- forma: cantos da v2 ---------- */
+*,*::before,*::after{border-radius:0}
+.card,.kpi,.course-card,.sim,.lane,.answer,.cls,.qz,.exam,.note,.callout,.wzout,.vh.banner,.lhead,.mod,.qres,.fc,.flip,.flip .in,.flip .f,.flip .b,.rwend,.efx,.rw,.lbar,.course,.insight,.cont,.labw,.tabs,.tabp{border-radius:var(--r-card)!important}
+.btn,.seg button,.regimes button,.filters button,.rwans button,.opt,.tabh button,.wzq .seg,.stp button,input,select,textarea{border-radius:var(--r-btn)!important}
+.chip,.badge,.art,.rwpath span,.tag{border-radius:var(--r-tag)!important}
+.coin,.tlstep .dot,.pfmark,.pimark,.jcmark,.rtmark,.tabbar .dot,.wm-dot,.nowdot,.mono em,.spinseal circle{border-radius:50%!important}
+.vh.banner,.lhead,.course-card,.card,.mod,.qres{overflow:hidden}
+
+/* ---------- superfícies ---------- */
+.card,.kpi,.course-card,.sim,.lane,.answer,.cls,.mod,.wzout,.efx,.rw,.fc .f{background:var(--sheet);border:2px solid var(--edge)}
+.kpis,.kpis4{background:none;border:0;gap:12px}
+.kpis .kpi,.kpis4 .kpi{border:2px solid var(--edge);border-top:4px solid var(--brass)}
+.vh.banner{background:var(--sheet);border:2px solid var(--edge);border-top:8px solid var(--mat)}
+.lhead{background:var(--sheet);border:2px solid var(--edge);border-top:8px solid var(--mat)}
+.lhead .ctop{border-bottom-color:var(--edge)}
+.lhead .ctop span:first-child{color:var(--mat)}
+.callout{background:var(--seal-soft);border:0;border-left:6px solid var(--seal);color:var(--ink)}
+.insight{background:var(--brass-soft);color:var(--ink)}
+.cont{background:var(--sage-soft);color:var(--sage-ink)}
+.lbar{background:color-mix(in srgb,var(--paper) 90%,transparent);border:2px solid var(--edge)}
+
+/* ---------- cor por matéria ---------- */
+.course-card{border-top:8px solid var(--mat)!important;--mat-tint:color-mix(in srgb,var(--mat) 14%,var(--sheet))}
+.courses .course-card.cur{border-top-color:var(--mat)!important}
+.cc-top small{color:var(--mat)}
+.cc-stats{border-top-color:var(--edge)}
+.cc-stats dd{color:var(--ink)}
+.cc-stats dt .ico{color:var(--mat)}
+.mod .n,.mod .n i{color:var(--mat)}
+.mtag{display:inline-flex;align-items:center;padding:6px 9px;background:color-mix(in srgb,var(--mat) 18%,transparent);color:var(--mat);font:600 11px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r-tag)}
+
+/* ---------- botões, links, listas: hover 160 ms, clique 120 ms ---------- */
+.btn{border:2px solid var(--edge);background:transparent;color:var(--ink);font:600 14px/1 var(--sans);padding:13px 16px;transition:background-color 160ms,color 160ms,border-color 160ms,transform 120ms var(--ease)}
+.btn:hover{background:var(--sheet2);border-color:var(--ink);color:var(--ink)}
+.btn.primary{background:var(--seal);border-color:var(--seal);color:var(--on-seal)}
+.btn.primary:hover{background:color-mix(in srgb,var(--seal) 86%,#fff);border-color:color-mix(in srgb,var(--seal) 86%,#fff);color:var(--on-seal)}
+.btn:active,.mod:active,.course-card:active,.opt:active,.rwans button:active,.seg button:active,.regimes button:active{transform:scale(.97)}
+.course-card:active{transform:scale(.98)}
+.seg button[aria-pressed="true"],.regimes button[aria-pressed="true"],.filters button[aria-pressed="true"],.ldt button[aria-pressed="true"],.chip.fill{background:var(--seal);color:var(--on-seal);border-color:var(--seal)}
+.mod{transition:background-color 160ms,border-color 160ms,padding 160ms,transform 120ms var(--ease)}
+.mod:hover{background:var(--mat-tint);border-color:var(--mat);transform:none}
+.courses .course-card,.kpi,.card{box-shadow:none!important}
+.courses .course-card{transition:background-color 160ms,border-color 160ms,transform 120ms var(--ease)}
+.courses .course-card:hover{background:var(--mat-tint);border-color:var(--mat);transform:none;box-shadow:none}
+.kpi:hover{transform:none}
+.soonlist li:hover{transform:none;padding-left:8px;transition:padding 160ms}
+
+/* ---------- questões: acerto 480 ms, erro 420 ms ---------- */
+.opt{background:var(--sheet);border:2px solid var(--edge);color:var(--ink);transition:background-color 160ms,border-color 160ms,transform 120ms}
+.opt .key{color:var(--brass);font-weight:600}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt.ok{background:var(--sage-soft);border-color:var(--sage)}
+.opt.ok .key{color:var(--sage-ink)}
+.opt.no{background:var(--seal-soft);border-color:var(--seal)}
+.opt.no .key{color:var(--seal)}
+.why b{font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+  .opt.ok{animation:v2ok 480ms var(--ease)}
+  .opt.no{animation:v2shake 420ms var(--ease)}
+}
+@keyframes v2ok{0%{transform:scale(1)}40%{transform:scale(1.02)}100%{transform:scale(1)}}
+@keyframes v2shake{20%{transform:translateX(-6px)}45%{transform:translateX(5px)}70%{transform:translateX(-3px)}100%{transform:none}}
+
+/* ---------- flashcard: virar em 560 ms ---------- */
+.flip .in,.fc .in{transition:transform 560ms var(--ease)!important}
+.flip .f{background:var(--sheet);border:2px solid var(--edge);color:var(--ink)}
+.flip .f strong{font:600 20px/1.15 var(--sans);letter-spacing:-.02em}
+
+/* ---------- progresso: sempre Sálvia ---------- */
+.ring circle[data-a="ring"],.ring .v{stroke:var(--sage)}
+.bar{background:var(--track);border-radius:4px!important}
+.bar i{background:var(--sage);border-radius:4px!important}
+
+/* ---------- barra do topo (horizontal) ---------- */
+@media (min-width:901px){
+  .side{background:color-mix(in srgb,var(--night) 88%,transparent);border-bottom:2px solid var(--edge)}
+  .side .course{border:2px solid var(--edge);border-left:6px solid var(--mat)}
+  .side .course small{color:var(--mat)}
+  .nav a{color:#8A93AB;font:600 14px/1 var(--sans);background:none;transition:color 160ms}
+  .nav a:hover{background:none;color:var(--ink)}
+  .nav a[aria-current="page"]{background:none;color:var(--ink);box-shadow:none}
+  .nav a[aria-current="page"]::after{content:"";position:absolute;left:12px;right:12px;bottom:-12px;height:3px;background:var(--seal);transform-origin:left center}
+}
+@media (prefers-reduced-motion:no-preference) and (min-width:901px){
+  .nav a[aria-current="page"]::after{animation:v2draw 700ms var(--ease) both}
+}
+@keyframes v2draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.tabbar{background:var(--night);border-top:2px solid var(--edge)}
+.tabbar a{color:#8A93AB}
+.tabbar a[aria-current="page"]{color:var(--ink)}
+
+/* ícone ativo preenchido */
+.nav a[aria-current="page"] svg rect,.tabbar a[aria-current="page"] svg rect{fill:currentColor}
+.nav a[data-nav="painel"][aria-current="page"] svg path,.nav a[data-nav="questoes"][aria-current="page"] svg path,.nav a[data-nav="revisao"][aria-current="page"] svg path:last-child,
+.tabbar a[href="#painel"][aria-current="page"] svg path,.tabbar a[href="#questoes"][aria-current="page"] svg path,.tabbar a[href="#revisao"][aria-current="page"] svg path:last-child{stroke:var(--night)}
+.nav a[data-nav="desempenho"][aria-current="page"] svg,.tabbar a[href="#desempenho"][aria-current="page"] svg{stroke-width:2.6}
+
+/* gestos dos ícones (520 ms) no hover */
+@media (prefers-reduced-motion:no-preference){
+  .nav a:hover svg,.btn:hover .ico,.kpi:hover>.ico,.course-card:hover .cc-stats dt .ico{animation:var(--gesture,g-pop) 520ms var(--ease)}
+  .nav a[data-nav="materias"]{--gesture:g-rise}
+  .nav a[data-nav="painel"]{--gesture:g-pop}
+  .nav a[data-nav="trilha"]{--gesture:g-nudge}
+  .nav a[data-nav="revisao"]{--gesture:g-flip}
+  .nav a[data-nav="questoes"]{--gesture:g-pop}
+  .nav a[data-nav="desempenho"]{--gesture:g-spin}
+}
+@keyframes g-rise{0%{transform:translateY(0)}40%{transform:translateY(-4px)}100%{transform:none}}
+@keyframes g-pop{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:none}}
+@keyframes g-flip{0%{transform:perspective(60px) rotateY(0)}50%{transform:perspective(60px) rotateY(90deg)}100%{transform:none}}
+@keyframes g-spin{to{transform:rotate(360deg)}}
+@keyframes g-nudge{0%{transform:none}40%{transform:translateX(4px)}100%{transform:none}}
+@keyframes g-tick{0%,100%{transform:rotate(0)}30%{transform:rotate(12deg)}60%{transform:rotate(-6deg)}}
+
+/* ---------- monograma ---------- */
+.mono{background:var(--sheet);border:2px solid var(--edge);border-radius:var(--r-btn)!important}
+.mono b{font-family:var(--caslon)!important;color:var(--ink)}
+.splash .I,.splash .word,.wm{font-family:var(--caslon)}
+
+/* ---------- transições entre telas ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #view.v2-r{animation:v2tabR 360ms var(--ease)}
+  #view.v2-l{animation:v2tabL 360ms var(--ease)}
+  #view.v2-push{animation:v2push 360ms var(--ease)}
+  #view.v2-back{animation:v2back 360ms var(--ease)}
+}
+@keyframes v2tabR{from{transform:translateX(48px);opacity:0}to{transform:none;opacity:1}}
+@keyframes v2tabL{from{transform:translateX(-48px);opacity:0}to{transform:none;opacity:1}}
+@keyframes v2push{from{transform:translateX(100%)}to{transform:none}}
+@keyframes v2back{from{transform:translateX(-24%);opacity:.4}to{transform:none;opacity:1}}
+
+/* ---------- conquista (fim do teste da aula) ---------- */
+.conq{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+.conq .cseal{width:120px;height:120px;transform:rotate(-8deg)}
+.conq .cstats{display:flex;gap:28px;flex-wrap:wrap;margin:12px 0 16px}
+.conq .cstats b{display:block;font:600 32px/1 var(--sans);letter-spacing:-.03em;color:var(--ink)}
+.conq .cstats span{font-size:14px;color:var(--muted)}
+.conq .cstats div:first-child b{color:var(--sage)}
+@media (max-width:600px){.conq{grid-template-columns:1fr}.conq .cseal{width:96px;height:96px}}

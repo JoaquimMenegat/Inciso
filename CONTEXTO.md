@@ -35,27 +35,31 @@ O projeto nasceu do interesse de um professor em vender material de estudo. O pr
 - **Meta:** abrir as vendas em fevereiro de 2027, com um beta durante as provas de dezembro.
 - O roadmap completo está em `prototipo/roadmap-inciso.md`.
 
-## Identidade visual
+## Identidade visual (v2, 12/10/2026)
 
-O manual está em `Identidade Visual/Inciso Identidade.dc.html`.
+Manuais em `Identidade Visual/`: `Inciso Identidade`, `Inciso Sistema` (v2) e `Inciso Guia de Movimento`. No protótipo, a camada `prototipo/src/theme-v2.css` é a última do build.
 
-**Cores:**
-- Tinta: `#1B2540`
-- Papel: `#EEF1F5`
-- Folha: `#FFFFFF`
-- Selo (vermelho): `#A3263A`
-- Latão (dourado): `#B98A2E`
-- Sálvia (verde): `#4F7464`
-- Noite, fundo escuro: `#131A2B`
-
-**Fontes:** Libre Caslon Text para títulos e números; Archivo para a interface.
-
-**Formas:** cantos retos, filetes de 2px, algarismos romanos seguidos de travessão ("IV –").
-
-**Preferências do dono do projeto:**
-- Menos azul. Usar mais o vermelho (ações e destaques), o dourado (numerais e títulos) e o verde (progresso).
-- Nada de padrão de fundo com números; nada de grades de blocos brancos.
-- Muitas animações e ícones, com movimento fluido. Respeitar quem desativa animações no sistema.
+- **Sempre modo escuro:** fundo Noite `#131A2B`; superfícies `#1B2540` (a tinta vira superfície); texto Papel `#EEF1F5`.
+- **Cores de apoio:** Selo `#E0566B` (ações e alertas), Latão `#D9AE57` (numerais e travessões), Sálvia `#82B29B` (progresso e acerto, sempre).
+- **Cor por matéria:** seis tons do manual, usados só em faixa da capa, etiqueta e numerais da trilha. Lançamento: TGP oliva `#B4C46E`, Processo de Conhecimento ameixa `#D08FB2`, Procedimentos Especiais violeta `#A99DE0`. O mapa está em `MATOF`, em `90-app.js`.
+- **Tipografia:** Archivo para tudo, com títulos em 600 e espaçamento apertado (escala ≈ 1,33). Libre Caslon só no monograma "I –".
+- **Forma:** cantos de 16px (cartões), 10px (botões) e 8px (etiquetas); filetes de 2px; sem sombra nem brilho.
+- **Movimento:**
+  - hover em 160 ms;
+  - clique em 120 ms (o elemento afunda para 97%);
+  - ícones com gesto de 520 ms;
+  - abas deslizam na ordem da barra (360 ms);
+  - abrir uma aula empurra a tela pela direita;
+  - flashcard vira em 560 ms;
+  - acerto em 480 ms e erro em 420 ms;
+  - conquista com carimbo ao concluir a aula;
+  - no máximo um carimbo por tela.
+- **Preferências do dono, mantidas:**
+  - navegação horizontal no topo, com só o monograma "I –";
+  - nada de padrão de fundo com números (os traços vermelhos continuam);
+  - nada de grades de blocos brancos;
+  - vermelho, dourado e verde presentes;
+  - respeito a quem desativa animações.
 
 ## O protótipo
 
