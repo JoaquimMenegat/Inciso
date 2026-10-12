@@ -136,7 +136,7 @@ function viewPainel(){
     </header>
   <div class="top">
     <article class="card prep">${dial(prep,132,'Preparo estimado')}
-      <div><h2>Preparo estimado para a prova</h2><p>Média do seu domínio nos ${TOPICS.length} temas da prova. Sobe quando você acerta questões de temas novos e mantém os flashcards em dia.</p>
+      <div><h2>Preparo estimado para a prova</h2>
       <p style="margin-top:12px"><a class="btn small" href="#desempenho">Ver desempenho</a></p></div></article>
     <div class="kpis">
       <div class="kpi">${ic('sequencia','icd')}<small>Sequência</small><b class="num">${st} ${st===1?'dia':'dias'}</b><span>estudando sem falhar</span></div>
