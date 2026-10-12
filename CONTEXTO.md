@@ -15,7 +15,9 @@ O projeto nasceu do interesse de um professor em vender material de estudo. O pr
 - **O material é do Inciso:** nunca citar universidade, semestre ou "fase", número de aula, nome de professor ou termos próprios de um professor.
 - **Origem das notas:** a base veio das notas de estudo de um Obsidian Vault. Pela Lei 9.610/98, art. 46, IV, anotações de aula não podem ser publicadas sem autorização de quem deu a aula. Por isso, o plano é reescrever a partir de fontes primárias (lei, súmulas, jurisprudência), com redação própria.
 - **Citações:** toda citação traz artigo e lei, ou o número da súmula e o tribunal.
-- **Revisão jurídica:** obrigatória antes de vender.
+- **Revisão jurídica:** obrigatória antes de vender. A primeira (10/2026) cobriu TGP, Processo de Conhecimento e Procedimentos Especiais e Recursos, com três agentes: leitor (extrai as afirmações), pesquisador (confere lei, STJ, STF e doutrina) e validador (dá o parecer). Os relatórios estão em `revisao-juridica/`.
+- **Jurisprudência:** só STJ e STF (e corte internacional em tema de direitos humanos). Julgados de tribunais estaduais foram retirados.
+- **Material a partir do Vault:** siga as regras 7 a 16 de `instrucoes-projeto-claude.md`. Cada correção feita no material também vai para a nota de origem no Vault, seguindo as regras do Vault (texto corrigido com a marca *(C, data)* nas notas sem `(C)`; julgados, súmulas e citações literais ficam intactos, com aviso ⚖️ ao lado).
 
 ## Decisões de negócio (10/10/2026)
 

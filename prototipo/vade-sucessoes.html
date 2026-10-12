@@ -5890,8 +5890,8 @@ function viewPainel(){
   <header class="vh banner">${patHTML(48)}<div><p class="eyebrow">${COURSE.nome}</p><h1>Seu painel</h1></div>
     </header>
   <div class="top">
-    <article class="card prep">${dial(prep,132,'Preparo estimado')}
-      <div><h2>Preparo estimado para a prova</h2>
+    <article class="card prep">${dial(prep,132,'Domínio do conteúdo')}
+      <div><h2>Domínio do conteúdo</h2>
       <p style="margin-top:12px"><a class="btn small" href="#desempenho">Ver desempenho</a></p></div></article>
     <div class="kpis">
       <div class="kpi">${ic('sequencia','icd')}<small>Sequência</small><b class="num">${st} ${st===1?'dia':'dias'}</b><span>estudando sem falhar</span></div>
@@ -6026,7 +6026,7 @@ function renderCard(){
   const area=$('#rvarea');if(!area)return;
   if(rv.i>=rv.queue.length){
     const T=today(),next=Object.values(S.cards).filter(c=>c.due>T).map(c=>c.due).sort((a,b)=>a-b)[0];
-    area.innerHTML=`<div class="card empty swap"><p class="eyebrow">Revisão em dia</p><h2>${rv.done?`${rv.done} cartões revisados`:'Nada para revisar agora'}</h2><p>${next?`A próxima revisão vence ${ivlTxt(next-T)}. `:''}Enquanto isso, resolver questões é o que mais aumenta o seu preparo.</p><div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><button class="btn primary" data-practice="weak">Praticar pontos fracos</button><a class="btn" href="#painel">Voltar ao painel</a></div></div>`;
+    area.innerHTML=`<div class="card empty swap"><p class="eyebrow">Revisão em dia</p><h2>${rv.done?`${rv.done} cartões revisados`:'Nada para revisar agora'}</h2><p>${next?`A próxima revisão vence ${ivlTxt(next-T)}. `:''}Enquanto isso, resolver questões é o que mais aumenta o seu domínio do conteúdo.</p><div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><button class="btn primary" data-practice="weak">Praticar pontos fracos</button><a class="btn" href="#painel">Voltar ao painel</a></div></div>`;
     return;
   }
   const id=rv.queue[rv.i],c=CB[id],isNew=!S.cards[id];
