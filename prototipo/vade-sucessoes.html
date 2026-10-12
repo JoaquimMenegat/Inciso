@@ -6094,8 +6094,7 @@ function viewMaterias(){
   const live=LIVE.map(id=>COURSES[id]),order=['Direito Civil','Direito Penal','Direito Processual','Direito Constitucional','Direito Público','Formação geral'];
   const areas=[];live.forEach(c=>{if(!areas.includes(c.area))areas.push(c.area)});
   const soon=Object.values(COURSES).filter(c=>!isLive(c.id)).sort((x,y)=>order.indexOf(x.area)-order.indexOf(y.area));
-  const total=live.reduce((s,c)=>[s[0]+c.mods.length,s[1]+c.bank.length],[0,0]);
-  return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">Inciso</p><h1>Suas matérias</h1><p class="sub">${live.length} matérias, ${total[0]} aulas interativas e ${total[1]} questões. Cada matéria tem sua trilha, flashcards e progresso; o seu histórico de cada uma fica guardado.</p></div></header>
+  return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">Inciso</p><h1>Suas matérias</h1></div></header>
   ${areas.map(area=>`<section class="unit"><h2>${area}</h2><div class="courses">${live.filter(c=>c.area===area).map(c=>{const p=courseProgress(c.id),cur=c.id===COURSE.id;
     return `<article class="course-card${cur?' cur':''}"><div class="cc-top"><small>${c.area}</small>${cur?'<span class="chip ok">Estudando agora</span>':''}</div>
       <h2>${c.nome}</h2><p>${c.desc}</p>
