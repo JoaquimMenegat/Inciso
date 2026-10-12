@@ -1268,10 +1268,6 @@ a.course:hover{background:var(--soft)}
     <div class="brand"><span class="wm"><span class="wm-i">ı<span class="wm-dot"></span></span>nciso</span><small>Direto, incisivo.</small></div>
     <a class="course" id="course" href="#materias"></a>
     <nav class="nav" id="nav"></nav>
-    <div class="demo">
-      <span>Protótipo com dados de exemplo. Seu progresso fica salvo neste navegador.</span>
-      <button id="reset" type="button">Recomeçar demonstração</button>
-    </div>
   </aside>
   <main>
     <div class="mtop"><span class="wm"><span class="wm-i">ı<span class="wm-dot"></span></span>nciso</span><span id="mtopc"></span></div>
@@ -6140,7 +6136,7 @@ document.addEventListener('keydown',e=>{
   else if(['1','2','3'].includes(e.key)&&!$('#rate').hidden)doRate(+e.key-1);
 });
 let armed;
-$('#reset').addEventListener('click',function(){
+$('#reset')&&$('#reset').addEventListener('click',function(){
   if(!this.classList.contains('armed')){this.classList.add('armed');this.textContent='Confirmar: apagar meu progresso';clearTimeout(armed);armed=setTimeout(()=>{this.classList.remove('armed');this.textContent='Recomeçar demonstração'},4000);return}
   clearTimeout(armed);this.classList.remove('armed');this.textContent='Recomeçar demonstração';
   Object.keys(COURSES).forEach(id=>{try{localStorage.removeItem(CKEY(id))}catch(e){}});try{localStorage.removeItem(GKEY)}catch(e){};MEM={};LAB=null;load();if(location.hash==='#painel'||!location.hash)route();else location.hash='painel';toast('Demonstração recomeçada');

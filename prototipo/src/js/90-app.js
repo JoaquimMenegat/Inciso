@@ -402,7 +402,7 @@ document.addEventListener('keydown',e=>{
   else if(['1','2','3'].includes(e.key)&&!$('#rate').hidden)doRate(+e.key-1);
 });
 let armed;
-$('#reset').addEventListener('click',function(){
+$('#reset')&&$('#reset').addEventListener('click',function(){
   if(!this.classList.contains('armed')){this.classList.add('armed');this.textContent='Confirmar: apagar meu progresso';clearTimeout(armed);armed=setTimeout(()=>{this.classList.remove('armed');this.textContent='Recomeçar demonstração'},4000);return}
   clearTimeout(armed);this.classList.remove('armed');this.textContent='Recomeçar demonstração';
   Object.keys(COURSES).forEach(id=>{try{localStorage.removeItem(CKEY(id))}catch(e){}});try{localStorage.removeItem(GKEY)}catch(e){};MEM={};LAB=null;load();if(location.hash==='#painel'||!location.hash)route();else location.hash='painel';toast('Demonstração recomeçada');
