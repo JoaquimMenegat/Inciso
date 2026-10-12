@@ -6003,7 +6003,7 @@ function rate(id,g){
 let rv={queue:[],i:0,done:0};
 function viewRevisao(){
   rv={queue:dueQueue().map(c=>c.id),i:0,done:0};
-  return `<header class="vh"><div><p class="eyebrow">Repetição espaçada</p><h1>Revisão</h1><p class="sub">Cada cartão volta no momento em que você está prestes a esquecer. Quanto melhor você lembra, mais ele demora a voltar.</p></div></header><div id="rvarea"></div>`;
+  return `<header class="vh"><div><p class="eyebrow">Repetição espaçada</p><h1>Revisão</h1></div></header><div id="rvarea"></div>`;
 }
 function renderCard(){
   const area=$('#rvarea');if(!area)return;
