@@ -151,9 +151,9 @@ intro:`Competência é a medida da jurisdição: diz qual órgão, entre todos o
 blocks:[
 {t:`vs`,h:`Os critérios`,l:{t:`Absoluta`,i:[`Matéria (família, falência, trabalho)`,`Pessoa (União na Justiça Federal)`,`Função ou hierarquia (recursos, competência originária)`,`Interesse público: não se altera`]},r:{t:`Relativa`,i:[`Território (domicílio do réu, ${a(`art. 46`)})`,`Valor da causa`,`Interesse das partes: pode ser alterada`,`Exceção: território absoluto em imóveis e possessórias (${a(`art. 47`)})`]}},
 {t:`chooser`,h:`O regime na prática`,items:[
-[`Quem alega?`,`Absoluta: qualquer um, o juiz de ofício. Relativa: só o réu.`,`<p><b>Absoluta</b>: em qualquer tempo e grau, e o juiz declara de ofício (${a(`CPC, art. 64, §1º`)}). <b>Relativa</b>: o réu, em preliminar de contestação; o MP pode alegar nas causas em que atua (${a(`art. 65, parágrafo único`)}). O juiz não a reconhece de ofício (${a(`Súmula 33 do STJ`)}).</p>`],
+[`Quem alega?`,`Absoluta: qualquer um, o juiz de ofício. Relativa: só o réu.`,`<p><b>Absoluta</b>: em qualquer tempo e grau, e o juiz declara de ofício (${a(`CPC, art. 64, §1º`)}). <b>Relativa</b>: o réu, em preliminar de contestação; o MP pode alegar nas causas em que atua (${a(`art. 65, parágrafo único`)}). O juiz não a reconhece de ofício (${a(`Súmula 33 do STJ`)}), salvo a cláusula de eleição abusiva antes da citação (${a(`art. 63, §3º`)}) e a ação proposta em juízo aleatório (${a(`art. 63, §5º`)}).</p>`],
 [`E se ninguém alegar?`,`Absoluta: o vício permanece. Relativa: prorroga.`,`<p>A incompetência absoluta pode fundamentar ação rescisória (${a(`art. 966, II`)}). A relativa se prorroga e o juízo passa a ser competente (${a(`art. 65`)}).</p>`],
-[`As partes podem mudar?`,`Só a relativa.`,`<p>A absoluta é inderrogável por convenção (${a(`art. 62`)}). A relativa pode ser modificada por eleição de foro em contrato escrito que mencione o negócio (${a(`art. 63`)}).</p>`],
+[`As partes podem mudar?`,`Só a relativa.`,`<p>A absoluta é inderrogável por convenção (${a(`art. 62`)}). A relativa pode ser modificada por eleição de foro, em instrumento escrito, ligada a um negócio determinado e com pertinência com o domicílio ou a residência de uma das partes ou com o local da obrigação; em contrato de consumo, vale a cláusula favorável ao consumidor (${a(`art. 63, §1º`)}, redação da Lei 14.879/2024).</p>`],
 [`Efeito da declaração`,`Remessa ao juízo competente.`,`<p>Declarada a incompetência, os autos vão ao juízo competente, e as decisões do incompetente conservam efeitos até outra decisão (${a(`art. 64, §§3º e 4º`)}).</p>`]]},
 {t:`sorter`,h:`Absoluta ou relativa?`,bins:[`Absoluta`,`Relativa`],cards:[
 [`Ação de família proposta na vara cível, existindo vara de família na comarca.`,0,`Critério de matéria.`],
@@ -161,10 +161,10 @@ blocks:[
 [`União é ré, e a ação corre na Justiça Estadual.`,0,`Critério de pessoa (${a(`CF, art. 109, I`)}).`],
 [`Ação possessória sobre imóvel proposta fora do foro do imóvel.`,0,`Exceção territorial absoluta (${a(`CPC, art. 47, §2º`)}).`],
 [`Contrato com foro de eleição em Joaçaba; ação proposta em Chapecó.`,1,`Eleição de foro é critério territorial.`]]},
-{t:`callout`,kind:`brass`,title:`Cláusula de eleição abusiva`,html:`<p>Antes da citação, o juiz pode reputar ineficaz, de ofício, a cláusula de foro abusiva e remeter os autos ao foro do domicílio do réu (${a(`art. 63, §3º`)}). Citado, cabe ao réu alegar na contestação, sob pena de preclusão (§4º).</p>`},
-{t:`keys`,h:`Números que caem em prova`,items:[[`40`,`salários mínimos`,`teto do Juizado Especial Cível estadual (Lei 9.099/95, art. 3º)`],[`60`,`salários mínimos`,`teto dos Juizados Federais e da Fazenda Pública`],[`33`,`Súmula do STJ`,`incompetência relativa não se declara de ofício`]]}],
+{t:`callout`,kind:`brass`,title:`Cláusula de eleição abusiva`,html:`<p>Antes da citação, o juiz pode reputar ineficaz, de ofício, a cláusula de foro abusiva e remeter os autos ao foro do domicílio do réu (${a(`art. 63, §3º`)}). Citado, cabe ao réu alegar na contestação, sob pena de preclusão (§4º). E se a ação for proposta em juízo aleatório, sem vínculo com o domicílio ou a residência das partes nem com o negócio, o juiz pode declinar de ofício (§5º, incluído pela Lei 14.879/2024).</p>`},
+{t:`keys`,h:`Números que caem em prova`,items:[[`40`,`salários mínimos`,`teto do Juizado Especial Cível estadual (Lei 9.099/95, art. 3º)`],[`60`,`salários mínimos`,`teto dos Juizados Federais e da Fazenda Pública`],[`33`,`Súmula do STJ`,`incompetência relativa não se declara de ofício (exceções: art. 63, §§3º e 5º)`]]}],
 quiz:[
-[`O juiz pode declarar de ofício a incompetência territorial?`,[`Sim`,`Não, salvo cláusula abusiva antes da citação`,`Só em segundo grau`],1,`${a(`Súmula 33 do STJ`)} e ${a(`CPC, art. 63, §3º`)}.`],
+[`O juiz pode declarar de ofício a incompetência territorial?`,[`Sim`,`Não, salvo cláusula abusiva antes da citação ou ação em juízo aleatório`,`Só em segundo grau`],1,`${a(`Súmula 33 do STJ`)}; exceções no ${a(`CPC, art. 63, §§3º e 5º`)} (Lei 14.879/2024).`],
 [`O réu não alegou incompetência relativa. Consequência?`,[`Nulidade`,`Prorrogação`,`Extinção`],1,`${a(`CPC, art. 65`)}.`],
 [`Competência em razão da matéria é:`,[`relativa`,`absoluta`,`depende do valor`],1,`Critério de interesse público.`]]},
 
@@ -173,7 +173,7 @@ quiz:[
 intro:`Só a competência relativa se modifica. Os caminhos são a vontade das partes (derrogação), a inércia do réu (prorrogação) e a ligação entre ações (conexão e continência).`,
 blocks:[
 {t:`tl`,h:`Quatro formas de modificar`,items:[
-[`Derrogação`,`Antes do processo: as partes elegem o foro no contrato (${a(`art. 63`)}). Vincula herdeiros e sucessores.`],
+[`Derrogação`,`Antes do processo: as partes elegem, no contrato, foro ligado ao domicílio de uma delas ou ao local da obrigação (${a(`art. 63, §1º`)}). Vincula herdeiros e sucessores (§2º).`],
 [`Prorrogação`,`No processo: o réu não alega a incompetência relativa (${a(`art. 65`)}).`],
 [`Conexão`,`Duas ações com o mesmo pedido ou a mesma causa de pedir são reunidas (${a(`art. 55`)}).`],
 [`Continência`,`Mesmas partes e causa de pedir, e o pedido de uma abrange o da outra (${a(`art. 56`)}).`]]},
