@@ -253,3 +253,10 @@
   .lbar{top:var(--toph,78px)}
 }
 @media (min-width:901px) and (max-width:1180px){.nav a>span:not(.badge){display:none}.nav a{padding:10px}}
+
+/* área útil maior: acompanha a largura da barra do topo */
+@media (min-width:901px){
+  main{padding-inline:clamp(16px,3vw,40px)}
+  .view{max-width:1560px}
+  .courses{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+}
