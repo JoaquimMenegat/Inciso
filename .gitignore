@@ -18,3 +18,7 @@ inciso-materiais*.zip
 
 # Checagem de originalidade: contém trechos do material do professor
 validacao/originalidade/privado/
+
+# Publicação: o código de acesso e a pasta montada não vão para o Git
+prototipo/.codigo-acesso
+prototipo/publicar/

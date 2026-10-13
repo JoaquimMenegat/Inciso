@@ -56,7 +56,12 @@ Confirmar que o material é recriação, e não cópia do material do professor.
 - [ ] Pedir ao navegador para guardar os dados como permanentes (`navigator.storage.persist()`).
 
 **O mínimo para o piloto**
-- [ ] **Hospedagem com um endereço:** Cloudflare Pages (grátis), no domínio próprio se já estiver registrado. Com `noindex`, para o Google não indexar as aulas.
+- [ ] **Hospedagem com um endereço:** Cloudflare Pages (grátis), no domínio próprio se já estiver registrado. Subir a pasta gerada por `python prototipo/publicar.py`.
+- [ ] **Proteção do link (opção 1, decidida em 13/10):**
+  - [x] Endereço difícil de adivinhar (`<domínio>/a/<código>/`); o código fica fora do Git.
+  - [x] Aulas fora do Google (`noindex`) e endereço que não vaza para outros sites quando o aluno clica num link (`no-referrer`).
+  - [ ] **Tornar o repositório do GitHub privado.** Hoje ele é público e tem o conteúdo completo e o HTML montado: qualquer pessoa baixa o Inciso inteiro sem comprar.
+  - [ ] Se o link vazar: `python prototipo/publicar.py --novo`, subir de novo e trocar o link na área de membros. O aluno não perde o progresso.
 - [ ] **Métricas simples:** aulas abertas e aulas concluídas, contadas sem identificar o aluno. Usar um contador que registre eventos, como Umami ou GoatCounter (os dois têm plano grátis).
 - [ ] **Botão "Encontrei um erro"** em cada aula. Abre um formulário (Tally, grátis) que já chega preenchido com a matéria e a aula. O aluno descreve o erro e, se quiser, deixa o e-mail.
 - [ ] **Avaliação no fim da aula:** 1 a 5 estrelas e comentário opcional, enviados ao mesmo formulário ou ao contador de eventos.
@@ -80,7 +85,7 @@ Confirmar que o material é recriação, e não cópia do material do professor.
 - [ ] Compra de teste completa, do pagamento até abrir uma aula, e depois o reembolso.
 
 **Documentos (antes da primeira venda)**
-- [ ] **Termos de uso:** licença pessoal; proibido compartilhar o acesso; prazo de acesso; sem atualizações incluídas; erros continuam sendo corrigidos; o material não substitui a leitura da lei; **o progresso fica salvo no aparelho do aluno**.
+- [ ] **Termos de uso:** licença pessoal; proibido compartilhar o acesso ou o link (e o link pode ser trocado a qualquer momento); prazo de acesso; sem atualizações incluídas; erros continuam sendo corrigidos; o material não substitui a leitura da lei; **o progresso fica salvo no aparelho do aluno**.
 - [ ] **Política de privacidade (LGPD):** o que a Kiwify, o contador de acessos e o formulário coletam, para quê e por quanto tempo.
 - [ ] Links para os dois documentos no rodapé do Inciso e na página de vendas.
 - [ ] **Imposto:** entender o Carnê-Leão (declaração mensal da receita no CPF) antes da primeira venda.
@@ -112,6 +117,8 @@ Confirmar que o material é recriação, e não cópia do material do professor.
 - [ ] Abrir as vendas com preço de lançamento por tempo limitado.
 - [ ] Divulgar entre colegas, centros acadêmicos e nas redes, com as animações das aulas.
 - [ ] Acompanhar todas as semanas: vendas, reembolsos, aulas concluídas, avaliações e erros relatados.
+
+**Primeiro passo depois do lançamento: link individual (opção 2).** A Kiwify avisa uma compra por webhook; um Worker da Cloudflare manda ao comprador um link de acesso só dele, que pode ser cancelado e mostra quando é usado em muitos aparelhos. Esforço de 2 a 3 dias. O mesmo webhook serve depois para a plataforma com login.
 
 **Quando partir para a plataforma com login** (Fase 2 de `roadmap-inciso.md`): quando as vendas se sustentarem ou quando a perda de progresso virar reclamação frequente. O aluno leva o progresso que já tem pelo botão "Importar".
 
