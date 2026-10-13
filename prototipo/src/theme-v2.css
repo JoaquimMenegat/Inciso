@@ -190,7 +190,7 @@ a:not(.btn):not(.mod):not(.brand):not([data-nav]):not(.course):not([class]){text
 .brand .mono b{transform:translateX(-6px)}
 
 /* logo da barra do topo: ícone "Ji" do manual (o mesmo do favicon) */
-.brand .ji{display:block;width:44px;height:44px;border-radius:10px;outline:2px solid var(--edge);outline-offset:-1px}
+.brand .ji{display:block;width:40px;height:40px;color:var(--ink);overflow:visible}
 .brand .ji .jidot{transform-box:fill-box;transform-origin:center}
 @media (prefers-reduced-motion:no-preference){
   .brand .ji .jidot{animation:monostamp .62s cubic-bezier(.3,1.6,.5,1) .3s both}
