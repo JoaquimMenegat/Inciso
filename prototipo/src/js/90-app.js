@@ -367,7 +367,7 @@ function viewMaterias(){
   const live=LIVE.map(id=>COURSES[id]),order=['Direito Civil','Direito Penal','Direito Processual','Direito Constitucional','Direito Público','Formação geral'];
   const areas=[];live.forEach(c=>{if(!areas.includes(c.area))areas.push(c.area)});
   const soon=Object.values(COURSES).filter(c=>!isLive(c.id)).sort((x,y)=>order.indexOf(x.area)-order.indexOf(y.area));
-  return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">Inciso</p><h1>Suas matérias</h1></div></header>
+  return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">JurInterativo</p><h1>Suas matérias</h1></div></header>
   ${areas.map(area=>`<section class="unit"><h2>${area}</h2><div class="courses">${live.filter(c=>c.area===area).map(c=>{const p=courseProgress(c.id),cur=c.id===COURSE.id;
     return `<article class="course-card${cur?' cur':''}" style="--mat:${matCor(c.id)}"><div class="cc-top"><small>${c.area}</small>${cur?'<span class="chip ok">Estudando agora</span>':''}</div>
       <h2>${c.nome}</h2><p>${c.desc}</p>
@@ -428,7 +428,7 @@ function splash(){
   let seen=false;try{seen=!!sessionStorage.getItem('inciso-splash');sessionStorage.setItem('inciso-splash','1')}catch(e){}
   if(seen||Motion.reduce())return;
   const el=document.createElement('div');el.className='splash';
-  el.innerHTML=`<div class="row"><span class="mono"><span class="I" data-a="rise" data-d="250">I</span><span class="dash" data-a="draw" style="transform-origin:left center"></span></span><span class="sep" data-a="fade" data-d="300"></span><span class="word" data-a="letters" data-d="1350" data-st="60"><span class="wm-i"><span data-l="1">ı</span><span class="wm-dot" data-a="stamp" data-d="800"></span></span><span data-l="1">n</span><span data-l="1">c</span><span data-l="1">i</span><span data-l="1">s</span><span data-l="1">o</span></span></div><div class="tag" data-a="fade" data-d="2500" data-dur="700">Direto, incisivo.</div><button type="button">Pular abertura</button>`;
+  el.innerHTML=`<div class="row"><span class="mono"><span class="I" data-a="rise" data-d="250">I</span><span class="dash" data-a="draw" style="transform-origin:left center"></span></span><span class="sep" data-a="fade" data-d="300"></span><span class="word" data-a="letters" data-d="1350" data-st="60" aria-label="JurInterativo">${[...'JurInterat'].map(c=>`<span data-l="1">${c}</span>`).join('')}<span class="wm-i"><span data-l="1">ı</span><span class="wm-dot" data-a="stamp" data-d="800"></span></span><span data-l="1">v</span><span data-l="1">o</span></span></div><div class="tag" data-a="fade" data-d="2500" data-dur="700">Direto, incisivo.</div><button type="button">Pular abertura</button>`;
   document.body.appendChild(el);Motion.play(el);
   let done=false;const close=()=>{if(done)return;done=true;el.classList.add('out');setTimeout(()=>el.remove(),520)};
   el.addEventListener('click',close);setTimeout(close,3800);

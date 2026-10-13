@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<script src="inciso-motion.js"></script>
+</helmet>
+<svg viewBox="0 0 200 200" style="display:block;width:100%;height:100%;overflow:visible">
+<defs><path id="{{ pid }}" d="M100,18 a82,82 0 1,1 0,164 a82,82 0 1,1 0,-164"></path></defs>
+<circle cx="100" cy="100" r="97" style="fill:{{ fill }};stroke:{{ stroke }};stroke-width:{{ sw }}"></circle>
+<circle cx="100" cy="100" r="66" style="fill:none;stroke:{{ ink }};stroke-width:1.5"></circle>
+<g ref="{{ ring }}" style="transform-origin:100px 100px">
+<text style="font-family:Archivo,sans-serif;font-size:14px;font-weight:700;fill:{{ ink }}"><textPath ref="{{ tp }}" href="{{ pref }}"></textPath></text>
+</g>
+<text ref="{{ ct }}" x="100" y="104" style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:{{ cs }}px;fill:{{ ink }};text-anchor:middle;dominant-baseline:middle"></text>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:240,&quot;height&quot;:240},&quot;text&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ART. 1.784 • SAISINE • &quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;center&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;I –&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A3263A&quot;,&quot;options&quot;:[&quot;#A3263A&quot;,&quot;#1B2540&quot;,&quot;#B98A2E&quot;,&quot;#4F7464&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#EEF1F5&quot;,&quot;options&quot;:[&quot;#EEF1F5&quot;,&quot;#1B2540&quot;,&quot;#131A2B&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;outline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;spin&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;period&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:30,&quot;min&quot;:8,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;centerSize&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:58,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  pid = 'selo' + Math.random().toString(36).slice(2, 8);
+  ring = React.createRef();
+  tp = React.createRef();
+  ct = React.createRef();
+  componentDidMount() {
+    this.fit();
+    if (document.fonts) document.fonts.ready.then(() => this.fit());
+    const go = () => window.IncisoMotion ? ((this.props.spin ?? true) && IncisoMotion.spin(this.ring.current, this.props.period ?? 30)) : setTimeout(go, 60);
+    go();
+  }
+  componentDidUpdate() { this.fit(); }
+  fit() {
+    const t = this.tp.current, c = this.ct.current;
+    if (c) c.textContent = this.props.center ?? 'I –';
+    if (!t) return;
+    const s = this.props.text ?? 'JURINTERATIVO • DIRETO, INCISIVO • ';
+    t.textContent = s.repeat(Math.max(1, Math.round(512 / (s.length * 10.5))));
+    t.setAttribute('textLength', String(2 * Math.PI * 82 - 3));
+    t.setAttribute('lengthAdjust', 'spacing');
+  }
+  renderVals() {
+    const c = this.props.color ?? '#A3263A', o = this.props.outline ?? false;
+    return {
+      pid: this.pid, pref: '#' + this.pid, ring: this.ring, tp: this.tp, ct: this.ct,
+      text: this.props.text ?? 'JURINTERATIVO • DIRETO, INCISIVO • ',
+      center: this.props.center ?? 'I –',
+      fill: o ? 'none' : c, stroke: c, sw: o ? 3 : 0,
+      ink: this.props.ink ?? (o ? c : '#EEF1F5'),
+      cs: this.props.centerSize ?? 58
+    };
+  }
+}
+</script>
+</body>
+</html>

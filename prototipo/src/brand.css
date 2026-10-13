@@ -221,10 +221,10 @@
 
 /* barra lateral: só o monograma "I –" com o selo (ícone da marca) */
 .side .brand{display:block;padding:0 10px;text-decoration:none}
-.mono{position:relative;display:inline-grid;place-items:center;width:52px;height:52px;background:var(--inv-bg);color:var(--inv-fg)}
-.mono b{font:700 30px/1 var(--serif);transform:translateX(-7px)}
-.mono i{position:absolute;left:30px;top:26px;width:12px;height:3px;background:var(--inv-brass)}
-.mono em{position:absolute;right:-5px;top:-5px;width:14px;height:14px;border-radius:50%!important;background:var(--seal)}
+.brand .mono{position:relative;display:inline-grid;place-items:center;width:52px;height:52px;background:var(--inv-bg);color:var(--inv-fg)}
+.brand .mono b{font:700 30px/1 var(--serif);transform:translateX(-7px)}
+.brand .mono i{position:absolute;left:30px;top:26px;width:12px;height:3px;background:var(--inv-brass)}
+.brand .mono em{position:absolute;right:-5px;top:-5px;width:14px;height:14px;border-radius:50%!important;background:var(--seal)}
 @media (prefers-reduced-motion:no-preference){
   .mono em{animation:monostamp .6s cubic-bezier(.3,1.6,.5,1) .3s both}
   .mono i{transform-origin:left center;animation:monodash .5s var(--ease) .1s both}

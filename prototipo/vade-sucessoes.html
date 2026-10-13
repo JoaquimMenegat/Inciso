@@ -4,8 +4,8 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231B2540'/%3E%3Crect x='8' y='9' width='4' height='14' fill='%23EEF1F5'/%3E%3Crect x='6' y='8' width='8' height='2' fill='%23EEF1F5'/%3E%3Crect x='6' y='22' width='8' height='2' fill='%23EEF1F5'/%3E%3Crect x='16' y='16' width='9' height='2.5' fill='%23EEF1F5'/%3E%3Ccircle cx='23.5' cy='9' r='3.5' fill='%23A3263A'/%3E%3C/svg%3E">
-<title>Inciso</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B2540'/%3E%3Cpath d='M13.6 6.5V19.8a3.9 3.9 0 0 1-7.8 0' fill='none' stroke='%23EEF1F5' stroke-width='5.6'/%3E%3Crect x='9.2' y='4.6' width='9.6' height='3.6' fill='%23EEF1F5'/%3E%3Crect x='19' y='11.6' width='5.6' height='14.6' fill='%23EEF1F5'/%3E%3Crect x='17.2' y='11.6' width='7.4' height='3.3' fill='%23EEF1F5'/%3E%3Crect x='17' y='22.9' width='9.6' height='3.3' fill='%23EEF1F5'/%3E%3Ccircle cx='21.8' cy='7' r='3.3' fill='%23A3263A'/%3E%3C/svg%3E">
+<title>JurInterativo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1004,10 +1004,10 @@ input[type=range]{width:100%;accent-color:var(--brass)}
 
 /* barra lateral: só o monograma "I –" com o selo (ícone da marca) */
 .side .brand{display:block;padding:0 10px;text-decoration:none}
-.mono{position:relative;display:inline-grid;place-items:center;width:52px;height:52px;background:var(--inv-bg);color:var(--inv-fg)}
-.mono b{font:700 30px/1 var(--serif);transform:translateX(-7px)}
-.mono i{position:absolute;left:30px;top:26px;width:12px;height:3px;background:var(--inv-brass)}
-.mono em{position:absolute;right:-5px;top:-5px;width:14px;height:14px;border-radius:50%!important;background:var(--seal)}
+.brand .mono{position:relative;display:inline-grid;place-items:center;width:52px;height:52px;background:var(--inv-bg);color:var(--inv-fg)}
+.brand .mono b{font:700 30px/1 var(--serif);transform:translateX(-7px)}
+.brand .mono i{position:absolute;left:30px;top:26px;width:12px;height:3px;background:var(--inv-brass)}
+.brand .mono em{position:absolute;right:-5px;top:-5px;width:14px;height:14px;border-radius:50%!important;background:var(--seal)}
 @media (prefers-reduced-motion:no-preference){
   .mono em{animation:monostamp .6s cubic-bezier(.3,1.6,.5,1) .3s both}
   .mono i{transform-origin:left center;animation:monodash .5s var(--ease) .1s both}
@@ -1454,9 +1454,13 @@ a:not(.btn):not(.mod):not(.brand):not([data-nav]):not(.course):not([class]){text
 @keyframes g-tick{0%,100%{transform:rotate(0)}30%{transform:rotate(12deg)}60%{transform:rotate(-6deg)}}
 
 /* ---------- monograma ---------- */
-.mono{background:var(--sheet);border:2px solid var(--edge);border-radius:var(--r-btn)!important}
-.mono b{font-family:var(--caslon)!important;color:var(--ink)}
-.splash .I,.splash .word,.wm{font-family:var(--caslon)}
+.brand .mono{background:var(--sheet);border:2px solid var(--edge);border-radius:var(--r-btn)!important}
+.brand .mono b{font-family:var(--caslon)!important;font-weight:700;color:var(--ink)}
+.brand .mono i{background:var(--brass)}
+.splash .mono,.splash .I,.splash .word,.wm{font-family:var(--caslon);font-weight:700}
+.splash .dash{background:var(--brass)}
+.splash .tag{font:italic 700 clamp(18px,2.3vw,32px)/1.2 var(--caslon)}
+.splash .word{letter-spacing:-.01em}
 
 /* ---------- transições entre telas ---------- */
 @media (prefers-reduced-motion:no-preference){
@@ -1478,11 +1482,15 @@ a:not(.btn):not(.mod):not(.brand):not([data-nav]):not(.course):not([class]){text
 .conq .cstats span{font-size:14px;color:var(--muted)}
 .conq .cstats div:first-child b{color:var(--sage)}
 @media (max-width:600px){.conq{grid-template-columns:1fr}.conq .cseal{width:96px;height:96px}}
+
+/* monograma "I –" do manual (caminho a): Caslon 700 + travessão em Latão, sem selo */
+.brand .mono em{display:none}
+.brand .mono b{transform:translateX(-6px)}
 </style>
 
 <div class="app">
   <header class="side" aria-label="Navegação">
-    <a class="brand" href="#materias" aria-label="Inciso, início"><span class="mono" aria-hidden="true"><b>I</b><i></i><em></em></span></a>
+    <a class="brand" href="#materias" aria-label="JurInterativo, início"><span class="mono" aria-hidden="true"><b>I</b><i></i><em></em></span></a>
     <a class="course" id="course" href="#materias"></a>
     <nav class="nav" id="nav"></nav>
   </header>
@@ -1577,7 +1585,7 @@ function rom(n){let s='';for(const [v,r] of [[1000,'M'],[900,'CM'],[500,'D'],[40
 const inc=n=>`<span class="inc">${rom(n)} <i>–</i></span>`;
 /* padrão de incisões: traços no vermelho-selo, como cortes de texto, que se adensam à direita */
 const patHTML=(n)=>`<div class="pat" aria-hidden="true">${Array.from({length:(n||72)*2},(_,i)=>{const w=[14,26,40,58,22,34][(i*7+(i>>3))%6],o=(i*5)%9===0;return `<span${o?' class="o"':''} style="width:${w}px"></span>`}).join('')}</div>`;
-const WORDMARK='<span class="wm" aria-label="Inciso"><span class="wm-i">ı<span class="wm-dot"></span></span>nciso</span>';
+const WORDMARK='<span class="wm" aria-label="JurInterativo">JurInterat<span class="wm-i">ı<span class="wm-dot"></span></span>vo</span>';
 
 /* ================= ícones da marca =================
    Grade de 24, traço de 1,5 px, pontas retas (manual, seção V). Cada traço tem pathLength=1,
@@ -3798,7 +3806,7 @@ defLesson('co-est',{
       ['Preâmbulo','Carta de intenções. <em>Não tem força normativa</em>: orienta a interpretação.'],
       ['Parte dogmática','Arts. 1º a 250: <em>a Constituição propriamente dita</em>, com força obrigatória.'],
       ['ADCT','Regras de <em>transição</em> entre a ordem antiga e a nova; tendem a esgotar seus efeitos.'],
-      ['Divisões','Artigos, parágrafos, <em>incisos</em> e alíneas, a mesma lógica que dá nome a esta plataforma.']])},
+      ['Divisões','Artigos, parágrafos, <em>incisos</em> e alíneas, a mesma lógica do "I –" da nossa marca.']])},
     {id:'titulos',nav:'Os títulos',h:'Onde está cada assunto?',lead:'Classifique pelo título da Constituição.',html:()=>W.classify({buckets:['Tít. I · Princípios','Tít. II · Direitos','Tít. III · Estado','Tít. IV · Poderes'],items:[
       ['Os fundamentos da República, como a dignidade da pessoa humana.',0,'Art. 1º.'],
       ['O direito de herança e a inviolabilidade do domicílio.',1,'Art. 5º.'],
@@ -6309,7 +6317,7 @@ function viewMaterias(){
   const live=LIVE.map(id=>COURSES[id]),order=['Direito Civil','Direito Penal','Direito Processual','Direito Constitucional','Direito Público','Formação geral'];
   const areas=[];live.forEach(c=>{if(!areas.includes(c.area))areas.push(c.area)});
   const soon=Object.values(COURSES).filter(c=>!isLive(c.id)).sort((x,y)=>order.indexOf(x.area)-order.indexOf(y.area));
-  return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">Inciso</p><h1>Suas matérias</h1></div></header>
+  return `<header class="vh banner">${patHTML(48)}<div><p class="eyebrow">JurInterativo</p><h1>Suas matérias</h1></div></header>
   ${areas.map(area=>`<section class="unit"><h2>${area}</h2><div class="courses">${live.filter(c=>c.area===area).map(c=>{const p=courseProgress(c.id),cur=c.id===COURSE.id;
     return `<article class="course-card${cur?' cur':''}" style="--mat:${matCor(c.id)}"><div class="cc-top"><small>${c.area}</small>${cur?'<span class="chip ok">Estudando agora</span>':''}</div>
       <h2>${c.nome}</h2><p>${c.desc}</p>
@@ -6370,7 +6378,7 @@ function splash(){
   let seen=false;try{seen=!!sessionStorage.getItem('inciso-splash');sessionStorage.setItem('inciso-splash','1')}catch(e){}
   if(seen||Motion.reduce())return;
   const el=document.createElement('div');el.className='splash';
-  el.innerHTML=`<div class="row"><span class="mono"><span class="I" data-a="rise" data-d="250">I</span><span class="dash" data-a="draw" style="transform-origin:left center"></span></span><span class="sep" data-a="fade" data-d="300"></span><span class="word" data-a="letters" data-d="1350" data-st="60"><span class="wm-i"><span data-l="1">ı</span><span class="wm-dot" data-a="stamp" data-d="800"></span></span><span data-l="1">n</span><span data-l="1">c</span><span data-l="1">i</span><span data-l="1">s</span><span data-l="1">o</span></span></div><div class="tag" data-a="fade" data-d="2500" data-dur="700">Direto, incisivo.</div><button type="button">Pular abertura</button>`;
+  el.innerHTML=`<div class="row"><span class="mono"><span class="I" data-a="rise" data-d="250">I</span><span class="dash" data-a="draw" style="transform-origin:left center"></span></span><span class="sep" data-a="fade" data-d="300"></span><span class="word" data-a="letters" data-d="1350" data-st="60" aria-label="JurInterativo">${[...'JurInterat'].map(c=>`<span data-l="1">${c}</span>`).join('')}<span class="wm-i"><span data-l="1">ı</span><span class="wm-dot" data-a="stamp" data-d="800"></span></span><span data-l="1">v</span><span data-l="1">o</span></span></div><div class="tag" data-a="fade" data-d="2500" data-dur="700">Direto, incisivo.</div><button type="button">Pular abertura</button>`;
   document.body.appendChild(el);Motion.play(el);
   let done=false;const close=()=>{if(done)return;done=true;el.classList.add('out');setTimeout(()=>el.remove(),520)};
   el.addEventListener('click',close);setTimeout(close,3800);

@@ -2,6 +2,8 @@
 
 Leia este arquivo primeiro. Ele resume as decisões já tomadas, para qualquer pessoa ou IA que for trabalhar no projeto.
 
+> **Marca renomeada (13/10/2026): o Inciso passa a se chamar JurInterativo.** Slogan e conceito ("I –", inciso) mantidos. Wordmark em Libre Caslon 700 com o pingo do último "i" como selo vermelho; ícone/favicon é o monograma "Ji". Nomes de arquivo e de código com "inciso" continuam por compatibilidade. Ver `Identidade Visual/CLAUDE.md`.
+
 ## O que é
 
 O **Inciso** é uma plataforma de estudo para estudantes de Direito. O slogan é "Direto, incisivo."

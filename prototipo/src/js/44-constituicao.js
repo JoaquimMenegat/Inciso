@@ -47,7 +47,7 @@ defLesson('co-est',{
       ['Preâmbulo','Carta de intenções. <em>Não tem força normativa</em>: orienta a interpretação.'],
       ['Parte dogmática','Arts. 1º a 250: <em>a Constituição propriamente dita</em>, com força obrigatória.'],
       ['ADCT','Regras de <em>transição</em> entre a ordem antiga e a nova; tendem a esgotar seus efeitos.'],
-      ['Divisões','Artigos, parágrafos, <em>incisos</em> e alíneas, a mesma lógica que dá nome a esta plataforma.']])},
+      ['Divisões','Artigos, parágrafos, <em>incisos</em> e alíneas, a mesma lógica do "I –" da nossa marca.']])},
     {id:'titulos',nav:'Os títulos',h:'Onde está cada assunto?',lead:'Classifique pelo título da Constituição.',html:()=>W.classify({buckets:['Tít. I · Princípios','Tít. II · Direitos','Tít. III · Estado','Tít. IV · Poderes'],items:[
       ['Os fundamentos da República, como a dignidade da pessoa humana.',0,'Art. 1º.'],
       ['O direito de herança e a inviolabilidade do domicílio.',1,'Art. 5º.'],

@@ -156,9 +156,13 @@ a:not(.btn):not(.mod):not(.brand):not([data-nav]):not(.course):not([class]){text
 @keyframes g-tick{0%,100%{transform:rotate(0)}30%{transform:rotate(12deg)}60%{transform:rotate(-6deg)}}
 
 /* ---------- monograma ---------- */
-.mono{background:var(--sheet);border:2px solid var(--edge);border-radius:var(--r-btn)!important}
-.mono b{font-family:var(--caslon)!important;color:var(--ink)}
-.splash .I,.splash .word,.wm{font-family:var(--caslon)}
+.brand .mono{background:var(--sheet);border:2px solid var(--edge);border-radius:var(--r-btn)!important}
+.brand .mono b{font-family:var(--caslon)!important;font-weight:700;color:var(--ink)}
+.brand .mono i{background:var(--brass)}
+.splash .mono,.splash .I,.splash .word,.wm{font-family:var(--caslon);font-weight:700}
+.splash .dash{background:var(--brass)}
+.splash .tag{font:italic 700 clamp(18px,2.3vw,32px)/1.2 var(--caslon)}
+.splash .word{letter-spacing:-.01em}
 
 /* ---------- transições entre telas ---------- */
 @media (prefers-reduced-motion:no-preference){
@@ -180,3 +184,7 @@ a:not(.btn):not(.mod):not(.brand):not([data-nav]):not(.course):not([class]){text
 .conq .cstats span{font-size:14px;color:var(--muted)}
 .conq .cstats div:first-child b{color:var(--sage)}
 @media (max-width:600px){.conq{grid-template-columns:1fr}.conq .cseal{width:96px;height:96px}}
+
+/* monograma "I –" do manual (caminho a): Caslon 700 + travessão em Latão, sem selo */
+.brand .mono em{display:none}
+.brand .mono b{transform:translateX(-6px)}

@@ -47,4 +47,4 @@ function rom(n){let s='';for(const [v,r] of [[1000,'M'],[900,'CM'],[500,'D'],[40
 const inc=n=>`<span class="inc">${rom(n)} <i>–</i></span>`;
 /* padrão de incisões: traços no vermelho-selo, como cortes de texto, que se adensam à direita */
 const patHTML=(n)=>`<div class="pat" aria-hidden="true">${Array.from({length:(n||72)*2},(_,i)=>{const w=[14,26,40,58,22,34][(i*7+(i>>3))%6],o=(i*5)%9===0;return `<span${o?' class="o"':''} style="width:${w}px"></span>`}).join('')}</div>`;
-const WORDMARK='<span class="wm" aria-label="Inciso"><span class="wm-i">ı<span class="wm-dot"></span></span>nciso</span>';
+const WORDMARK='<span class="wm" aria-label="JurInterativo">JurInterat<span class="wm-i">ı<span class="wm-dot"></span></span>vo</span>';
