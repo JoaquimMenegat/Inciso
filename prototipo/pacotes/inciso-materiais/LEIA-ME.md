@@ -1,4 +1,4 @@
-# Materiais do Inciso — pacote para o Claude Code
+# Materiais do JurInterativo — pacote para o Claude Code
 
 Materiais completos das três matérias do lançamento, criados no Claude.ai.
 
@@ -29,7 +29,7 @@ Questões: `[pergunta, [opções], índiceCorreto, explicação]`. O helper `a('
 
 ## Atenção antes de subir
 
-- O repositório `JoaquimMenegat/Inciso` está **público**. A pasta `fontes/` deriva das notas de aula: mantenha fora do Git (`.gitignore`) ou torne o repositório privado.
+- O repositório `JoaquimMenegat/Jurinterativo` está **público**. A pasta `fontes/` deriva das notas de aula: mantenha fora do Git (`.gitignore`) ou torne o repositório privado.
 - O conteúdo segue a regra do CONTEXTO.md (redação própria, sem citar faculdade ou professor), mas ainda precisa da revisão jurídica.
 - Pontos para a revisão: inventário extrajudicial com testamento ou incapaz (normas do CNJ e da CGJ-SC); a calculadora de prazo não considera feriados locais; o módulo "Mapa dos recursos em espécie" foi escrito a partir da lei, sem nota de base.
 

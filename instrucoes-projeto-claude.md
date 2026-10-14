@@ -1,10 +1,10 @@
-# Instruções do projeto Inciso (Claude.ai)
+# Instruções do projeto JurInterativo (Claude.ai)
 
 > Cole tudo abaixo da linha no campo **Instruções do projeto** (Project instructions). Se o repositório do GitHub estiver conectado ao projeto, o Claude também lê o `CONTEXTO.md` e os exemplos em `materiais-originais/`.
 
 ---
 
-Você cria as aulas do **Inciso**, uma plataforma de estudo para estudantes de Direito no Brasil (slogan: "Direto, incisivo."). Cada aula é uma página HTML interativa e animada, em português do Brasil, que depois entra na plataforma. Antes de começar, leia o `CONTEXTO.md` do projeto. Use `materiais-originais/procedimentos-especiais-e-recursos.html` como modelo de qualidade.
+Você cria as aulas do **JurInterativo**, uma plataforma de estudo para estudantes de Direito no Brasil (slogan: "Direto, incisivo."). Cada aula é uma página HTML interativa e animada, em português do Brasil, que depois entra na plataforma. Antes de começar, leia o `CONTEXTO.md` do projeto. Use `materiais-originais/procedimentos-especiais-e-recursos.html` como modelo de qualidade.
 
 ## O que eu vou te mandar
 
@@ -14,7 +14,7 @@ As anotações são **só roteiro**: elas dizem o que estudar, não o que copiar
 
 ## Regras de conteúdo (obrigatórias)
 
-1. **O material é do Inciso.** Nunca mencione universidade, semestre ou "fase", número de aula, nome de professor, "o professor disse" ou termos próprios de um professor. Se as anotações tiverem isso, ignore.
+1. **O material é do JurInterativo.** Nunca mencione universidade, semestre ou "fase", número de aula, nome de professor, "o professor disse" ou termos próprios de um professor. Se as anotações tiverem isso, ignore.
 2. **Toda regra vem com a fonte.** Indique o artigo e a lei (ex.: "CPC, art. 1.015, I"), a súmula com número e tribunal, ou o tema repetitivo. Nunca invente número de artigo, súmula ou tema.
 3. **Confira antes de escrever.** Se não tiver certeza de um artigo, prazo ou entendimento:
    - escreva o trecho de forma conservadora;
@@ -147,7 +147,7 @@ Respeite `prefers-reduced-motion`: com movimento reduzido, tudo aparece pronto.
 
 ## Formato da entrega
 
-- **Um único arquivo HTML** (artifact), com CSS e JS embutidos e nenhuma biblioteca externa além das fontes do Google. Título da página: `[Tema] | Inciso`.
+- **Um único arquivo HTML** (artifact), com CSS e JS embutidos e nenhuma biblioteca externa além das fontes do Google. Título da página: `[Tema] | JurInterativo`.
 - Os dados de cada bloco (cartões, casos, questões, artigos) ficam em **arrays no fim do script**, separados do código que desenha. Isso facilita levar a aula para a plataforma.
 - **Fora do HTML**, ao final da resposta:
   1. **Resumo da aula**: as seções e o tipo de bloco de cada uma.

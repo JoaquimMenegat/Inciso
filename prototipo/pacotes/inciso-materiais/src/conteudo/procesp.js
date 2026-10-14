@@ -1,7 +1,7 @@
 window.COURSE={id:`procesp`,title:`Procedimentos Especiais e Recursos`,kicker:`Matéria III`,h1a:`Procedimentos especiais`,h1b:`e recursos`,
 intro:`Os ritos que fogem do comum, do inventário aos Juizados, e toda a teoria dos recursos: precedentes, admissibilidade, efeitos e casos práticos.`,
 seal:{ring:`CONSIGNAÇÃO • POSSE • INVENTÁRIO • RECURSOS • `,word:`Especiais`,sub:`CPC, arts. 539 a 1.044`},
-footer:`Inciso — Procedimentos Especiais e Recursos. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), do Código Civil, da Lei 9.099/95, da Lei 6.858/80 e da jurisprudência citada. Material em revisão jurídica: confira sempre o texto vigente, em especial as normas do CNJ sobre inventário extrajudicial.`,
+footer:`JurInterativo — Procedimentos Especiais e Recursos. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), do Código Civil, da Lei 9.099/95, da Lei 6.858/80 e da jurisprudência citada. Material em revisão jurídica: confira sempre o texto vigente, em especial as normas do CNJ sobre inventário extrajudicial.`,
 mods:[
 /* I */
 {id:`introducao`,group:`Procedimentos especiais`,title:`Por que existem procedimentos especiais`,

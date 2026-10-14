@@ -2,7 +2,7 @@
 
 *Versão 1 — 12/10/2026*
 
-**Objetivo:** confirmar, antes da venda, que o material do Inciso é uma recriação própria, e não uma cópia do material do professor.
+**Objetivo:** confirmar, antes da venda, que o material do JurInterativo é uma recriação própria, e não uma cópia do material do professor.
 
 ## O que precisa ser verificado
 
@@ -35,8 +35,8 @@ O material conferido é o pacote `prototipo/pacotes/inciso-materiais/src/conteud
 | Quem | Lê | Faz | Não faz |
 |---|---|---|---|
 | **1. Comparador** (script, sem IA) | Material, arquivos do professor, Vault | Acha trechos de 8 palavras ou mais iguais nos dois lados | Julgar se é problema |
-| **2. Inventariante** (agente) | **Só** os arquivos do professor e o Vault | Lista as marcas do professor (exemplos, casos, analogias, quadros, exercícios, ordem dos tópicos, julgados) | Ver o material do Inciso |
-| **3. Auditor** (agente) | O material do Inciso, o inventário e o resultado do Comparador | Classifica cada achado, aula por aula | Reescrever |
+| **2. Inventariante** (agente) | **Só** os arquivos do professor e o Vault | Lista as marcas do professor (exemplos, casos, analogias, quadros, exercícios, ordem dos tópicos, julgados) | Ver o material do JurInterativo |
+| **3. Auditor** (agente) | O material do JurInterativo, o inventário e o resultado do Comparador | Classifica cada achado, aula por aula | Reescrever |
 | **4. Reescritor** (agente) | O achado, a lei e as regras de `instrucoes-projeto-claude.md` | Reescreve com redação e exemplos próprios | Conferir o próprio trabalho |
 | **5. Conferente** (agente) | O trecho novo | Repete o Comparador e o Auditor no trecho e confere se continua juridicamente certo | Reescrever |
 | **Você** | Os amarelos e as discordâncias | Decide e dá o aval final | — |

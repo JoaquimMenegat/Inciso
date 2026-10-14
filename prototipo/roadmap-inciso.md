@@ -1,4 +1,4 @@
-# Roadmap Inciso — do protótipo à venda
+# Roadmap JurInterativo — do protótipo à venda
 
 *Versão 1 — 10/10/2026*
 
@@ -40,8 +40,8 @@ Esta fase trava todas as outras. Não adianta construir antes de resolvê-la.
    - o que acontece se ele sair.
 3. **Sócios e papéis.** Quem faz conteúdo, quem faz plataforma, quem vende. Anote por escrito, mesmo que sejam só vocês dois.
 4. **Marca.**
-   - Busque "Inciso" no INPI, nas classes 41 (educação) e 9/42 (software).
-   - Verifique o domínio `inciso.com.br` (ou alternativas) e os @ nas redes.
+   - Busque "JurInterativo" no INPI, nas classes 41 (educação) e 9/42 (software).
+   - Verifique o domínio `jurinterativo.com.br` (ou alternativas) e os @ nas redes.
    - Registre o que estiver livre.
 5. **Público inicial.** Recomendo **alunos de graduação** (provas da faculdade), com a OAB como expansão. O conteúdo atual é de graduação, e concorrer de cara com os cursinhos da OAB é caro.
 6. **Página de espera.** Uma página simples com o vídeo de uma animação e um campo de e-mail. Ela começa a juntar interessados desde já.
@@ -52,9 +52,9 @@ Esta fase trava todas as outras. Não adianta construir antes de resolvê-la.
 
 ## Fase 1 — Padrão e estrutura do conteúdo (semanas 2 a 6 · até 21/nov)
 
-É o coração do Inciso: transformar o que existe em um **sistema de produção de aulas**.
+É o coração do JurInterativo: transformar o que existe em um **sistema de produção de aulas**.
 
-1. **Definir o "padrão de aula Inciso".** Um documento curto que diz:
+1. **Definir o "padrão de aula JurInterativo".** Um documento curto que diz:
    - **Estrutura fixa:**
      - capa;
      - "o que você vai aprender";
@@ -104,7 +104,7 @@ Esta fase trava todas as outras. Não adianta construir antes de resolvê-la.
 
 **Decisão: Base44 ou código próprio.**
 
-- **Base44:** sobe rápido, mas prende você à ferramenta. Os simuladores personalizados são justamente o diferencial do Inciso, e lá ficam mais difíceis de manter.
+- **Base44:** sobe rápido, mas prende você à ferramenta. Os simuladores personalizados são justamente o diferencial do JurInterativo, e lá ficam mais difíceis de manter.
 - **Recomendação: código próprio.** O motor de aulas já existe e é a parte mais difícil.
   - Stack sugerida: Next.js; Supabase para login e banco; Vercel para hospedagem; Hotmart ou Kiwify para pagamento, ligados à plataforma por webhook.
   - O custo inicial fica perto de zero até ter usuários.
@@ -134,7 +134,7 @@ Não vamos abrir empresa: a venda é feita no CPF.
 
 1. **Vender por uma plataforma intermediária** (Hotmart, Kiwify ou Eduzz), que aceita vendedor pessoa física.
    - Ela cuida do checkout (Pix, cartão, boleto), e do reembolso.
-   - Quando a venda é aprovada, ela avisa a plataforma do Inciso automaticamente (webhook), e o acesso é liberado.
+   - Quando a venda é aprovada, ela avisa a plataforma do JurInterativo automaticamente (webhook), e o acesso é liberado.
    - Taxa de cerca de 10% por venda, em troca de não precisar de CNPJ nem de gateway próprio.
 2. **Imposto de renda.** O que entra no CPF é rendimento: precisa ser declarado todo mês pelo Carnê-Leão, com alíquota de até 27,5%.
    - Se houver sócios, combinar como a receita é dividida e declarada.
@@ -221,7 +221,7 @@ Direitos do conteúdo + acordo com professor  ──►  Padrão de aula  ──
 
 - [ ] Conversar com o professor: papel, remuneração, autorização por escrito.
 - [ ] Decidir o caminho dos direitos: autorização ou reescrita a partir de fontes primárias.
-- [ ] Buscar "Inciso" no INPI e o domínio.
+- [ ] Buscar "JurInterativo" no INPI e o domínio.
 - [x] Escolher as matérias de lançamento: as três de processo.
 - [ ] Aprovar o padrão de aula (eu escrevo a primeira versão).
 - [ ] Criar conta de vendedor (pessoa física) na Hotmart ou na Kiwify e comparar as taxas.

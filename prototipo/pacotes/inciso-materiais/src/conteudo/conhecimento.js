@@ -1,7 +1,7 @@
 window.COURSE={id:`conhecimento`,title:`Processo de Conhecimento`,kicker:`Matéria II`,h1a:`Processo de`,h1b:`conhecimento`,
 intro:`O procedimento comum do início ao fim: petição inicial, audiência, defesa do réu, saneamento, provas, tutelas provisórias, sentença e coisa julgada. Cada etapa com simuladores e teste.`,
 seal:{ring:`PETIÇÃO • CITAÇÃO • DEFESA • PROVA • SENTENÇA • `,word:`Rito comum`,sub:`CPC, arts. 318 a 508`},
-footer:`Inciso — Processo de Conhecimento. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), da Lei 9.307/96 e da legislação citada. Material em revisão jurídica: confira sempre o texto vigente.`,
+footer:`JurInterativo — Processo de Conhecimento. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), da Lei 9.307/96 e da legislação citada. Material em revisão jurídica: confira sempre o texto vigente.`,
 mods:[
 /* I */
 {id:`rito`,group:`Fase postulatória`,title:`O mapa do procedimento comum`,

@@ -4,7 +4,7 @@ const a=s=>`<span class="art-ref">${s}</span>`;const PK={};
 PK.c={id:`tgp`,title:`Teoria Geral do Processo`,kicker:`Matéria I`,h1a:`Teoria geral`,h1b:`do processo`,
 intro:`Jurisdição, ação e processo, do princípio ao fim do processo: competência, sujeitos, terceiros, prazos, nulidades e custos. Cada módulo tem simuladores e termina com um teste.`,
 seal:{ring:`JURISDIÇÃO • AÇÃO • PROCESSO • LEI 13.105/2015 • `,word:`Processo`,sub:`inércia e impulso`},
-footer:`Inciso — Teoria Geral do Processo. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), da Constituição Federal e da legislação citada. Material em revisão jurídica: confira sempre o texto vigente.`,
+footer:`JurInterativo — Teoria Geral do Processo. Conteúdo escrito a partir do Código de Processo Civil (Lei 13.105/2015), da Constituição Federal e da legislação citada. Material em revisão jurídica: confira sempre o texto vigente.`,
 mods:[
 /* ================= I ================= */
 {id:`fundamentos`,group:`Fundamentos`,title:`Jurisdição, ação e processo`,

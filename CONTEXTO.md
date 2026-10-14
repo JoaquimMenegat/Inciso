@@ -1,4 +1,4 @@
-# Contexto do projeto Inciso
+# Contexto do projeto JurInterativo
 
 Leia este arquivo primeiro. Ele resume as decisões já tomadas, para qualquer pessoa ou IA que for trabalhar no projeto.
 
@@ -6,7 +6,7 @@ Leia este arquivo primeiro. Ele resume as decisões já tomadas, para qualquer p
 
 ## O que é
 
-O **Inciso** é uma plataforma de estudo para estudantes de Direito. O slogan é "Direto, incisivo."
+O **JurInterativo** é uma plataforma de estudo para estudantes de Direito. O slogan é "Direto, incisivo."
 
 Não vendemos PDF. Cada matéria é uma trilha de aulas interativas: o aluno simula, classifica, decide. A plataforma mede o progresso: painel, desempenho por tema, revisão espaçada de flashcards e banco de questões.
 
@@ -14,7 +14,7 @@ O projeto nasceu do interesse de um professor em vender material de estudo. **De
 
 ## Regras de conteúdo
 
-- **O material é do Inciso:** nunca citar universidade, semestre ou "fase", número de aula, nome de professor ou termos próprios de um professor.
+- **O material é do JurInterativo:** nunca citar universidade, semestre ou "fase", número de aula, nome de professor ou termos próprios de um professor.
 - **Origem das notas:** a base veio das notas de estudo de um Obsidian Vault. Pela Lei 9.610/98, art. 46, IV, anotações de aula não podem ser publicadas sem autorização de quem deu a aula. Por isso, o plano é reescrever a partir de fontes primárias (lei, súmulas, jurisprudência), com redação própria.
 - **Citações:** toda citação traz artigo e lei, ou o número da súmula e o tribunal.
 - **Revisão jurídica:** obrigatória antes de vender. A primeira (10/2026) cobriu TGP, Processo de Conhecimento e Procedimentos Especiais e Recursos, com três agentes: leitor (extrai as afirmações), pesquisador (confere lei, STJ, STF e doutrina) e validador (dá o parecer). Os relatórios estão em `revisao-juridica/`.
@@ -35,7 +35,7 @@ O projeto nasceu do interesse de um professor em vender material de estudo. **De
 
   As outras 10 aparecem como "Em breve".
 - **Meta (atualizada em 12/10/2026):** publicar na Kiwify até 04/11/2026, depois de um piloto de uma semana. Passos em `prototipo/roadmap-kiwify.md`.
-- **Canal de acesso (12/10/2026):** no lançamento, o aluno compra na **Kiwify** e abre o Inciso pela área de membros (link ou iframe para o site hospedado). Sem login: o progresso fica no navegador, com aviso no primeiro acesso, exportar e importar e lembrete de backup. A plataforma própria com login vem depois, se as vendas validarem a ideia. Passos em `prototipo/roadmap-kiwify.md`.
+- **Canal de acesso (12/10/2026):** no lançamento, o aluno compra na **Kiwify** e abre o JurInterativo pela área de membros (link ou iframe para o site hospedado). Sem login: o progresso fica no navegador, com aviso no primeiro acesso, exportar e importar e lembrete de backup. A plataforma própria com login vem depois, se as vendas validarem a ideia. Passos em `prototipo/roadmap-kiwify.md`.
 - O roadmap completo está em `prototipo/roadmap-inciso.md`.
 
 ## Identidade visual (v2, 12/10/2026)
@@ -82,7 +82,7 @@ Manuais em `Identidade Visual/`: `Inciso Identidade`, `Inciso Sistema` (v2) e `I
 ## Próximos passos
 
 1. Fase 0 do roadmap: direitos sobre o conteúdo, acordo com o professor, marca no INPI e domínio.
-2. Escrever o padrão de aula do Inciso, usando Teoria Geral do Processo como modelo.
+2. Escrever o padrão de aula do JurInterativo, usando Teoria Geral do Processo como modelo.
 3. Separar o conteúdo do código, com as aulas em arquivos JSON ou Markdown.
 4. Preparar o protótipo para venda na Kiwify (Etapa 3 de `prototipo/roadmap-kiwify.md`).
 5. Depois do lançamento, se validar: plataforma própria (Next.js + Supabase + Kiwify via webhook).

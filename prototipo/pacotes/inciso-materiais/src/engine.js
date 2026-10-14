@@ -160,7 +160,7 @@ function render(id){const i=idx(id);if(i<0){cover();paintNav();window.scrollTo(0
   const qh=main.querySelector('.qhost');if(qh)quiz(qh,m);
   main.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{location.hash=b.dataset.go});
   if(!m.quiz||!m.quiz.length){st.done[m.id]=1;save()}
-  paintNav();observe();window.scrollTo(0,0);document.title=`${m.title} | ${C.title} | Inciso`}
+  paintNav();observe();window.scrollTo(0,0);document.title=`${m.title} | ${C.title} | JurInterativo`}
 window.addEventListener('hashchange',()=>render(location.hash.slice(1)));
 $('.top .course').textContent=C.title;
 render(location.hash.slice(1));

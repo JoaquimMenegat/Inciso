@@ -1,6 +1,6 @@
 """Monta a pasta publicar/ para subir na Cloudflare Pages.
 
-O Inciso fica num endereço difícil de adivinhar: <domínio>/a/<código>/.
+O JurInterativo fica num endereço difícil de adivinhar: <domínio>/a/<código>/.
 O código fica em .codigo-acesso, fora do Git (o repositório é público).
 
 Uso:
@@ -33,7 +33,7 @@ shutil.copy(ROOT / "vade-sucessoes.html", SAIDA / "a" / codigo / "index.html")
 # A raiz não mostra nada do conteúdo.
 (SAIDA / "index.html").write_text(
     '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
-    '<title>Inciso</title><p>Inciso: Direto, incisivo.</p>',
+    '<title>JurInterativo</title><p>JurInterativo: Direto, incisivo.</p>',
     encoding="utf-8",
 )
 # Cabeçalhos da Cloudflare Pages: não indexar e não vazar o endereço para outros sites.

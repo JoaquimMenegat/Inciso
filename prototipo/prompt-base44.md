@@ -1,14 +1,14 @@
-# Prompt para o Base44 — Inciso
+# Prompt para o Base44 — JurInterativo
 
 > Cole o texto abaixo no Base44 e anexe junto o arquivo `Inciso Identidade.dc.html` (ou prints dele) da pasta "Identidade Visual".
 
 ---
 
-Crie o **Inciso**, uma plataforma web de estudo para estudantes de Direito no Brasil. Toda a interface em português do Brasil. Slogan: **"Direto, incisivo."**
+Crie o **JurInterativo**, uma plataforma web de estudo para estudantes de Direito no Brasil. Toda a interface em português do Brasil. Slogan: **"Direto, incisivo."**
 
 ## A ideia
 
-O Inciso não vende PDF. Cada matéria é uma trilha de aulas **interativas** (o aluno mexe, simula, classifica, decide) e a plataforma **mede o progresso**: o aluno vê o que já domina, o que está fraco e o que revisar hoje. O conteúdo é próprio do Inciso: nunca cite universidade, semestre/fase, número de aula ou nome de professor.
+O JurInterativo não vende PDF. Cada matéria é uma trilha de aulas **interativas** (o aluno mexe, simula, classifica, decide) e a plataforma **mede o progresso**: o aluno vê o que já domina, o que está fraco e o que revisar hoje. O conteúdo é próprio do JurInterativo: nunca cite universidade, semestre/fase, número de aula ou nome de professor.
 
 ## Usuários
 
