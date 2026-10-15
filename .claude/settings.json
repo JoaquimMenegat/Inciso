@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node validacao/ferramentas/aula_em_texto.js *)",
+      "Bash(python validacao/ferramentas/cobertura.py *)",
+      "Bash(powershell -ExecutionPolicy Bypass -File validacao/ferramentas/codex.ps1 *)",
+      "Bash(powershell -ExecutionPolicy Bypass -File validacao\\ferramentas\\codex.ps1 *)",
+      "WebSearch",
+      "WebFetch(domain:planalto.gov.br)",
+      "WebFetch(domain:www.planalto.gov.br)",
+      "WebFetch(domain:*.stj.jus.br)",
+      "WebFetch(domain:stj.jus.br)",
+      "WebFetch(domain:*.stf.jus.br)",
+      "WebFetch(domain:stf.jus.br)",
+      "WebFetch(domain:*.cnj.jus.br)",
+      "WebFetch(domain:cnj.jus.br)"
+    ]
+  }
+}
