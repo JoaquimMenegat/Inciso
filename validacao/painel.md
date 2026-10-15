@@ -6,9 +6,9 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 
 | aula-id | origem | data-base | status | pendências | atualizado em |
 |---|---|---|---|---|---|
-| pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | extraindo | lote 1 | 15/10/2026 |
-| pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | extraindo | lote 1 | 15/10/2026 |
-| pe-contas | procesp.js, aula `contas` | 15/10/2026 | pesquisando | lote 1 · 31 afirmações, cobertura 39/39 | 15/10/2026 |
+| pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 26 confere, 7 corrigir (1 alta), 16 não verificáveis (1 decisão) | 15/10/2026 |
+| pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 24 confere, 13 corrigir (1 alta), 4 em decisoes-pendentes | 15/10/2026 |
+| pe-contas | procesp.js, aula `contas` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 17 confere, 6 corrigir (0 alta), 8 em decisoes-pendentes | 15/10/2026 |
 | pe-possessorias | procesp.js, aula `possessorias` (versão atual) | 14/10/2026 | aguardando Joaquim | parecer: 19 confere, 9 corrigir (0 alta, 6 média, 3 baixa); 028, 038, 039 resolvidos por decisoes.md; faltam 023 e 026 | 14/10/2026 |
 | pe-possessorias (teste às cegas) | versão de 11/10, antes da revisão (`validacao/teste-cego/`) | 14/10/2026 | encerrado | 2 de 2 erros conhecidos achados; ver `teste-cego/resultado-pe-possessorias.md` | 14/10/2026 |
 

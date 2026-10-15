@@ -43,6 +43,7 @@ Do Orquestrador: o `aula-id`, a data-base e os IDs das perguntas do tipo `lei` e
 - Sem URL do Planalto, a situação é `não encontrada`. Não responda de memória, nem "para adiantar".
 - Se o Planalto não abrir, tente de novo uma vez. Se falhar, `acesso bloqueado`. Não use outro site como substituto.
 - Se a pergunta for, na verdade, de jurisprudência, responda a parte de lei e escreva `BLOQUEADO` para a parte que não é sua.
+- **Regras gerais antes de lacuna.** Se o dispositivo específico não diz como se conta um prazo, aplique as regras gerais do CPC (arts. 219, 224, 230 e 231, e 1.003 para recursos) e diga o resultado. O mesmo vale para natureza de decisões (arts. 203 e 204) e recursos (arts. 1.009 e 1.015). Só declare `Lacuna` para o que essas regras gerais também não resolvem.
 - **Lacuna:** se a lei não responde a uma parte da pergunta, diga isso de forma explícita, em uma linha `Lacuna: <o que a lei não diz>`. Não tente preencher com interpretação própria; o Orquestrador manda a lacuna ao Pesquisador de jurisprudência.
 - Não comente se uma regra é boa, confusa ou polêmica. Só o que a lei diz.
 
