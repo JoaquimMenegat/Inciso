@@ -4,6 +4,15 @@
 .quote{border-left:4px solid var(--brass);padding:6px 0 6px 20px;margin-bottom:20px}
 .quote p{font-family:var(--serif);font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.25;font-style:italic}
 .quote small{color:var(--muted)}
+.lerro{border-top:1px solid var(--line);padding:24px 0;margin-top:8px}
+.lerro h3{font-size:18px;margin:0 0 6px}
+.lerro p{margin:0 0 14px;color:var(--muted);font-size:14px}
+.lerro-form{display:grid;gap:14px;max-width:560px}
+.lerro-form label{display:grid;gap:6px;font-size:14px;color:var(--body)}
+.lerro-form select,.lerro-form textarea{font:inherit;color:var(--ink);background:var(--sheet);border:2px solid var(--edge);padding:10px 12px;width:100%}
+.lerro-form textarea{resize:vertical}
+.lerro-acoes{display:flex;gap:10px;flex-wrap:wrap}
+.lerro [hidden]{display:none!important}
 .lnext{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
 .lnext .btn{max-width:100%;white-space:normal}
 

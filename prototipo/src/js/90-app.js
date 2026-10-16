@@ -9,6 +9,9 @@ function paintCourse(){const r=document.documentElement.style,t=MATTONE[MATOF[CO
 const GKEY='inciso-global-v3',CKEY=id=>'inciso-'+id+'-v3'+((COURSES[id]&&COURSES[id].ver)||'');
 /* matérias liberadas no lançamento; as demais aparecem como "em breve" */
 const LIVE=['tgp','conhecimento','procesp'],isLive=id=>LIVE.includes(id);
+/* "Encontrou algum erro?": para onde vai o aviso do aluno. form = link de um formulário (ex.: Tally) que
+   recebe materia, aula, parte e texto pelo endereço; sem form, usa o e-mail; sem nenhum dos dois, copia o aviso */
+const REPORTE={form:'',email:''};
 let G,S;
 function blankLessons(){return Object.fromEntries(MODS.map(m=>[m.live,{seen:{},quiz:null}]))}
 function seedCourse(){
@@ -200,6 +203,11 @@ function lessonView(m){
       <nav class="lincs" aria-label="Seções da aula">${out.map((o,i)=>`<button data-to="${o[0]}" data-a="up" data-d="${900+Math.min(i,5)*80}"><b>${rom(o[2])} –</b>${o[1]}</button>`).join('')}</nav></header>
     ${secs}
     ${def.noQuiz?'':`<section class="lsec" id="${id}-quiz"><h2>${inc(def.sections.length+1)}<span>Teste rápido</span></h2><p class="lead">${nq} questões. Suas respostas entram no seu domínio do tema e no painel.</p><div class="qz dark" id="${id}-qz"></div></section>`}
+    <section class="lerro" id="${id}-erro"><h3>Encontrou algum erro?</h3><p>Artigo errado, gabarito trocado, texto confuso: avise, e a gente corrige para todos.</p>
+      <button class="btn small lerro-abrir">Avisar sobre um erro</button>
+      <form class="lerro-form" hidden><label>Em que parte?<select name="parte">${def.sections.map(s=>`<option>${s.nav}</option>`).join('')}${def.noQuiz?'':'<option>Teste rápido</option>'}<option>Outra parte</option></select></label>
+        <label>O que está errado?<textarea name="texto" rows="4" required placeholder="Ex.: o prazo da seção III é de 15 dias, não 10 (art. 335)."></textarea></label>
+        <div class="lerro-acoes"><button class="btn primary small" type="submit">Enviar aviso</button><button class="btn small lerro-fechar" type="button">Cancelar</button></div></form></section>
     <nav class="lnext">${prev?`<a class="btn" href="#modulo-${prev.n}">← ${rom(prev.n)} – ${prev.tit}</a>`:'<span></span>'}${nxt?`<a class="btn primary" href="#modulo-${nxt.n}">${rom(nxt.n)} – ${nxt.tit} →</a>`:`<a class="btn primary" href="#painel">Voltar ao painel</a>`}</nav>
   </article>`;
 }
@@ -208,6 +216,25 @@ function mountLesson(m){
   S.lastLesson=id;save();
   if(!def.noQuiz)lessonQuiz(id,m.t);
   trackSections(id);
+  mountErro(m);
+}
+function mountErro(m){
+  const box=$('#'+m.live+'-erro');if(!box)return;
+  const form=$('.lerro-form',box),abrir=$('.lerro-abrir',box);
+  const mostra=v=>{form.hidden=!v;abrir.hidden=v;if(v)form.texto.focus()};
+  abrir.onclick=()=>mostra(true);$('.lerro-fechar',box).onclick=()=>mostra(false);
+  form.onsubmit=e=>{
+    e.preventDefault();
+    const d={materia:COURSE.nome,aula:`Aula ${rom(m.n)} – ${m.tit}`,parte:form.parte.value,texto:form.texto.value.trim()};
+    if(!d.texto)return;
+    if(REPORTE.form)window.open(REPORTE.form+(REPORTE.form.includes('?')?'&':'?')+new URLSearchParams(d),'_blank','noopener');
+    else if(REPORTE.email)location.href=`mailto:${REPORTE.email}?subject=${encodeURIComponent('Erro: '+d.materia+' · '+d.aula)}&body=${encodeURIComponent(`Parte: ${d.parte}
+
+${d.texto}`)}`;
+    else{const t=`${d.materia} · ${d.aula} · ${d.parte}
+${d.texto}`;navigator.clipboard&&navigator.clipboard.writeText(t).catch(()=>{});toast('Aviso copiado. O envio ainda não foi configurado.');return}
+    form.reset();mostra(false);toast('Obrigado! Seu aviso foi enviado.');
+  };
 }
 function updateLessonBar(id){const p=lessonProgress(id),b=$('#lprog'),t=$('#lpct');if(b)b.style.width=p*100+'%';if(t)t.textContent=pct(p)}
 function lessonQuiz(id,topic){

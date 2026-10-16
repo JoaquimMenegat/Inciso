@@ -462,6 +462,15 @@ td .bar{width:110px}
 .quote{border-left:4px solid var(--brass);padding:6px 0 6px 20px;margin-bottom:20px}
 .quote p{font-family:var(--serif);font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.25;font-style:italic}
 .quote small{color:var(--muted)}
+.lerro{border-top:1px solid var(--line);padding:24px 0;margin-top:8px}
+.lerro h3{font-size:18px;margin:0 0 6px}
+.lerro p{margin:0 0 14px;color:var(--muted);font-size:14px}
+.lerro-form{display:grid;gap:14px;max-width:560px}
+.lerro-form label{display:grid;gap:6px;font-size:14px;color:var(--body)}
+.lerro-form select,.lerro-form textarea{font:inherit;color:var(--ink);background:var(--sheet);border:2px solid var(--edge);padding:10px 12px;width:100%}
+.lerro-form textarea{resize:vertical}
+.lerro-acoes{display:flex;gap:10px;flex-wrap:wrap}
+.lerro [hidden]{display:none!important}
 .lnext{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
 .lnext .btn{max-width:100%;white-space:normal}
 
@@ -5883,7 +5892,6 @@ blocks:[
 {t:`table`,h:`Precedentes que vinculam (art. 927)`,head:[`Inciso`,`Precedente`],rows:[[`I`,`Decisões do STF em controle concentrado de constitucionalidade`],[`II`,`Súmulas vinculantes (${a(`CF, art. 103-A`)})`],[`III`,`Acórdãos em assunção de competência, IRDR e recursos repetitivos`],[`III-A`,`Acórdãos em recurso especial julgado sob o regime da relevância da questão federal (Lei 15.484/2026)`],[`IV`,`Súmulas do STF em matéria constitucional e do STJ em infraconstitucional`],[`V`,`Orientação do plenário ou órgão especial a que estiverem vinculados`]]},
 {t:`chooser`,h:`Como o juiz trata o precedente`,hint:`Em todos os casos ele deve se manifestar, até de ofício, ouvindo as partes (art. 10).`,items:[[`Caso análogo`,`Aplica`,`<p>Há dever jurídico de seguir a tese.</p>`],[`Caso diferente`,`Distinguishing`,`<p>Demonstra, fundamentadamente, que o caso tem particularidade que afasta a tese (${a(`art. 489, §1º, VI`)}).</p>`],[`Tese superada`,`Overruling`,`<p>Pode deixar de aplicar, fundamentando a superação; o tribunal pode modular efeitos (${a(`art. 927, §3º`)}).</p>`],[`Silêncio`,`Decisão omissa`,`<p>Não se manifestar sobre tese de repetitivo ou assunção de competência aplicável torna a decisão omissa: cabem embargos de declaração (${a(`art. 1.022, parágrafo único, I`)}).</p>`]]},
 {t:`flips`,h:`O relator (arts. 929 a 932)`,items:[[`Distribuição`,`Por alternância, sorteio e publicidade.`],[`Prevenção`,`O primeiro recurso torna prevento o relator para recursos do mesmo processo ou de processo conexo (${a(`art. 930, parágrafo único`)}).`],[`Incumbências`,`Dirigir o processo, homologar acordos, apreciar tutela provisória, intimar o MP.`],[`Não conhecer`,`Recurso inadmissível, prejudicado ou que não impugnou os fundamentos da decisão; antes, 5 dias para sanar vício sanável (${a(`art. 932, III e parágrafo único`)}).`],[`Julgar o mérito sozinho`,`Negar provimento a recurso contrário a súmula, repetitivo, REsp com relevância reconhecida, IRDR ou IAC; dar provimento, depois das contrarrazões, se a decisão recorrida for contrária a eles (${a(`IV e V`)}).`],[`Recurso`,`Contra a decisão monocrática: agravo interno ao colegiado.`]]},
-{t:`callout`,kind:`sage`,title:`Caso: o acidente em Catanduvas`,html:`<p>A ação de danos materiais por um acidente é julgada e a apelação vai à 1ª Câmara de Direito Civil do TJSC. Depois, a vítima propõe outra ação pelo mesmo acidente, pedindo lucros cessantes. O recurso desta segunda ação vai ao <b>mesmo relator</b>: processos conexos, relator prevento.</p>`},
 {t:`tl`,h:`A sessão de julgamento`,items:[[`Pauta`,`Publicada com pelo menos 5 dias de antecedência (${a(`art. 935`)}).`],[`Exposição`,`O relator resume a causa.`],[`Sustentação oral`,`15 minutos por parte, nos casos do art. 937; preferência pedida até o início da sessão (§2º) e, por videoconferência, requerida até o dia anterior (§4º).`],[`Preliminares`,`Votadas antes do mérito e separadamente; acolhida preliminar incompatível, não se julga o mérito (${a(`art. 938`)}).`],[`Mérito`,`O vencido na preliminar também vota (${a(`art. 939`)}). Vista por até 10 dias (${a(`art. 940`)}).`],[`Resultado`,`Voto vencido é declarado e integra o acórdão; o voto pode mudar até a proclamação (${a(`art. 941`)}). Agravo se julga antes da apelação do mesmo processo (${a(`art. 946`)}).`]]},
 {t:`callout`,kind:`brass`,title:`Julgamento decomposto`,html:`<p>Cada fundamento que sozinho sustenta o pedido é votado separadamente. Na apelação que alega pagamento e compensação, basta um fundamento acolhido pela maioria para prover o recurso; se todos acolhem o pagamento, não é preciso examinar a compensação.</p>`},
 {t:`vs`,h:`Ampliação do colegiado (art. 942)`,l:{t:`O que é`,i:[`Técnica de julgamento, não recurso: aplica-se de ofício`,`Resultado não unânime: o julgamento prossegue com mais julgadores, em número que permita inverter o resultado`,`Quem já votou pode rever o voto`,`Substituiu os antigos embargos infringentes`]},r:{t:`Quando`,i:[`Apelação: basta não haver unanimidade`,`Ação rescisória: quando o resultado for rescindir a sentença`,`Agravo de instrumento: quando reformar decisão que julgou parcialmente o mérito`,`Não se aplica a IRDR, assunção de competência, remessa necessária e plenário`]}}],
@@ -5967,6 +5975,9 @@ function paintCourse(){const r=document.documentElement.style,t=MATTONE[MATOF[CO
 const GKEY='inciso-global-v3',CKEY=id=>'inciso-'+id+'-v3'+((COURSES[id]&&COURSES[id].ver)||'');
 /* matérias liberadas no lançamento; as demais aparecem como "em breve" */
 const LIVE=['tgp','conhecimento','procesp'],isLive=id=>LIVE.includes(id);
+/* "Encontrou algum erro?": para onde vai o aviso do aluno. form = link de um formulário (ex.: Tally) que
+   recebe materia, aula, parte e texto pelo endereço; sem form, usa o e-mail; sem nenhum dos dois, copia o aviso */
+const REPORTE={form:'',email:''};
 let G,S;
 function blankLessons(){return Object.fromEntries(MODS.map(m=>[m.live,{seen:{},quiz:null}]))}
 function seedCourse(){
@@ -6158,6 +6169,11 @@ function lessonView(m){
       <nav class="lincs" aria-label="Seções da aula">${out.map((o,i)=>`<button data-to="${o[0]}" data-a="up" data-d="${900+Math.min(i,5)*80}"><b>${rom(o[2])} –</b>${o[1]}</button>`).join('')}</nav></header>
     ${secs}
     ${def.noQuiz?'':`<section class="lsec" id="${id}-quiz"><h2>${inc(def.sections.length+1)}<span>Teste rápido</span></h2><p class="lead">${nq} questões. Suas respostas entram no seu domínio do tema e no painel.</p><div class="qz dark" id="${id}-qz"></div></section>`}
+    <section class="lerro" id="${id}-erro"><h3>Encontrou algum erro?</h3><p>Artigo errado, gabarito trocado, texto confuso: avise, e a gente corrige para todos.</p>
+      <button class="btn small lerro-abrir">Avisar sobre um erro</button>
+      <form class="lerro-form" hidden><label>Em que parte?<select name="parte">${def.sections.map(s=>`<option>${s.nav}</option>`).join('')}${def.noQuiz?'':'<option>Teste rápido</option>'}<option>Outra parte</option></select></label>
+        <label>O que está errado?<textarea name="texto" rows="4" required placeholder="Ex.: o prazo da seção III é de 15 dias, não 10 (art. 335)."></textarea></label>
+        <div class="lerro-acoes"><button class="btn primary small" type="submit">Enviar aviso</button><button class="btn small lerro-fechar" type="button">Cancelar</button></div></form></section>
     <nav class="lnext">${prev?`<a class="btn" href="#modulo-${prev.n}">← ${rom(prev.n)} – ${prev.tit}</a>`:'<span></span>'}${nxt?`<a class="btn primary" href="#modulo-${nxt.n}">${rom(nxt.n)} – ${nxt.tit} →</a>`:`<a class="btn primary" href="#painel">Voltar ao painel</a>`}</nav>
   </article>`;
 }
@@ -6166,6 +6182,25 @@ function mountLesson(m){
   S.lastLesson=id;save();
   if(!def.noQuiz)lessonQuiz(id,m.t);
   trackSections(id);
+  mountErro(m);
+}
+function mountErro(m){
+  const box=$('#'+m.live+'-erro');if(!box)return;
+  const form=$('.lerro-form',box),abrir=$('.lerro-abrir',box);
+  const mostra=v=>{form.hidden=!v;abrir.hidden=v;if(v)form.texto.focus()};
+  abrir.onclick=()=>mostra(true);$('.lerro-fechar',box).onclick=()=>mostra(false);
+  form.onsubmit=e=>{
+    e.preventDefault();
+    const d={materia:COURSE.nome,aula:`Aula ${rom(m.n)} – ${m.tit}`,parte:form.parte.value,texto:form.texto.value.trim()};
+    if(!d.texto)return;
+    if(REPORTE.form)window.open(REPORTE.form+(REPORTE.form.includes('?')?'&':'?')+new URLSearchParams(d),'_blank','noopener');
+    else if(REPORTE.email)location.href=`mailto:${REPORTE.email}?subject=${encodeURIComponent('Erro: '+d.materia+' · '+d.aula)}&body=${encodeURIComponent(`Parte: ${d.parte}
+
+${d.texto}`)}`;
+    else{const t=`${d.materia} · ${d.aula} · ${d.parte}
+${d.texto}`;navigator.clipboard&&navigator.clipboard.writeText(t).catch(()=>{});toast('Aviso copiado. O envio ainda não foi configurado.');return}
+    form.reset();mostra(false);toast('Obrigado! Seu aviso foi enviado.');
+  };
 }
 function updateLessonBar(id){const p=lessonProgress(id),b=$('#lprog'),t=$('#lpct');if(b)b.style.width=p*100+'%';if(t)t.textContent=pct(p)}
 function lessonQuiz(id,topic){
