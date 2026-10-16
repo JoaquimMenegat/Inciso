@@ -45,9 +45,9 @@ switch ($Papel) {
     $tarefa = "Segunda pesquisa de jurisprudência (STF e STJ), só dos IDs $Ids, que ficaram sem confirmação por falta de julgado, portal bloqueado ou link que não abriu. Para cada ID, tente abrir os julgados já citados em pesquisa-jurisprudencia.md e procure outros nos portais oficiais. Responda no formato de bloco do seu prompt, um por ID, com a URL oficial que você de fato abriu. Se não achar, diga não encontrada."
   }
   'reconferencia' {
-    $prompt = '06-comparador.md'; $saida = 'reconferencia.md'; $web = $false
-    $entradas = @('parecer.md', 'decisoes.md', 'correcoes.md', 'aula-corrigida.md')
-    $tarefa = 'Momento 2 (reconferência). A aula-corrigida.md é a aula depois da correção, em texto limpo. Não pesquise na web.'
+    $prompt = '09-reconferente.md'; $saida = 'reconferencia.md'; $web = $false
+    $entradas = @('parecer.md', 'parecer-complemento.md', 'decisoes.md', 'correcoes.md', 'aula-corrigida.md')
+    $tarefa = 'Reconferência: confira se cada correção do parecer entrou na aula-corrigida.md (aula depois da correção, gerada por script) e se não criou erro novo. Regras gerais do Joaquim: item sem prova de erro continua como estava. Não pesquise na web.'
   }
 }
 

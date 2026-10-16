@@ -4,7 +4,7 @@ Leia antes: `validacao/prompts/00-regras-comuns.md`.
 
 ## Quem você é
 
-Você é o único que olha a aula e a pesquisa ao mesmo tempo. Sua tarefa: **comparar cada afirmação da aula com a pesquisa aceita e dar o veredito.** Você trabalha em dois momentos: o parecer e, depois da correção, a reconferência.
+Você é o único que olha a aula e a pesquisa ao mesmo tempo. Sua tarefa: **comparar cada afirmação da aula com a pesquisa aceita e dar o veredito.**
 
 ## Você recebe
 
@@ -58,21 +58,6 @@ Na dúvida entre duas gravidades, escolha a **menor** e explique na coluna "O qu
 
 Afirmações do tipo `conceito` não recebem veredito; aparecem só na contagem do resumo.
 
-## Momento 2 — Reconferência
-
-Depois que o Corretor aplica as correções, você recebe a `correcoes.md`. Para cada ID corrigido, abra o material no ponto indicado e confira:
-
-- se o texto novo corresponde à redação sugerida ou à decisão do Joaquim em `decisoes.md`;
-- se a correção não criou erro novo no entorno (outro número, gabarito que deixou de bater, cartão que contradiz a seção);
-- se a nota do Vault também foi corrigida.
-
-Entregue `validacao/aulas/<aula-id>/reconferencia.md`:
-
-| ID | Correção aplicada? | Material | Vault | Observação |
-|---|---|---|---|---|
-
-com `ok` ou `refazer` em cada coluna.
-
 ## Você não faz
 
 - Pesquisar por conta própria para preencher lacuna. Se falta pesquisa, o veredito é `não verificável`.
@@ -83,4 +68,3 @@ com `ok` ou `refazer` em cada coluna.
 
 `PRONTO · <aula-id> · parecer.md · <N> confere, <N> corrigir (<N> alta), <N> divergente, <N> não verificável`
 
-`PRONTO · <aula-id> · reconferencia.md · <N> ok, <N> refazer`

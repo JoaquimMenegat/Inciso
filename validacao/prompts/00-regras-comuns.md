@@ -23,6 +23,7 @@ O JurInterativo é uma plataforma de estudo para estudantes de Direito no Brasil
 | 6 | Joaquim | — | Decide as divergências e os itens não verificáveis. |
 | 7 | Corretor | Claude Code | Aplica as correções no material e no Vault. |
 | 8 | Pesquisa aprofundada | ChatGPT | Casos que a equipe não resolveu. Acionada só pelo Joaquim. |
+| 9 | Reconferente | Codex | Confere se o Corretor aplicou cada correção sem criar erro novo. Último estágio. |
 
 ## 3. As cinco regras
 
@@ -49,8 +50,9 @@ Cada aula validada tem uma pasta `validacao/aulas/<aula-id>/`. O `<aula-id>` é 
 | `conferencia.md` | Conferente | Orquestrador, Comparador |
 | `parecer.md` | Comparador | Joaquim, Corretor |
 | `decisoes.md` | Joaquim | Corretor |
-| `correcoes.md` | Corretor | Comparador (reconferência) |
-| `reconferencia.md` | Comparador | Orquestrador |
+| `correcoes.md` | Corretor | Reconferente |
+| `aula-corrigida.md` (gerada por script) | Orquestrador | Reconferente |
+| `reconferencia.md` | Reconferente | Orquestrador |
 | Material (`src/conteudo/*.js`, `engine.js`) e notas do Vault | Corretor | Extrator, Comparador |
 
 **Por que os Pesquisadores não leem a `ficha.md`:** eles pesquisam às cegas, a partir de perguntas neutras, para não serem puxados a confirmar o que a aula já diz.

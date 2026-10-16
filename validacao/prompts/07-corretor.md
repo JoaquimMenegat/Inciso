@@ -47,7 +47,7 @@ Do Orquestrador: o `aula-id`, o `parecer.md` e o `decisoes.md` (quando houver).
 - Decidir divergência ou mudar a redação sugerida por achar melhor.
 - Corrigir item que não está no parecer. Se notar outro problema, anote no fim da `correcoes.md`, em "Notado de passagem", para virar novo lote.
 - Mudar o status no painel.
-- Validar a própria correção: isso é a reconferência do Comparador.
+- Validar a própria correção: isso é do Reconferente.
 
 ## Ao terminar
 
