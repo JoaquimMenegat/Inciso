@@ -1,0 +1,16 @@
+# Segunda conferência — pe-forca
+
+Data-base: 15/10/2026 · Consulta do Conferente: 16/10/2026.
+
+Aceitação da parte legal não significa resolução das lacunas jurisprudenciais nem veredito sobre a aula.
+
+| ID | Pesquisa | Resultado | Link aberto por mim? | Motivo / observação |
+|---|---|---|---|---|
+| pe-forca-006 | Lei | aceita | Sim — [CPC](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105compilada.htm) e [CC](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm). | Os arts. 558 e 312 sustentam os marcos indicados. As descrições dos arts. 219 e 224 do CPC e 132, caput e §§ 1º e 3º, do CC correspondem ao texto compilado, sem indicação de revogação nesses dispositivos. A resposta distingue corretamente a restrição do art. 219 da redação do art. 224. **Lacuna para jurisprudência:** regime aplicável ao ano e dia e determinação de seu vencimento. |
+| pe-forca-006 | Jurisprudência | não verificável | Sim — página do [SCON](https://scon.stj.jus.br/SCON/pesquisar.jsp); nenhum julgado indicado. | Pesquisa registra ausência de resultado e bloqueio durante suas consultas. A página inicial abriu nesta conferência, mas isso não comprova a inexistência de precedente nem resolve a lacuna. Não há decisão identificada cujo conteúdo possa ser conferido. |
+| pe-forca-020 | Lei | aceita | Sim — [CPC](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105compilada.htm). | Arts. 564, 219, 224, 230 e 231 sustentam o prazo, a contagem e os marcos apresentados, inclusive a intimação após justificação. As ressalvas dos arts. 229, §§ 1º e 2º, 231, § 1º, e 220 correspondem ao compilado vigente. **Lacuna para jurisprudência:** aplicação dos arts. 334 e 335 ao rito especial. A aceitação não resolve essa questão. |
+| pe-forca-020 | Jurisprudência | não verificável | Sim — página do [SCON](https://scon.stj.jus.br/SCON/pesquisar.jsp); nenhum julgado indicado. | Não foi identificado precedente superior para conferir. O resumo acadêmico e a referência estadual não suprem essa ausência. O acesso atual à página inicial não confirma nem afasta o bloqueio relatado pelo pesquisador. A lacuna permanece aberta. |
+| pe-forca-022 | Lei | aceita | Sim — [CPC](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105compilada.htm), [CC](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm) e [Lei 662/1949](https://www.planalto.gov.br/ccivil_03/leis/l0662.htm). | Aceita apenas a parte legal documentada e a explicitação das lacunas. O art. 132, § 3º, sustenta a correspondência anual apresentada condicionalmente; o art. 1º da Lei 662 confirma o feriado. **Lacuna para jurisprudência:** contagem completa, incidência de prorrogação ou suspensão e classificação do exemplo. Não foi validada uma data final nem a classificação da ação. |
+| pe-forca-022 | Jurisprudência | não verificável | Sim — página do [SCON](https://scon.stj.jus.br/SCON/pesquisar.jsp); nenhum julgado indicado. | Sem precedente identificado para verificar as questões de contagem. Além disso, o bloco não registra conclusão específica sobre a suspensão do art. 220, acrescentada à pesquisa legal refeita. Essa questão permanece pendente, juntamente com as demais lacunas. |
+
+Resumo: 3 aceitas, limitadas à parte legal documentada; 0 devolvidas; 0 conflitos entre fontes; 3 não verificáveis; 4 links distintos abertos.

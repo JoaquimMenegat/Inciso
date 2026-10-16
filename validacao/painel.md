@@ -6,6 +6,9 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 
 | aula-id | origem | data-base | status | pendências | atualizado em |
 |---|---|---|---|---|---|
+| pe-forca | procesp.js, aula `forca` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 15 confere, 3 corrigir (0 alta), 6 em decisoes-pendentes | 15/10/2026 |
+| pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 17 confere, 8 corrigir (0 alta), 7 em decisoes-pendentes | 15/10/2026 |
+| pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 20 confere, 13 corrigir (0 alta), 3 em decisoes-pendentes | 15/10/2026 |
 | pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 26 confere, 7 corrigir (1 alta), 16 não verificáveis (1 decisão) | 15/10/2026 |
 | pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 24 confere, 13 corrigir (1 alta), 4 em decisoes-pendentes | 15/10/2026 |
 | pe-contas | procesp.js, aula `contas` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 17 confere, 6 corrigir (0 alta), 8 em decisoes-pendentes | 15/10/2026 |
@@ -52,9 +55,9 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | pe-consignacao | Consignação em pagamento | em validação | — |
 | pe-contas | Ação de exigir contas | em validação | — |
 | pe-possessorias | Ações possessórias | em validação | — |
-| pe-forca | Força nova e força velha | não iniciada | — |
-| pe-embargos-terceiro | Embargos de terceiro | não iniciada | — |
-| pe-monitoria | Ação monitória | não iniciada | — |
+| pe-forca | Força nova e força velha | em validação | — |
+| pe-embargos-terceiro | Embargos de terceiro | em validação | — |
+| pe-monitoria | Ação monitória | em validação | — |
 | pe-demarcacao | Demarcação e divisão de terras | não iniciada | — |
 | pe-dissolucao | Dissolução parcial de sociedade | não iniciada | — |
 | pe-inventario | Inventário e partilha | não iniciada | — |

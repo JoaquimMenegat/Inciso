@@ -31,3 +31,31 @@ Parecer: 17 confere, 6 corrigir (0 alta, 5 média, 1 baixa), 8 não verificávei
 Parecer: 26 confere, 7 corrigir (1 alta, 5 média, 1 baixa), 16 não verificáveis. A correção alta: a aula atribui ao Código Civil o prazo de "ano e dia", que é do procedimento do CPC (art. 558); o CC (art. 1.210) só garante a restituição.
 
 12. **Classificação "jurisdição contenciosa" (pe-introducao-012 a 026, 038 e 052; 14 itens)** — A aula diz que os procedimentos dos arts. 539 a 718 são de jurisdição contenciosa, inclusive o inventário (e o teste tem gabarito "contenciosa"). O CPC não usa essa palavra para os Capítulos I a XIV, mas o Capítulo XV do mesmo Título se chama "Dos procedimentos de jurisdição voluntária" (arts. 719 e seguintes). O Conferente não aceitou essa leitura por exclusão. (a) **confere**, pela estrutura do CPC — e vale como decisão geral para todas as aulas; (b) reformular a aula para "procedimentos especiais (arts. 539 a 718)" e "jurisdição voluntária (arts. 719 e seguintes)", sem a palavra "contenciosa".
+
+## pe-monitoria
+
+Parecer: 20 confere, 13 corrigir (0 alta, 11 média, 2 baixa), 3 não verificáveis.
+
+13. **pe-monitoria-012** — "O mandado monitório dá ao réu 15 dias para cumprir." O número está no art. 701 do CPC; o item ficou não verificável porque o Orquestrador pulou a devolução de um detalhe acessório (prazo em dobro), para poupar cota. (a) confere; (b) devolver à pesquisa.
+14. **pe-monitoria-004** — "Contrato sem testemunhas e troca de e-mails são exemplos de prova escrita sem eficácia de título executivo." Sem julgado específico para o contrato sem testemunhas; o de e-mail não foi conferido. (a) manter; (b) trocar por exemplos com súmula do STJ (cheque prescrito, Súmula 299; contrato de abertura de crédito, Súmula 247).
+15. **pe-monitoria-029** — "Procedimentos especiais (inclusive a monitória) não cabem nos Juizados Especiais." A base é o Enunciado 8 do FONAJE, que não é fonte desta equipe. (a) manter, citando o FONAJE como orientação dos Juizados; (b) tirar.
+
+## pe-forca
+
+Parecer: 15 confere, 3 corrigir (0 alta, 3 média), 6 não verificáveis — quase todos pela rigidez do Conferente com a contagem do "ano e dia" e com o que a lei não diz expressamente.
+
+16. **pe-forca-010 e 023** — A liminar da força nova "dispensa perigo de dano" (e o teste com gabarito "Não"). O art. 562 não exige perigo; o Conferente queria um julgado dizendo isso expressamente. (a) confere; (b) reformular para "o art. 562 não exige perigo de dano".
+17. **pe-forca-011** — A liminar da força nova "tem natureza de tutela de evidência". Classificação doutrinária; o CPC não a faz. (a) manter; (b) tirar a classificação.
+18. **pe-forca-022** — Teste: esbulho em 1/1/2025, ação em 10/1/2026 → "velha" (limite em 2/1/2026). Qualquer contagem dá mais de ano e dia, mas a data exata do limite não foi validada. (a) confere; (b) manter o gabarito e tirar a data exata da explicação.
+19. **pe-forca-005** — "Na força velha, a tutela provisória continua possível pelos requisitos gerais." A lei confirma (arts. 294, 300 e 558); o julgado citado na aula é do tempo do CPC/1973. (a) manter só com os artigos, sem o julgado; (b) manter como está.
+20. **pe-forca-006 — a calculadora "nova ou velha?"** A regra está no código (engine.js) e nenhum agente a confere hoje. Este é o ponto cego que eu tinha apontado. (a) incluir um teste automático da calculadora com datas conhecidas; (b) deixar para depois do lançamento.
+
+## pe-embargos-terceiro
+
+Parecer: 17 confere, 8 corrigir (0 alta, 7 média, 1 baixa), 7 não verificáveis. Três deles têm súmula do STJ que a pesquisa achou, mas o Conferente só aceitou em parte. O texto das súmulas abaixo é do Orquestrador, a confirmar por você (como fez com a 619).
+
+21. **pe-embargos-terceiro-030** — Compromisso de compra e venda sem registro legitima os embargos. Súmula 84 do STJ: "É admissível a oposição de embargos de terceiro fundados em alegação de posse advinda do compromisso de compra e venda de imóvel, ainda que desprovido do registro." (a) confere, e vira decisão geral; (b) outra.
+22. **pe-embargos-terceiro-025 e 032** — Fraude contra credores não se discute nos embargos (e o teste com gabarito "Não"). Súmula 195 do STJ: "Em embargos de terceiro não se anula ato jurídico, por fraude contra credores." (a) confere, e vira decisão geral; (b) reformular para "não se anula o ato por fraude contra credores; para isso existe a ação pauliana".
+23. **pe-embargos-terceiro-026** — Quem deu causa à constrição indevida paga os honorários. Súmula 303 do STJ: "Em embargos de terceiro, quem deu causa à constrição indevida deve arcar com os honorários advocatícios." (a) confere, e vira decisão geral; (b) outra.
+24. **pe-embargos-terceiro-003** — O rol do art. 674, § 2º, é exemplificativo. Sem regra expressa nem julgado aceito. (a) manter; (b) tirar "exemplificativo".
+25. **pe-embargos-terceiro-015 e 016** — O valor da causa é o valor do bem (ou da meação) e não ultrapassa o valor da dívida. Sem regra expressa; a pesquisa achou julgado, mas o Conferente não o abriu. (a) manter; (b) mandar à pesquisa aprofundada; (c) tirar.
