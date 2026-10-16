@@ -25,7 +25,7 @@ Do Orquestrador: o `aula-id`, a data-base, a `ficha.md`, a `perguntas.md`, as pe
 |---|---|
 | `confere` | A aula diz o mesmo que a pesquisa aceita, em todas as partes |
 | `corrigir` | A aula está errada, desatualizada ou incompleta a ponto de induzir erro |
-| `divergente` | A conferência apontou `conflito entre fontes`, ou há divergência real; a aula deve apresentá-la, não escolher um lado |
+| `divergente` | Há divergência real entre o STF e o STJ (ou dentro de cada um); a redação sugerida apresenta as duas visões, com a fonte de cada uma, sem escolher lado. O Corretor aplica sem precisar do Joaquim |
 | `não verificável` | A pesquisa não foi aceita nem pôde ser |
 
 ### Gravidade (só para `corrigir`)

@@ -1,0 +1,20 @@
+# Conferência da segunda pesquisa de jurisprudência (Codex) · pe-monitoria
+
+Conferente · data-base: 15/10/2026 · conferência feita em 16/10/2026.
+Arquivo conferido: `pesquisa-jurisprudencia-codex.md` (IDs 004, 012 e 029), contra `perguntas.md`.
+
+**Acesso bloqueado:** os links `scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao` retornaram HTTP 403 na busca automática; no navegador, o SCON fica preso na tela de verificação antirrobô do STJ ("Verificação automática em andamento", com desafio). Não contornei o bloqueio. Ficaram sem conferência: AgInt no AREsp 3.151.082/MT e REsp 2.205.765/MT.
+
+Abriram: o PDF do inteiro teor do REsp 1.381.603/MS (www.stj.jus.br/websecstj), a página de informativos do STJ (processo.stj.jus.br) com a nota do AREsp 2.448.781/SP, e a página de Enunciados Cíveis do FONAJE (fonaje.amb.com.br, aberta no navegador; a busca automática deu 403).
+
+| ID | Pesquisa | Resultado | Link aberto por mim? | Motivo / observação |
+|---|---|---|---|---|
+| pe-monitoria-004 | jurisprudência (Codex) | aceita (parcial) | Sim: REsp 1.381.603/MS (PDF do inteiro teor); AgInt no AREsp 3.151.082/MT bloqueado (403/desafio) | **Aceito:** REsp 1.381.603/MS, Quarta Turma, rel. Min. Luis Felipe Salomão, julgado em 06/10/2016, DJe 11/11/2016. Ementa, itens 2 e 3: o e-mail pode fundamentar a monitória se o juízo se convencer da verossimilhança e da idoneidade, cabendo impugnação pelo réu, e sua validade é aferida no caso concreto com as demais provas. Julgado de turma, não repetitivo. **Não aceito (não verificável):** a parte sobre instrumento particular de confissão de dívida sem duas testemunhas (AgInt no AREsp 3.151.082/MT), porque o inteiro teor não abriu. A pergunta é de tipo `lei`: o art. 700 do CPC continua com o Pesquisador de lei. |
+| pe-monitoria-012 | jurisprudência (Codex) | aceita (parcial; registro de não localização) | Sim: página de informativos (nota do AREsp 2.448.781/SP); REsp 2.205.765/MT bloqueado (403/desafio) | **Aceito:** o registro de que a nota oficial do AREsp 2.448.781/SP (Quarta Turma, rel. Min. Raul Araújo, julgado em 3/3/2026, Informativo 880) descreve o mandado com prazo de 15 dias e as consequências da inércia (art. 701, caput e § 2º), mas não trata da contagem nem do termo inicial. Confere. **Não aceito (não verificável):** a descrição do REsp 2.205.765/MT (dias corridos para a dilação do edital e dias úteis para a resposta), porque o inteiro teor não abriu. Pergunta de tipo `lei`: prazo, contagem, titular e termo inicial continuam com o Pesquisador de lei (lacuna não resolvida pela jurisprudência). |
+| pe-monitoria-029 | jurisprudência (Codex) | aceita | Sim: página oficial de Enunciados Cíveis do FONAJE | Texto aberto: "ENUNCIADO 8 – As ações cíveis sujeitas aos procedimentos especiais não são admissíveis nos Juizados Especiais." Sem anotação de cancelamento ou nova redação na página. Nenhum enunciado da página menciona "monitória", como a pesquisa diz. Correto tratá-lo como enunciado (orientação), não como tese do STF/STJ. A aplicação à monitória é inferência pelo enquadramento como procedimento especial; a localização da monitória no CPC é ponto de lei e não foi mostrada com link nesta pesquisa (fica com o Pesquisador de lei). A não localização de precedente do STF/STJ é registro do pesquisador, sem trecho a conferir. |
+
+- Nenhum conflito com outras fontes foi apurado nesta conferência: por regra, não li a pesquisa de lei nem a primeira pesquisa de jurisprudência; a comparação fica com o Comparador.
+- As partes não aceitas (004 e 012) dependem só de acesso ao SCON do STJ e podem ser reconferidas se alguém abrir os inteiros teores manualmente num navegador.
+- Nenhuma pergunta enviesada entre os três IDs.
+
+**Resumo:** 3 aceitas (004 e 012 parcialmente; 029 integralmente), 0 devolvidas, 0 conflitos entre fontes, 0 não verificáveis (partes não verificáveis anotadas em 004 e 012). Links abertos com sucesso: 3 (REsp 1.381.603/MS, página de informativos com o AREsp 2.448.781/SP, Enunciados FONAJE). Links bloqueados: 2 (ambos no SCON).

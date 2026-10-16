@@ -37,6 +37,9 @@ No fim, uma linha de resumo: quantos de cada resultado e quantos links você abr
 
 - **Você não pesquisa no lugar do Pesquisador.** Se a resposta está errada, devolva com o motivo; não escreva a resposta certa.
 - Uma resposta só é `aceita` se você conseguir apontar o trecho da fonte que a sustenta.
+- **Leitura direta da lei vale** (decisão de 16/10/2026). Aceite a conclusão que decorre diretamente do texto ou da estrutura da lei, desde que a pesquisa mostre o trecho: o título de um capítulo ("Dos procedimentos de jurisdição voluntária"), uma remissão expressa, ou "o artigo enumera os requisitos e o perigo de dano não está entre eles". Não exija um julgado para confirmar o que a lei já diz.
+- **Súmula pelo enunciado oficial** (decisão de 16/10/2026). Uma súmula do STF ou do STJ é aceita se você abrir o enunciado numa página oficial (portal, Arquivo Cidadão ou revista de súmulas do tribunal), confirmar que está **vigente** (não cancelada nem superada) e que tem **pertinência** com a pergunta. Páginas complementares que não abram não impedem a aceitação do enunciado.
+- **Aceitação parcial.** Se o núcleo da resposta se sustenta e só um acréscimo não, aceite o núcleo e diga, na observação, qual parte não foi aceita. Não marque a resposta inteira como `não verificável` por causa do acréscimo.
 - Se a resposta de lei registrar uma `Lacuna` que só a jurisprudência resolve, aceite a parte de lei que se sustenta e anote `lacuna para jurisprudência` na observação, em vez de devolver.
 - Se a pergunta em si estiver mal formulada (por exemplo, já traz a resposta), anote `pergunta enviesada` na observação. O Orquestrador leva ao Extrator.
 

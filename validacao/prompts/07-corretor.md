@@ -15,8 +15,11 @@ Do Orquestrador: o `aula-id`, o `parecer.md` e o `decisoes.md` (quando houver).
 | Item do parecer | O que fazer |
 |---|---|
 | `corrigir` | Aplicar a redação sugerida |
-| `divergente`, `não verificável` ou `citação doutrinária` com decisão do Joaquim | Aplicar o que o `decisoes.md` diz |
-| `divergente`, `não verificável` ou `citação doutrinária` sem decisão | Não mexer; `BLOQUEADO` |
+| `divergente` | Aplicar a redação sugerida, que apresenta as duas visões |
+| `não verificável` ou `citação doutrinária` com decisão do Joaquim | Aplicar o que o `decisoes.md` diz |
+| `não verificável` sem decisão | Não mexer: continua como está (regra geral de 16/10/2026) |
+| `citação doutrinária` sem decisão | Não mexer; `BLOQUEADO` |
+| Contradição interna apontada no parecer | Ficar com o entendimento majoritário do STJ/STF indicado no parecer; se não houver, retirar as frases contraditórias |
 | `confere` | Não mexer |
 
 ## Como corrigir

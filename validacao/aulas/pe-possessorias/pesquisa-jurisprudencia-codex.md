@@ -1,0 +1,19 @@
+### pe-possessorias-023
+
+- Resposta: O STJ reconhece natureza executiva lato sensu à tutela possessória: o comando de restituição é cumprido por mandado na mesma relação processual, sem processo autônomo de execução; isso não significa inexistência de atos de cumprimento da sentença. O voto do REsp 900.419/SP, agora acessível, também admite multa coercitiva na sentença independentemente de pedido, para efetivar a reintegração frustrada, sob o CPC/1973.
+- Precedente principal: STJ, REsp 1.782.335/MT, 3ª Turma, rel. Min. Nancy Andrighi, julgado em 12/05/2020, DJe 18/05/2020, especialmente itens 4 e 10 a 13 do voto; complemento: STJ, REsp 900.419/SP, 4ª Turma, rel. Min. Raul Araújo, documento publicado em 03/10/2016, páginas 6 e 7 do relatório e voto.
+- Situação do precedente: Não localizada superação, revisão ou modulação nas buscas realizadas até a data-base de 14/10/2026. Não localizado tema vinculante ou pendente sobre a questão específica. São precedentes de turma; a pesquisa não certifica levantamento exaustivo. O REsp 1.782.335/MT examina a evolução do CPC/1973 e menciona expressamente a manutenção do sistema pelo CPC/2015.
+- Divergência: Nenhuma encontrada sobre a dispensa de processo autônomo. Quanto às benfeitorias, o REsp 1.782.335/MT distingue a retenção, que deve ser arguida na contestação, da indenização, que pode ser buscada em ação própria; portanto, a preclusão da retenção não elimina necessariamente a pretensão indenizatória.
+- Fonte: [REsp 1.782.335/MT — inteiro teor aberto](https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?seq=1940119&tipo=0&nreg=201803130349&SeqCgrmaSessao=&CodOrgaoJgdr=&dt=20200518&formato=PDF&salvar=false); [REsp 900.419/SP — relatório e voto abertos](https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ATC?seq=64694987&tipo=51&nreg=200602460370&SeqCgrmaSessao=&CodOrgaoJgdr=&dt=20161003&formato=PDF&salvar=false).
+- Consultado em: 16/10/2026
+- Situação: respondida
+
+### pe-possessorias-026
+
+- Resposta: Não encontrada confirmação suficiente, em julgado acessível, da regra geral específica para possessórias sobre bens móveis sob o CPC/2015. Localizei discussão expressa no CC 37.805/CE, sobre interdito envolvendo propriedade industrial, mas a fundamentação pelo foro do domicílio do réu está em voto vencido e não pode ser apresentada como conclusão do colegiado.
+- Precedente principal: Não localizado para confirmar a regra geral perguntada. Julgado relacionado efetivamente aberto: STJ, CC 37.805/CE, 2ª Seção, rel. Min. Humberto Gomes de Barros, julgado em 23/06/2004, DJ 01/07/2005.
+- Situação do precedente: Julgado sob o CPC/1973, com solução fundada em conexão e prevenção. Não foi localizada confirmação atual suficiente, nem tema vinculante ou pendente específico, até a data-base de 14/10/2026. A pesquisa anterior não indicava julgado para reabertura neste ID.
+- Divergência: No CC 37.805/CE, a maioria declarou competente Sobral/CE pela conexão e prevenção; os votos vencidos de Castro Filho e Barros Monteiro defenderam São Paulo/SP, domicílio da ré. Essa divergência interna, contextualizada nas páginas 239–252 da revista, não estabelece por si só divergência atual sobre toda possessória de bem móvel.
+- Fonte: [Revista do STJ, volume 200 — inteiro teor do CC 37.805/CE aberto, páginas 238–252](https://www.stj.jus.br/publicacaoinstitucional/index.php/RevSTJ/article/download/8123/8238). Também foi tentada a abertura da [Revista do STJ, volume 162](https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-eletronica-2003_162.pdf), localizada pela referência ao CC 30.712/SP, mas a ferramenta retornou `Internal Error`; esse documento não foi utilizado como confirmação. As buscas no domínio oficial do STF não localizaram precedente específico.
+- Consultado em: 16/10/2026
+- Situação: não encontrada

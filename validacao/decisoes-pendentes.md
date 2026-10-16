@@ -1,5 +1,16 @@
 # Decisões pendentes
 
+**16/10/2026: todos os itens abaixo foram resolvidos pelas regras gerais do Joaquim** (`decisoes-gerais.md`):
+- item sem prova de erro **continua na aula** (inclui as classificações de doutrina e das aulas);
+- súmula vigente e pertinente pode ser citada (o Codex confere o enunciado); enunciados do FONAJE e do CJF também;
+- contradição interna: entendimento majoritário do STJ/STF ou retirada;
+- os itens que dependem de jurisprudência passam por uma **segunda pesquisa no Codex**; se ela mostrar erro, o item é corrigido; se não, continua.
+- item 20 (calculadora): vira tarefa do Orquestrador (teste automático).
+
+Nada aqui depende mais do Joaquim. A lista fica como histórico.
+
+---
+
 Lista única do que depende do Joaquim, em todas as aulas. O Orquestrador acrescenta itens ao fim de cada parecer; o Joaquim responde quando puder, por lote.
 
 ## pe-possessorias

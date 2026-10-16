@@ -1,14 +1,14 @@
 ﻿# Roda um papel da validação no Codex (outro fornecedor de modelo).
-# Uso: powershell -ExecutionPolicy Bypass -File validacao/ferramentas/codex.ps1 <conferente|comparador|reconferencia> <aula-id> <data-base> [-Ids "id1,id2"]
+# Uso: powershell -ExecutionPolicy Bypass -File validacao/ferramentas/codex.ps1 <conferente|comparador|reconferencia|pesquisador> <aula-id> <data-base> [-Ids "id1,id2"]
 #
 # O Codex não abre arquivos do projeto: o script entrega a ele só os arquivos que o papel pode ler,
 # e a resposta final dele é gravada como o arquivo que o papel entrega. Assim a regra "às cegas"
 # não depende só do prompt, e o sandbox do Windows não precisa criar processos.
 param(
-  [Parameter(Mandatory=$true)][ValidateSet('conferente','comparador','reconferencia')][string]$Papel,
+  [Parameter(Mandatory=$true)][ValidateSet('conferente','comparador','reconferencia','pesquisador')][string]$Papel,
   [Parameter(Mandatory=$true)][string]$Aula,
   [Parameter(Mandatory=$true)][string]$DataBase,
-  # Só para o conferente: confere apenas estes IDs (pesquisas refeitas após devolução)
+  # Conferente: só estes IDs (devoluções). Pesquisador: IDs da segunda pesquisa. Comparador: IDs do complemento.
   [string]$Ids = ''
 )
 $ErrorActionPreference = 'Stop'
@@ -33,6 +33,16 @@ switch ($Papel) {
     $prompt = '06-comparador.md'; $saida = 'parecer.md'; $web = $false
     $entradas = @('ficha.md', 'perguntas.md', 'pesquisa-lei.md', 'pesquisa-jurisprudencia.md', 'conferencia.md', 'conferencia-devolucoes.md', 'aula.md')
     $tarefa = 'Momento 1 (parecer). Não pesquise na web: use só os arquivos abaixo. Se houver conferencia-devolucoes.md, o resultado dela vale para os IDs que ela lista, no lugar do resultado da conferencia.md.'
+    if ($Ids) {
+      $saida = 'parecer-complemento.md'
+      $entradas += @('parecer.md', 'pesquisa-jurisprudencia-codex.md', 'conferencia-codex.md')
+      $tarefa = "Complemento do parecer, só dos IDs $Ids, que receberam segunda pesquisa (pesquisa-jurisprudencia-codex.md, conferida em conferencia-codex.md). Dê novo veredito só para esses IDs, na mesma tabela do parecer. Regras gerais de 16/10/2026: item sem prova de erro continua como está (veredito confere ou não verificável, sem correção); se a aula se contradiz, a redação sugerida fica com o entendimento majoritário do STJ/STF ou retira as frases contraditórias. Não pesquise na web."
+    }
+  }
+  'pesquisador' {
+    $prompt = '04-pesquisador-jurisprudencia.md'; $saida = 'pesquisa-jurisprudencia-codex.md'; $web = $true
+    $entradas = @('perguntas.md', 'pesquisa-lei.md', 'pesquisa-jurisprudencia.md', 'conferencia.md')
+    $tarefa = "Segunda pesquisa de jurisprudência (STF e STJ), só dos IDs $Ids, que ficaram sem confirmação por falta de julgado, portal bloqueado ou link que não abriu. Para cada ID, tente abrir os julgados já citados em pesquisa-jurisprudencia.md e procure outros nos portais oficiais. Responda no formato de bloco do seu prompt, um por ID, com a URL oficial que você de fato abriu. Se não achar, diga não encontrada."
   }
   'reconferencia' {
     $prompt = '06-comparador.md'; $saida = 'reconferencia.md'; $web = $false

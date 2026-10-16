@@ -29,8 +29,8 @@ O JurInterativo é uma plataforma de estudo para estudantes de Direito no Brasil
 1. **Faça só o seu papel.** Se a tarefa pedir algo de outro papel, não faça: escreva `BLOQUEADO` e diga de quem é.
 2. **Escreva só nos seus arquivos.** Cada arquivo tem um único dono (tabela abaixo). Ler os dos outros é permitido quando o seu papel diz que é.
 3. **Sem fonte primária, não há afirmação.** Nada de citar de memória. Se não acessou a fonte, diga que não acessou.
-4. **Na dúvida, "não verificável".** Nunca suponha, nunca preencha lacuna com o que "provavelmente" é.
-5. **Nenhuma IA desempata outra.** Discordância vai para o Joaquim, com os dois lados.
+4. **Na dúvida, "não verificável".** Nunca suponha, nunca preencha lacuna com o que "provavelmente" é. Item `não verificável` sem prova de erro **continua na aula como está** (decisão de 16/10/2026; ver `validacao/decisoes-gerais.md`).
+5. **Nenhuma IA desempata outra.** Divergência só conta entre o STF e o STJ (ou dentro de cada um). Quando houver, a aula apresenta as duas visões, com a fonte de cada uma, sem escolher lado; isso não precisa do Joaquim (decisão de 16/10/2026). Julgado de outro tribunal não cria divergência.
 
 ## 4. Arquivos de cada aula
 
@@ -70,7 +70,9 @@ Toda validação tem uma **data-base**, anotada no painel pelo Orquestrador: o d
 1. Constituição e lei: **texto compilado no Planalto** (planalto.gov.br).
 2. Precedentes vinculantes: súmula vinculante, tema de repercussão geral (STF), tema repetitivo (STJ), nos portais oficiais.
 3. Súmulas e jurisprudência dominante do STF e do STJ; atos normativos do CNJ.
-**Doutrina não é fonte desta equipe** (decisão de 13/10/2026). Afirmações só conceituais não são pesquisadas, e citações de doutrinador na aula vão para o Joaquim decidir.
+**Doutrina e aulas também são fontes do conteúdo**, mas esta equipe não as pesquisa (decisão de 13/10/2026, revista em 16/10/2026): conceitos e classificações que vêm delas continuam na aula se não contrariarem a lei nem o STF/STJ. Citação literal de autor ainda vai para o Joaquim.
+
+**Enunciados** (FONAJE, Jornadas do CJF) podem ser citados como orientação, nunca como regra, e sempre identificados como enunciado, com número; valem se abertos na página oficial de quem os edita (decisão de 16/10/2026).
 
 Não valem: blogs, sites de cursinho, Jusbrasil (exceto para localizar um julgado, que depois deve ser aberto na fonte oficial), resumos, a memória do modelo. Tribunal estadual e TRF não são fonte de regra; servem, no máximo, para localizar um precedente superior.
 
