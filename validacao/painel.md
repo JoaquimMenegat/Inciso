@@ -6,13 +6,16 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 
 | aula-id | origem | data-base | status | pendências | atualizado em |
 |---|---|---|---|---|---|
-| pe-forca | procesp.js, aula `forca` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 15 confere, 3 corrigir (0 alta), 6 em decisoes-pendentes | 15/10/2026 |
+| pe-demarcacao | procesp.js, aula `demarcacao` | 16/10/2026 | extraindo | lote 3 | 16/10/2026 |
+| pe-dissolucao | procesp2.js, aula `dissolucao` | 16/10/2026 | extraindo | lote 3 | 16/10/2026 |
+| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | extraindo | lote 3 | 16/10/2026 |
+| pe-forca | procesp.js, aula `forca` | 15/10/2026 | validada | 3 correções aplicadas; reconferência aprovada; calculadora testada | 16/10/2026 |
 | pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 17 confere, 8 corrigir (0 alta), 7 em decisoes-pendentes | 15/10/2026 |
 | pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 20 confere, 13 corrigir (0 alta), 3 em decisoes-pendentes | 15/10/2026 |
-| pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 26 confere, 7 corrigir (1 alta), 16 não verificáveis (1 decisão) | 15/10/2026 |
+| pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 16/10/2026 |
 | pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 24 confere, 13 corrigir (1 alta), 4 em decisoes-pendentes | 15/10/2026 |
 | pe-contas | procesp.js, aula `contas` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 17 confere, 6 corrigir (0 alta), 8 em decisoes-pendentes | 15/10/2026 |
-| pe-possessorias | procesp.js, aula `possessorias` (versão atual) | 14/10/2026 | aguardando Joaquim | parecer: 19 confere, 9 corrigir (0 alta, 6 média, 3 baixa); 028, 038, 039 resolvidos por decisoes.md; faltam 023 e 026 | 14/10/2026 |
+| pe-possessorias | procesp.js, aula `possessorias` (versão atual) | 14/10/2026 | validada | 10 correções aplicadas; reconferência aprovada | 16/10/2026 |
 | pe-possessorias (teste às cegas) | versão de 11/10, antes da revisão (`validacao/teste-cego/`) | 14/10/2026 | encerrado | 2 de 2 erros conhecidos achados; ver `teste-cego/resultado-pe-possessorias.md` | 14/10/2026 |
 
 ## Todas as aulas
@@ -51,16 +54,16 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | con-sentenca | Sentença | não iniciada | — |
 | con-coisajulgada | Coisa julgada | não iniciada | — |
 | con-arbitragem | Arbitragem | não iniciada | — |
-| pe-introducao | Por que existem procedimentos especiais | em validação | — |
+| pe-introducao | Por que existem procedimentos especiais | validada | 16/10/2026 |
 | pe-consignacao | Consignação em pagamento | em validação | — |
 | pe-contas | Ação de exigir contas | em validação | — |
-| pe-possessorias | Ações possessórias | em validação | — |
-| pe-forca | Força nova e força velha | em validação | — |
+| pe-possessorias | Ações possessórias | validada | 16/10/2026 |
+| pe-forca | Força nova e força velha | validada | 16/10/2026 |
 | pe-embargos-terceiro | Embargos de terceiro | em validação | — |
 | pe-monitoria | Ação monitória | em validação | — |
-| pe-demarcacao | Demarcação e divisão de terras | não iniciada | — |
-| pe-dissolucao | Dissolução parcial de sociedade | não iniciada | — |
-| pe-inventario | Inventário e partilha | não iniciada | — |
+| pe-demarcacao | Demarcação e divisão de terras | em validação | — |
+| pe-dissolucao | Dissolução parcial de sociedade | em validação | — |
+| pe-inventario | Inventário e partilha | em validação | — |
 | pe-arrolamento | Arrolamento, sobrepartilha e inventário negativo | não iniciada | — |
 | pe-juizados | Juizados Especiais Cíveis | não iniciada | — |
 | pe-curatela | Tutela, curatela e interdição | não iniciada | — |

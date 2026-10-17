@@ -32,6 +32,7 @@ Do Orquestrador: o `aula-id`, o `parecer.md` e o `decisoes.md` (quando houver).
 2. **No Vault**, na nota de origem, seguindo o `CONTEXTO.md`:
    - nas notas sem `(C)`: texto corrigido com a marca *(C, DD/MM/AAAA)*;
    - julgados, súmulas e citações literais ficam intactos, com aviso ⚖️ ao lado.
+   - corrija também **diagramas, fluxogramas e quadros** da nota que digam a mesma coisa (lição da reconferência de pe-forca, 16/10/2026).
 3. **Marca na aula:** quando todos os IDs da aula estiverem resolvidos, atualize "Validada em DD/MM/AAAA" no fim da aula.
 4. **Gerar a plataforma:** rode `python prototipo/importar_pacote.py prototipo/pacotes/inciso-materiais` e confira se a aula continua abrindo.
 

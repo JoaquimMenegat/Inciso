@@ -12,7 +12,7 @@ Do Orquestrador: o `aula-id` e a `validacao/aulas/<aula-id>/aula.md`, a aula em 
 
 ## Você entrega
 
-Três arquivos em `validacao/aulas/<aula-id>/`. Só as afirmações do tipo `lei` e `jurisprudência` viram pergunta.
+Três arquivos em `validacao/aulas/<aula-id>/`. Só as afirmações do tipo `lei` e `jurisprudência` **de risco `alto` ou `médio`** viram pergunta (priorização de 16/10/2026, por causa do prazo e das cotas). As de risco `baixo` ficam na ficha, sem pergunta, e continuam na aula.
 
 ### 1. `ficha.md` — o que a aula afirma
 
