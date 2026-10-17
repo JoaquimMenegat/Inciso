@@ -11,7 +11,7 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | comparando | lote 3 · conferência: 42 aceitas, 8 não verificáveis | 16/10/2026 |
 | pe-forca | procesp.js, aula `forca` | 15/10/2026 | validada | 3 correções aplicadas; reconferência aprovada; calculadora testada | 16/10/2026 |
 | pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 17/10/2026 |
-| pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 20 confere, 13 corrigir (0 alta), 3 em decisoes-pendentes | 15/10/2026 |
+| pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | validada | 14 correções aplicadas; reconferência aprovada | 17/10/2026 |
 | pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 16/10/2026 |
 | pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | validada | 13 correções aplicadas; reconferência aprovada | 16/10/2026 |
 | pe-contas | procesp.js, aula `contas` | 15/10/2026 | validada | 9 correções aplicadas (inclui a contradição); reconferência aprovada | 16/10/2026 |
@@ -60,7 +60,7 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | pe-possessorias | Ações possessórias | validada | 16/10/2026 |
 | pe-forca | Força nova e força velha | validada | 16/10/2026 |
 | pe-embargos-terceiro | Embargos de terceiro | validada | 17/10/2026 |
-| pe-monitoria | Ação monitória | em validação | — |
+| pe-monitoria | Ação monitória | validada | 17/10/2026 |
 | pe-demarcacao | Demarcação e divisão de terras | validada | 17/10/2026 |
 | pe-dissolucao | Dissolução parcial de sociedade | em validação | — |
 | pe-inventario | Inventário e partilha | em validação | — |
