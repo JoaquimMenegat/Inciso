@@ -11,7 +11,7 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | pe-admissibilidade | procesp3.js, aula `admissibilidade` | 17/10/2026 | pesquisando | lote 4 (recursos) | 17/10/2026 |
 | pe-demarcacao | procesp.js, aula `demarcacao` | 16/10/2026 | validada | 5 correções aplicadas; reconferência aprovada | 17/10/2026 |
 | pe-dissolucao | procesp2.js, aula `dissolucao` | 16/10/2026 | validada | 9 correções aplicadas; reconferência aprovada; calculadora testada | 17/10/2026 |
-| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | 2ª pesquisa | lote 3 · parecer: 28 confere, 10 corrigir (0 alta), 12 não verificáveis (Res. CNJ 35) | 16/10/2026 |
+| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | validada | 10 correções aplicadas; reconferência aprovada; calculadora testada | 17/10/2026 |
 | pe-forca | procesp.js, aula `forca` | 15/10/2026 | validada | 3 correções aplicadas; reconferência aprovada; calculadora testada | 16/10/2026 |
 | pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 17/10/2026 |
 | pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | validada | 14 correções aplicadas; reconferência aprovada | 17/10/2026 |
@@ -66,7 +66,7 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | pe-monitoria | Ação monitória | validada | 17/10/2026 |
 | pe-demarcacao | Demarcação e divisão de terras | validada | 17/10/2026 |
 | pe-dissolucao | Dissolução parcial de sociedade | validada | 17/10/2026 |
-| pe-inventario | Inventário e partilha | em validação | — |
+| pe-inventario | Inventário e partilha | validada | 17/10/2026 |
 | pe-arrolamento | Arrolamento, sobrepartilha e inventário negativo | não iniciada | — |
 | pe-juizados | Juizados Especiais Cíveis | não iniciada | — |
 | pe-curatela | Tutela, curatela e interdição | não iniciada | — |
