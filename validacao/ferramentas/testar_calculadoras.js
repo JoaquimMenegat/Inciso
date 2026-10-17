@@ -30,7 +30,7 @@ const elemento = () => {
 
 const ctx = { CALC: {}, Date, Math, console };
 vm.createContext(ctx);
-vm.runInContext([linha('const pad='), 'const replay=()=>{};', calculadora('forca')].join('\n'), ctx);
+vm.runInContext([linha('const pad='), 'const replay=()=>{};', calculadora('forca'), calculadora('resolucao')].join('\n'), ctx);
 
 let falhas = 0;
 const confere = (nome, obtido, esperado) => {
@@ -55,6 +55,22 @@ confere('fato 01/01/2025, ação 10/01/2026 (questão da aula)', forca('2025-01-
 confere('fato 15/06/2025, ação no mesmo dia', forca('2025-06-15', '2025-06-15'), 'Força nova');
 confere('fato 31/12/2024, ação 01/01/2026 (virada de ano)', forca('2024-12-31', '2026-01-01'), 'Força nova');
 confere('fato 31/12/2024, ação 02/01/2026', forca('2024-12-31', '2026-01-02'), 'Força velha');
+
+// Data da resolução da sociedade (CPC, art. 605): óbito; notificação + 60 dias; notificação; trânsito; assembleia.
+const resolucao = (motivo, data) => {
+  const el = elemento();
+  ctx.CALC.resolucao(el);
+  el.querySelector('.k').value = String(motivo);
+  el.querySelector('.d').value = data;
+  el.querySelector('.k').ouvinte();
+  return el.querySelector('.res').textContent;
+};
+const br = iso => { const [a, m, d] = iso.split('-'); return `${d}/${m}/${a}`; };
+confere('resolução por falecimento (art. 605, I): a data do óbito', resolucao(0, '2026-03-10'), br('2026-03-10'));
+confere('retirada imotivada (art. 605, II): notificação + 60 dias', resolucao(1, '2026-03-10'), br('2026-05-09'));
+confere('recesso (art. 605, III): o dia da notificação', resolucao(2, '2026-03-10'), br('2026-03-10'));
+confere('exclusão judicial (art. 605, IV): o trânsito em julgado', resolucao(3, '2026-03-10'), br('2026-03-10'));
+confere('exclusão extrajudicial (art. 605, V): a assembleia', resolucao(4, '2026-03-10'), br('2026-03-10'));
 
 console.log(falhas ? `\n${falhas} falha(s).` : '\nTodas as verificações passaram.');
 process.exit(falhas ? 1 : 0);

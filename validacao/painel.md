@@ -6,15 +6,15 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 
 | aula-id | origem | data-base | status | pendências | atualizado em |
 |---|---|---|---|---|---|
-| pe-demarcacao | procesp.js, aula `demarcacao` | 16/10/2026 | extraindo | lote 3 | 16/10/2026 |
-| pe-dissolucao | procesp2.js, aula `dissolucao` | 16/10/2026 | extraindo | lote 3 | 16/10/2026 |
-| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | extraindo | lote 3 | 16/10/2026 |
+| pe-demarcacao | procesp.js, aula `demarcacao` | 16/10/2026 | corrigindo (fila) | lote 3 · parecer: 15 confere, 5 corrigir (0 alta), 2 não verificáveis | 16/10/2026 |
+| pe-dissolucao | procesp2.js, aula `dissolucao` | 16/10/2026 | 2ª pesquisa | lote 3 · parecer: 19 confere, 8 corrigir (0 alta), 6 não verificáveis | 16/10/2026 |
+| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | conferindo | lote 3 · 51 afirmações; 1 item com lei estadual (SC) | 16/10/2026 |
 | pe-forca | procesp.js, aula `forca` | 15/10/2026 | validada | 3 correções aplicadas; reconferência aprovada; calculadora testada | 16/10/2026 |
 | pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 17 confere, 8 corrigir (0 alta), 7 em decisoes-pendentes | 15/10/2026 |
 | pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 20 confere, 13 corrigir (0 alta), 3 em decisoes-pendentes | 15/10/2026 |
 | pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 16/10/2026 |
-| pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 24 confere, 13 corrigir (1 alta), 4 em decisoes-pendentes | 15/10/2026 |
-| pe-contas | procesp.js, aula `contas` | 15/10/2026 | aguardando Joaquim | lote 1 · parecer: 17 confere, 6 corrigir (0 alta), 8 em decisoes-pendentes | 15/10/2026 |
+| pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | validada | 13 correções aplicadas; reconferência aprovada | 16/10/2026 |
+| pe-contas | procesp.js, aula `contas` | 15/10/2026 | validada | 9 correções aplicadas (inclui a contradição); reconferência aprovada | 16/10/2026 |
 | pe-possessorias | procesp.js, aula `possessorias` (versão atual) | 14/10/2026 | validada | 10 correções aplicadas; reconferência aprovada | 16/10/2026 |
 | pe-possessorias (teste às cegas) | versão de 11/10, antes da revisão (`validacao/teste-cego/`) | 14/10/2026 | encerrado | 2 de 2 erros conhecidos achados; ver `teste-cego/resultado-pe-possessorias.md` | 14/10/2026 |
 
@@ -55,8 +55,8 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | con-coisajulgada | Coisa julgada | não iniciada | — |
 | con-arbitragem | Arbitragem | não iniciada | — |
 | pe-introducao | Por que existem procedimentos especiais | validada | 16/10/2026 |
-| pe-consignacao | Consignação em pagamento | em validação | — |
-| pe-contas | Ação de exigir contas | em validação | — |
+| pe-consignacao | Consignação em pagamento | validada | 16/10/2026 |
+| pe-contas | Ação de exigir contas | validada | 16/10/2026 |
 | pe-possessorias | Ações possessórias | validada | 16/10/2026 |
 | pe-forca | Força nova e força velha | validada | 16/10/2026 |
 | pe-embargos-terceiro | Embargos de terceiro | em validação | — |
