@@ -30,7 +30,7 @@ const elemento = () => {
 
 const ctx = { CALC: {}, Date, Math, console };
 vm.createContext(ctx);
-vm.runInContext([linha('const pad='), 'const replay=()=>{};', calculadora('forca'), calculadora('resolucao')].join('\n'), ctx);
+vm.runInContext([linha('const pad='), 'const replay=()=>{};', calculadora('forca'), calculadora('resolucao'), calculadora('inventario')].join('\n'), ctx);
 
 let falhas = 0;
 const confere = (nome, obtido, esperado) => {
@@ -71,6 +71,19 @@ confere('retirada imotivada (art. 605, II): notificação + 60 dias', resolucao(
 confere('recesso (art. 605, III): o dia da notificação', resolucao(2, '2026-03-10'), br('2026-03-10'));
 confere('exclusão judicial (art. 605, IV): o trânsito em julgado', resolucao(3, '2026-03-10'), br('2026-03-10'));
 confere('exclusão extrajudicial (art. 605, V): a assembleia', resolucao(4, '2026-03-10'), br('2026-03-10'));
+
+// Prazos do inventário: CC, art. 1.796 (30 dias); CPC, art. 611 (instaurar em 2 meses e concluir nos 12 meses seguintes).
+const inventario = obito => {
+  const el = elemento();
+  ctx.CALC.inventario(el);
+  el.querySelector('.d').value = obito;
+  el.querySelector('.d').ouvinte();
+  return el.querySelector('.tl').innerHTML;
+};
+const tl = inventario('2026-01-15');
+confere('inventário: prazo do CC (30 dias) a partir de 15/01/2026', tl.includes('14/02/2026'), true);
+confere('inventário: instaurar em 2 meses (CPC, art. 611) = 15/03/2026', tl.includes('15/03/2026'), true);
+confere('inventário: concluir nos 12 meses seguintes = 15/03/2027', tl.includes('15/03/2027'), true);
 
 console.log(falhas ? `\n${falhas} falha(s).` : '\nTodas as verificações passaram.');
 process.exit(falhas ? 1 : 0);
