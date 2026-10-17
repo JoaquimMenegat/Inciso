@@ -6,11 +6,11 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 
 | aula-id | origem | data-base | status | pendências | atualizado em |
 |---|---|---|---|---|---|
-| pe-demarcacao | procesp.js, aula `demarcacao` | 16/10/2026 | corrigindo (fila) | lote 3 · parecer: 15 confere, 5 corrigir (0 alta), 2 não verificáveis | 16/10/2026 |
+| pe-demarcacao | procesp.js, aula `demarcacao` | 16/10/2026 | validada | 5 correções aplicadas; reconferência aprovada | 17/10/2026 |
 | pe-dissolucao | procesp2.js, aula `dissolucao` | 16/10/2026 | 2ª pesquisa | lote 3 · parecer: 19 confere, 8 corrigir (0 alta), 6 não verificáveis | 16/10/2026 |
-| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | conferindo | lote 3 · 51 afirmações; 1 item com lei estadual (SC) | 16/10/2026 |
+| pe-inventario | procesp2.js, aula `inventario` | 16/10/2026 | comparando | lote 3 · conferência: 42 aceitas, 8 não verificáveis | 16/10/2026 |
 | pe-forca | procesp.js, aula `forca` | 15/10/2026 | validada | 3 correções aplicadas; reconferência aprovada; calculadora testada | 16/10/2026 |
-| pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 17 confere, 8 corrigir (0 alta), 7 em decisoes-pendentes | 15/10/2026 |
+| pe-embargos-terceiro | procesp.js, aula `embargos-terceiro` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 17/10/2026 |
 | pe-monitoria | procesp.js, aula `monitoria` | 15/10/2026 | aguardando Joaquim | lote 2 · parecer: 20 confere, 13 corrigir (0 alta), 3 em decisoes-pendentes | 15/10/2026 |
 | pe-introducao | procesp.js, aula `introducao` | 15/10/2026 | validada | 8 correções aplicadas; reconferência aprovada | 16/10/2026 |
 | pe-consignacao | procesp.js, aula `consignacao` | 15/10/2026 | validada | 13 correções aplicadas; reconferência aprovada | 16/10/2026 |
@@ -59,9 +59,9 @@ Só o Orquestrador escreve neste arquivo. Status e fluxo: `validacao/prompts/01-
 | pe-contas | Ação de exigir contas | validada | 16/10/2026 |
 | pe-possessorias | Ações possessórias | validada | 16/10/2026 |
 | pe-forca | Força nova e força velha | validada | 16/10/2026 |
-| pe-embargos-terceiro | Embargos de terceiro | em validação | — |
+| pe-embargos-terceiro | Embargos de terceiro | validada | 17/10/2026 |
 | pe-monitoria | Ação monitória | em validação | — |
-| pe-demarcacao | Demarcação e divisão de terras | em validação | — |
+| pe-demarcacao | Demarcação e divisão de terras | validada | 17/10/2026 |
 | pe-dissolucao | Dissolução parcial de sociedade | em validação | — |
 | pe-inventario | Inventário e partilha | em validação | — |
 | pe-arrolamento | Arrolamento, sobrepartilha e inventário negativo | não iniciada | — |
